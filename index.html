@@ -302,7 +302,7 @@
   .ctx-toggle code { font: 11px "SF Mono", Menlo, monospace; letter-spacing: 0; opacity: .6; }
   .tool-row + .tool-row { margin-top: 16px; }
   .tl { display: flex; flex-direction: column; gap: 6px; margin-top: 24px; }
-  .tl-row { display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 12px; background: #fff; border-radius: 10px; padding: 12px 14px; font-size: 14px; color: var(--sub); }
+  .tl-row { display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 12px; background: #fff; border-radius: 10px; padding: 12px 14px; font-size: 14px; color: var(--sub); }
   .tl-row .who { display: flex; align-items: flex-start; gap: 8px; font-size: 12px; color: var(--muted); padding-top: 1px; }
   .tl-row .who span { flex: none; width: 18px; height: 18px; border-radius: 50%; display: grid; place-items: center; background: var(--soft); font-size: 10px; }
   .tl-row pre { margin: 8px 0 0; font: 12px/1.6 "SF Mono", Menlo, monospace; letter-spacing: 0; white-space: pre-wrap; word-break: break-all; color: var(--muted); }
@@ -794,47 +794,47 @@
   <!-- 1. 개념 -->
   <div class="lesson-step" data-step="concept" data-title="개념">
     <h1>AI는 도구를 직접 쓰지 않는다<br>써 달라고 적을 뿐이다</h1>
-    <p class="sub">도구 사용 (Tool use).</p>
+    <p class="sub">도구 사용 (Tool use). 예시는 매일 쓰는 Claude Code로 본다.</p>
     <div class="body" style="margin-top:40px">
-      <p>1강에서 LLM은 글만 쓸 수 있다고 했다. 지금 날씨를 모르고, 큰 수 계산은 틀릴 수 있고, 메일을 보내지도 못한다.</p>
-      <p><strong>도구</strong>는 이 한계를 푸는 방법이다. 앱이 "이런 도구를 쓸 수 있다"는 목록을 컨텍스트에 같이 넣어 주면, 모델은 필요할 때 답 대신 <strong>"이 도구를 이 값으로 불러 줘"</strong>라는 글을 쓴다. 실제 실행은 앱이 하고, 결과를 다시 컨텍스트에 넣어 준다.</p>
+      <p>1강에서 LLM은 글만 쓸 수 있다고 했다. Claude(모델)도 마찬가지다. 혼자서는 내 컴퓨터의 파일을 열지도, 고치지도, 명령을 실행하지도 못한다.</p>
+      <p>그런데 Claude Code에서는 다 한다. <strong>도구</strong> 덕분이다. Claude Code(앱)가 "너는 <code class="inline">Read</code>(파일 읽기), <code class="inline">Edit</code>(파일 고치기), <code class="inline">Bash</code>(명령 실행)를 쓸 수 있다"는 목록을 같이 보내면, Claude는 필요할 때 <strong>"Read로 login.js 열어 줘"</strong> 같은 글을 쓴다. 실제로 파일을 여는 건 Claude Code다.</p>
       <p>모델은 여전히 글만 쓴다. 그 글을 앱이 행동으로 바꿔 주는 것이다.</p>
     </div>
     <div class="flow-steps">
-      <div><small>01 앱</small>질문과 도구 목록을 보낸다</div>
+      <div><small>01 Claude Code</small>내 요청과 도구 목록(Read, Edit, Bash)을 보낸다</div>
       <i class="ph ph-arrow-right"></i>
-      <div><small>02 모델</small>"get_weather(서울) 불러 줘"라고 쓴다</div>
+      <div><small>02 Claude</small>"Read로 login.js 열어 줘"라고 쓴다</div>
       <i class="ph ph-arrow-right"></i>
-      <div><small>03 앱</small>실제로 실행하고 결과를 다시 보낸다</div>
+      <div><small>03 Claude Code</small>실제로 파일을 열고, 내용을 다시 보낸다</div>
       <i class="ph ph-arrow-right"></i>
-      <div><small>04 모델</small>결과를 읽고 답한다</div>
+      <div><small>04 Claude</small>내용을 읽고 답한다</div>
     </div>
     <h3>비유로 보면</h3>
-    <p class="body">창문도 전화도 없는 방에 똑똑한 비서(모델)가 있다. 비서는 쪽지만 쓸 수 있다. 문 밖에는 심부름꾼(앱)이 있다.</p>
+    <p class="body">창문도 전화도 없는 방에 똑똑한 비서(Claude)가 있다. 비서는 쪽지만 쓸 수 있다. 문 밖에는 내 컴퓨터를 만질 수 있는 심부름꾼(Claude Code)이 있다.</p>
     <div class="usecase">
-      <div><b>도구 목록이 없을 때</b><small>비서는 심부름꾼이 있는 줄 모른다</small><p class="prompt-ex">"서울 날씨 어때?"<br>→ "밖을 못 봐서 모르겠어요"</p></div>
-      <div><b>도구 목록이 있을 때</b><small>"밖에 심부름꾼 있음. 날씨 확인 가능" 메모가 같이 들어간다</small><p class="prompt-ex">"심부름꾼님, 서울 날씨 봐 주세요"<br>→ 심부름꾼이 확인: "12도, 비 70%"<br>→ "우산 챙기세요"</p></div>
+      <div><b>도구 목록이 없을 때</b><small>비서는 심부름꾼이 있는 줄 모른다</small><p class="prompt-ex">"login.js 왜 안 돼?"<br>→ "파일을 볼 수 없어요. 코드를 붙여 넣어 주세요"</p></div>
+      <div><b>도구 목록이 있을 때</b><small>"밖에 심부름꾼 있음. Read, Edit, Bash 가능" 메모가 같이 들어간다</small><p class="prompt-ex">"심부름꾼님, Read로 login.js 열어 주세요"<br>→ 심부름꾼이 파일 내용을 넣어 줌<br>→ "2번째 줄이 문제예요"</p></div>
     </div>
-    <div class="why"><b>실제 예: 지금 쓰는 Claude Code</b>Claude도 파일을 직접 못 연다. 앱(Claude Code)이 준 <code class="inline">Read</code>(파일 읽기), <code class="inline">Edit</code>(파일 고치기), <code class="inline">Bash</code>(명령 실행) 도구로 "이 파일 읽어 줘"라고 적으면, 앱이 실제로 실행한다. 대화창에 접혀 있는 줄을 펼치면 어떤 도구를 어떤 값으로 불렀는지 보인다. 날씨 도구와 같은 구조다.</div>
+    <div class="why"><b>직접 확인하는 법</b>Claude Code 대화창에 접혀 있는 줄을 펼쳐 보면 Read, Edit, Bash가 보인다. 그게 Claude가 "이 도구를 이 값으로 불러 줘"라고 쓴 기록이다.</div>
   </div>
 
   <!-- 2. 해 보기 -->
   <div class="lesson-step" data-step="demo" data-title="해 보기" hidden>
     <h1>도구 호출 따라가 보기</h1>
-    <p class="sub">AI 앱에 질문했을 때 화면 뒤에서 일어나는 일을 한 단계씩 보는 곳이다.</p>
+    <p class="sub">Claude Code에 요청했을 때 화면 뒤에서 일어나는 일을 한 단계씩 본다.</p>
     <div class="pipeline" style="margin-top:40px">
-      <div><small>등장인물 1</small><b>나 (사용자)</b>앱에 질문을 쓴다</div>
-      <div><small>등장인물 2</small><b>앱 (코드)</b>모델과 나 사이의 프로그램. 도구를 실제로 실행하는 손</div>
-      <div><small>등장인물 3</small><b>모델</b>글만 쓰는 AI 본체. 도구가 필요하면 앱에게 부탁한다</div>
+      <div><small>등장인물 1</small><b>나</b>Claude Code에 요청을 쓴다</div>
+      <div><small>등장인물 2</small><b>Claude Code (앱)</b>내 컴퓨터에서 도구를 실제로 실행하는 손</div>
+      <div><small>등장인물 3</small><b>Claude (모델)</b>글만 쓰는 AI 본체. 도구가 필요하면 Claude Code에게 부탁한다</div>
     </div>
-    <p class="hint">① 질문을 하나 고른다 → ② "다음 단계"를 눌러 1번부터 끝까지 본다 → ③ 아래 도구를 눌러 꺼 보고 같은 질문을 다시 본다.</p>
+    <p class="hint">① 요청을 하나 고른다 → ② "다음 단계"를 눌러 1번부터 끝까지 본다 → ③ 아래 도구를 눌러 꺼 보고 같은 요청을 다시 본다.</p>
     <div class="card" style="margin-top:24px">
       <div class="tool-row">
-        <div class="code-label">① 내가 할 질문 고르기</div>
+        <div class="code-label">① Claude Code에 할 요청 고르기</div>
         <div class="ctx-toggles" id="tool-qs"></div>
       </div>
       <div class="tool-row">
-        <div class="code-label">③ 앱에 연결된 도구 (검정 = 쓸 수 있음, 누르면 꺼짐)</div>
+        <div class="code-label">③ Claude Code가 준 도구 (검정 = 쓸 수 있음, 누르면 꺼짐)</div>
         <div class="ctx-toggles" id="tool-list"></div>
       </div>
       <div class="tl" id="tool-tl"></div>
@@ -844,7 +844,7 @@
       </div>
       <div class="temp-result" id="tool-msg"></div>
     </div>
-    <p class="hint">흐름은 실제와 같고, 결과와 답은 이해를 위해 미리 써 둔 예시다.</p>
+    <p class="hint">흐름은 실제와 같고, 파일 내용과 답은 이해를 위해 미리 써 둔 예시다.</p>
   </div>
 
   <!-- 3. 자세히 -->
@@ -853,113 +853,95 @@
     <p class="sub">블록마다 한 줄 요약부터 읽으면 된다.</p>
 
     <h3><span class="h-num">01</span>도구 설명서</h3>
-    <p class="tldr">요청에 <strong>도구 목록을 설명서처럼</strong> 같이 보낸다. 모델은 이 설명만 보고 언제 쓸지 고른다.</p>
+    <p class="tldr">Claude Code는 요청에 <strong>도구 목록을 설명서처럼</strong> 같이 보낸다. Claude는 이 설명만 보고 언제 쓸지 고른다.</p>
     <p class="body">새로 온 직원에게 "사내 시스템은 이런 게 있고, 이럴 때 쓰면 된다"고 알려 주는 것과 같다. 시스템을 어떻게 만들었는지는 몰라도 된다. 이름과 쓰임새, 넣을 값만 알면 된다.</p>
+    <div class="code-label">Claude Code가 Claude에게 보내는 요청 (간단히 줄임)</div>
 <pre class="code">{
   "model": "claude-sonnet-5-5",
-  "max_tokens": 1024,
   <span class="add">"tools": [
     {
-      "name": "get_weather",
-      "description": "도시 이름을 받아 지금 날씨(기온, 비 올 확률)를 알려 준다",
-      "input_schema": {
-        "type": "object",
-        "properties": { "city": { "type": "string" } },
-        "required": ["city"]
-      }
-    }
+      "name": "Read",
+      "description": "파일을 읽어서 내용을 돌려준다",
+      "input_schema": { "properties": { "file_path": { "type": "string" } } }
+    },
+    {
+      "name": "Bash",
+      "description": "명령어를 실행하고 결과를 돌려준다",
+      "input_schema": { "properties": { "command": { "type": "string" } } }
+    },
+    ...Edit 등
   ]</span>,
   "messages": [
-    { "role": "user", "content": "지금 서울 날씨 어때?" }
+    { "role": "user", "content": "테스트 돌려 봐" }
   ]
 }</pre>
     <div class="explain">
-      <div><code>name</code><span>도구 이름. 모델이 부를 때 이 이름을 쓴다.</span></div>
-      <div><code>description</code><span>언제 쓰는 도구인지. 모델이 쓸지 말지 고르는 근거라서 제일 중요하다.</span></div>
-      <div><code>input_schema</code><span>입력 형식. 어떤 값을 넣어야 하는지 (여기서는 도시 이름).</span></div>
+      <div><code>name</code><span>도구 이름. Claude가 부를 때 이 이름을 쓴다 (Read, Bash).</span></div>
+      <div><code>description</code><span>언제 쓰는 도구인지. Claude가 쓸지 말지 고르는 근거라서 제일 중요하다.</span></div>
+      <div><code>input_schema</code><span>넣어야 하는 값. Read는 파일 경로, Bash는 실행할 명령.</span></div>
     </div>
-    <p class="body" style="margin-top:32px">get_weather는 날씨 앱 개발자가 만들었다고 치고 쓴 예시다. Claude Code의 <code class="inline">Bash</code>, <code class="inline">Edit</code>도 <strong>같은 모양</strong>으로 Claude에게 전달된다. 이름과 설명, 입력 형식만 다르다.</p>
-    <div class="code-pair">
-      <div>
-        <div class="code-label">Claude Code가 보내는 Bash 도구 (간단히 줄임)</div>
-<pre class="code">{
-  <span class="add">"name": "Bash"</span>,
-  <span class="add">"description": "명령어를 실행하고 결과를 돌려준다"</span>,
-  "input_schema": {
-    "type": "object",
-    "properties": { <span class="add">"command": { "type": "string" }</span> },
-    "required": ["command"]
-  }
-}</pre>
-      </div>
-    </div>
-    <div class="explain">
-      <div><code>get_weather</code><span>입력: 도시 이름 → 앱이 날씨를 조회한다</span></div>
-      <div><code>Bash</code><span>입력: 실행할 명령 → 앱(Claude Code)이 내 컴퓨터에서 실행한다</span></div>
-      <div><code>Edit</code><span>입력: 파일 경로, 바꿀 글, 새 글 → 앱이 파일을 고친다</span></div>
-    </div>
-    <div class="why"><b>왜 알아 둬야 하나</b>도구 설명도 결국 컨텍스트에 들어가는 글이다. 설명이 애매하면 엉뚱할 때 부르거나, 필요할 때 안 부른다. 2강의 "짐작할 게 없게 적는다"가 여기에도 그대로 적용된다.</div>
+    <div class="why"><b>왜 알아 둬야 하나</b>도구 설명도 결국 컨텍스트에 들어가는 글이다. 설명이 애매하면 엉뚱할 때 부르거나, 필요할 때 안 부른다. 2강의 "짐작할 게 없게 적는다"가 여기에도 그대로 적용된다. 참고로 날씨 앱이라면 같은 모양으로 <code class="inline">get_weather</code> 같은 도구를 만들어 보낸다. 모양은 같고 이름, 설명, 넣는 값만 다르다.</div>
 
-    <h3><span class="h-num">02</span>모델의 응답과 결과 돌려주기</h3>
-    <p class="tldr">모델은 답 대신 <strong>"이 도구를 이 값으로"</strong>를 적어서 멈춘다. 앱은 실행 결과를 붙여서 <strong>한 번 더</strong> 보낸다.</p>
-    <p class="body">식당에 비유하면 손님(사용자)의 주문을 받은 직원(모델)이 주방(앱)에 주문서를 넘기는 것이다. 요리는 주방이 하고, 직원은 나온 요리를 보고 손님에게 설명한다.</p>
+    <h3><span class="h-num">02</span>Claude의 응답과 결과 돌려주기</h3>
+    <p class="tldr">Claude는 답 대신 <strong>"Bash로 npm test 실행해 줘"</strong>를 적어서 멈춘다. Claude Code는 실행 결과를 붙여서 <strong>한 번 더</strong> 보낸다.</p>
+    <p class="body">식당에 비유하면 직원(Claude)이 주방(Claude Code)에 주문서를 넘기는 것이다. 요리는 주방이 하고, 직원은 나온 요리를 보고 손님(나)에게 설명한다.</p>
     <div class="code-pair">
       <div>
-        <div class="code-label">모델의 응답</div>
+        <div class="code-label">Claude의 응답</div>
 <pre class="code">{
   <span class="add">"stop_reason": "tool_use"</span>,
   "content": [
     {
       "type": "tool_use",
       "id": "toolu_01",
-      "name": "get_weather",
-      "input": { "city": "서울" }
+      "name": "Bash",
+      "input": { "command": "npm test" }
     }
   ]
 }</pre>
       </div>
       <div>
-        <div class="code-label">앱이 다시 보내는 요청의 messages</div>
+        <div class="code-label">Claude Code가 다시 보내는 요청의 messages</div>
 <pre class="code">[
-  { "role": "user", "content": "지금 서울 날씨 어때?" },
+  { "role": "user", "content": "테스트 돌려 봐" },
   { "role": "assistant", "content": [ { "type": "tool_use", "id": "toolu_01", ... } ] },
   <span class="add">{ "role": "user", "content": [
     { "type": "tool_result", "tool_use_id": "toolu_01",
-      "content": "{\"temp\": 12, \"rain_chance\": 70}" }
+      "content": "통과 12개, 실패 0개" }
   ] }</span>
 ]</pre>
       </div>
     </div>
     <div class="explain">
-      <div><code>stop_reason</code><span><code>tool_use</code>면 "도구를 써야 해서 멈췄다"는 뜻. 앱은 이걸 보고 도구를 실행한다.</span></div>
-      <div><code>input</code><span>모델이 고른 값. 모델이 채운 것이라 틀릴 수도 있다.</span></div>
+      <div><code>stop_reason</code><span><code>tool_use</code>면 "도구를 써야 해서 멈췄다"는 뜻. Claude Code는 이걸 보고 명령을 실행한다.</span></div>
+      <div><code>input</code><span>Claude가 고른 값 (여기서는 <code>npm test</code>). Claude가 채운 것이라 틀릴 수도 있다.</span></div>
       <div><code>tool_result</code><span>실행 결과. 사용자 쪽 메시지로 붙여서 보낸다. <code>id</code>로 어느 호출의 결과인지 짝을 맞춘다.</span></div>
     </div>
-    <div class="why"><b>그래서</b>도구를 한 번 쓰면 모델에게 요청이 최소 두 번 간다. 결과도 컨텍스트에 쌓이니까 토큰과 요금도 그만큼 는다.</div>
+    <div class="why"><b>그래서</b>도구를 한 번 쓰면 Claude에게 요청이 최소 두 번 간다. 결과도 컨텍스트에 쌓이니까 토큰과 요금도 그만큼 는다. 긴 파일을 Read하면 그 내용이 전부 컨텍스트에 들어간다.</div>
 
     <h3><span class="h-num">03</span>누가 무엇을 하나</h3>
-    <p class="tldr">모델은 <strong>고르고</strong>, 앱은 <strong>실행한다</strong>.</p>
+    <p class="tldr">Claude는 <strong>고르고</strong>, Claude Code는 <strong>실행한다</strong>.</p>
     <div class="usecase">
-      <div><b>모델</b><small>글로 판단하는 쪽</small>
-        <ul><li>도구를 쓸지 말지</li><li>어떤 도구를, 어떤 값으로</li><li>결과를 읽고 답 쓰기</li></ul></div>
-      <div><b>앱 (코드)</b><small>실제로 손을 움직이는 쪽</small>
-        <ul><li>도구 목록 보내기</li><li>도구 실제 실행 (API 호출, DB 조회 등)</li><li>권한 확인, 결과 돌려주기</li></ul></div>
+      <div><b>Claude (모델)</b><small>글로 판단하는 쪽</small>
+        <ul><li>도구를 쓸지 말지</li><li>어떤 도구를, 어떤 값으로 (Edit로 몇 번째 줄을 어떻게)</li><li>결과를 읽고 답 쓰기</li></ul></div>
+      <div><b>Claude Code (앱)</b><small>실제로 손을 움직이는 쪽</small>
+        <ul><li>도구 목록 보내기</li><li>내 컴퓨터에서 실제 실행 (파일 열기, 고치기, 명령)</li><li>권한 확인, 결과 돌려주기</li></ul></div>
     </div>
     <div class="why"><b>왜 알아 둬야 하나</b>
       <ul>
-        <li>실행이 앱 손에 있으니, 메일 발송이나 삭제처럼 되돌리기 어려운 도구는 <strong>실행 전에 사람 확인</strong>을 받게 만들 수 있다.</li>
-        <li>모델이 넣은 값이 틀릴 수 있어서, 앱이 실행 전에 값을 검사하는 게 좋다.</li>
+        <li>Claude Code가 명령을 실행하거나 파일을 고치기 전에 <strong>"허용할까요?"</strong>라고 묻는 이유다. 실행이 앱 손에 있으니, 되돌리기 어려운 일은 앱이 멈추고 사람에게 물을 수 있다.</li>
+        <li>Claude가 넣은 값이 틀릴 수 있어서(엉뚱한 파일 경로 등), 앱이 실행 전에 검사하는 게 좋다.</li>
       </ul>
     </div>
 
     <h3><span class="h-num">04</span>도구로 할 수 있게 된 것</h3>
     <p class="tldr">1강의 "혼자서는 행동하지 못한다"가 여기서 풀린다.</p>
     <div class="pipeline">
-      <div><small>01</small><b>가져오기</b>웹 검색, 사내 문서 검색, DB 조회, 파일 읽기. 최신 정보와 내 데이터</div>
-      <div><small>02</small><b>정확하게 하기</b>계산기, 코드 실행. 글로 흉내 내지 않고 실제로 계산</div>
-      <div><small>03</small><b>행동하기</b>메일 보내기, 일정 만들기, 파일 저장. 바깥 세상을 바꾸는 일</div>
+      <div><small>01</small><b>가져오기</b>Read(파일 읽기), Grep(코드 검색), 웹 검색. 내 파일과 최신 정보</div>
+      <div><small>02</small><b>확인하기</b>Bash로 테스트, 빌드 실행. 글로 짐작하지 않고 실제로 돌려 본다</div>
+      <div><small>03</small><b>바꾸기</b>Edit, Write(파일 고치기, 만들기), git 커밋. 내 컴퓨터를 실제로 바꾸는 일</div>
     </div>
-    <div class="why"><b>참고: MCP</b>도구를 붙이는 방식이 앱마다 다르면, 같은 도구도 앱마다 새로 만들어야 한다. MCP(Model Context Protocol)는 도구를 AI 앱에 연결하는 공통 규격이다. USB처럼 한 번 만들어 두면 여러 AI 앱에 꽂아 쓸 수 있다.</div>
+    <div class="why"><b>참고: MCP</b>Claude Code에 Figma, Gmail 같은 외부 도구를 붙일 때 쓰는 공통 규격이 MCP(Model Context Protocol)다. USB처럼 한 번 만들어 두면 여러 AI 앱에 꽂아 쓸 수 있다. 붙이면 그 도구들도 Read, Bash처럼 목록에 들어간다.</div>
   </div>
 
   <!-- 4. 정리 -->
@@ -1023,8 +1005,8 @@
     <h1>에이전트는 도구 쓰기를<br>일이 끝날 때까지 반복하는 것이다</h1>
     <p class="sub">에이전트 (Agent).</p>
     <div class="body" style="margin-top:40px">
-      <p>3강에서는 도구를 <strong>한 번</strong> 쓰고 끝났다. 날씨를 물으면 날씨 도구를 한 번 부르고 답했다.</p>
-      <p>그런데 "출장 준비해 줘" 같은 일은 한 번으로 안 끝난다. 날씨를 보고, 기차를 찾고, 예매하고, 일정에 넣어야 한다. 무엇을 할지는 앞의 결과를 봐야 정해진다.</p>
+      <p>3강에서는 도구를 <strong>한 번</strong> 쓰고 끝났다. "테스트 돌려 봐"라고 하면 Bash를 한 번 부르고 답했다.</p>
+      <p>그런데 "로그인 버튼 고쳐 줘" 같은 일은 한 번으로 안 끝난다. 파일을 읽고, 고치고, 테스트를 돌리고, 실패하면 다시 고쳐야 한다. 무엇을 할지는 앞의 결과를 봐야 정해진다.</p>
       <p><strong>에이전트</strong>는 모델이 결과를 보고 <strong>다음에 할 일을 스스로 정하면서</strong>, 일이 끝날 때까지 도구 쓰기를 반복하는 방식이다. 사람은 처음에 한 번만 말하면 된다.</p>
     </div>
     <div class="flow-steps">
@@ -1039,8 +1021,8 @@
     <h3>비유로 보면</h3>
     <p class="body">3강의 방 안 비서와 심부름꾼 그대로다. 달라진 건 비서가 심부름 결과를 보고 <strong>다음 심부름을 알아서 또 시킨다</strong>는 것뿐이다.</p>
     <div class="usecase">
-      <div><b>3강: 도구 한 번</b><small>"서울 날씨 어때?"</small><p class="prompt-ex">날씨 봐 줘 → "12도" → 답. 끝</p></div>
-      <div><b>4강: 에이전트</b><small>"부산 출장 준비해 줘"</small><p class="prompt-ex">날씨 봐 줘 → "비" → 기차 찾아 줘 → "07시 있음" → 예매해 줘 → "완료" → 일정 넣어 줘 → "등록" → 답</p></div>
+      <div><b>3강: 도구 한 번</b><small>"테스트 돌려 봐"</small><p class="prompt-ex">Bash로 npm test → "12개 통과" → 답. 끝</p></div>
+      <div><b>4강: 에이전트</b><small>"로그인 버튼 고쳐 줘"</small><p class="prompt-ex">Read로 파일 열기 → 원인 발견 → Edit로 고치기 → Bash로 테스트 → "실패 1개" → 다시 Edit → 다시 테스트 → "통과" → 답</p></div>
     </div>
     <div class="why"><b>실제 예: 지금 쓰는 Claude Code가 에이전트다</b>"3강 만들어 줘" 한마디에 Claude는 파일 읽기 → 내용 써 넣기 → 오류 검사 → 화면 캡처 → 버튼이 잘 안 보여서 다시 고치기까지 했다. 각 단계를 사람이 시키지 않았다. 결과를 보고 다음 할 일을 스스로 정했다.</div>
   </div>
@@ -1823,9 +1805,12 @@ const bank3 = [
   { q: "AI에게 \"지금 서울 날씨\"를 정확히 답하게 하려면 무엇이 필요할까?",
     opts: ["날씨 조회 도구를 쓸 수 있게 해 준다", "temperature를 낮춘다", "프롬프트에 \"정확히\"라고 쓴다", "같은 질문을 여러 번 한다"], a: 0,
     exp: "지금 날씨는 학습이 끝난 뒤의 일이라 모델은 모른다. 도구로 가져와야 한다." },
-  { q: "날씨 도구를 쓸 때, 실제로 날씨 서비스에 요청을 보내는 것은?",
-    opts: ["모델", "앱 (코드)", "사용자", "날씨 서비스가 알아서"], a: 1,
-    exp: "모델은 \"불러 달라\"고 적을 뿐이다. 실행은 앱이 한다." },
+  { q: "Claude Code에서 Bash 도구로 npm test를 실행할 때, 실제로 명령을 실행하는 것은?",
+    opts: ["Claude (모델)", "Claude Code (앱)", "GitHub", "내가 직접"], a: 1,
+    exp: "Claude는 \"Bash로 npm test 실행해 줘\"라고 적을 뿐이다. 실행은 Claude Code가 내 컴퓨터에서 한다." },
+  { q: "Claude Code 대화창에서 접힌 줄을 펼쳤더니 Edit가 보였다. 이건 무엇일까?",
+    opts: ["Claude가 Edit 도구를 어떤 값으로 불러 달라고 적은 기록", "Claude가 직접 파일을 고친 흔적", "내가 이전에 입력한 명령", "모델이 학습한 기록"], a: 0,
+    exp: "Claude가 도구 호출을 적고, Claude Code가 실제로 파일을 고친 것이다." },
   { q: "모델이 도구를 쓰고 싶을 때 실제로 하는 일은?",
     opts: ["직접 인터넷에 접속한다", "어떤 도구를 어떤 값으로 부를지 적어서 응답한다", "사용자에게 도구 설치를 부탁한다", "도구 사용법을 새로 학습한다"], a: 1,
     exp: "응답에 tool_use를 적고 멈춘다. 모델이 하는 건 여전히 글쓰기다." },
@@ -1884,8 +1869,8 @@ const bank3 = [
     hint: "ㅅㅁ", answers: ["설명", "description", "도구설명", "도구 설명"], exp: "설명 (description). 제일 공들여 써야 하는 부분이다." },
 
   // 순서
-  { type: "order", q: "도구 하나를 쓰는 흐름을 순서대로 눌러 보자.",
-    items: ["앱이 질문과 도구 목록을 보낸다", "모델이 도구 호출을 적어서 응답한다", "앱이 도구를 실제로 실행한다", "앱이 결과를 붙여서 다시 보낸다", "모델이 결과를 읽고 답한다"],
+  { type: "order", q: "Claude Code에 \"테스트 돌려 봐\"라고 했을 때의 흐름을 순서대로 눌러 보자.",
+    items: ["Claude Code가 요청과 도구 목록을 보낸다", "Claude가 \"Bash로 npm test\"를 적어서 응답한다", "Claude Code가 명령을 실제로 실행한다", "Claude Code가 결과를 붙여서 다시 보낸다", "Claude가 결과를 읽고 답한다"],
     exp: "모델 → 앱 → 모델로 한 번 왕복한다. 실행은 가운데의 앱이 한다." },
   { type: "order", q: "\"내일 3시에 회의 잡아 줘\"를 처리하는 순서대로 눌러 보자.",
     items: ["사용자가 요청한다", "모델이 create_event 호출을 적는다", "앱이 캘린더에 일정을 저장한다", "모델이 \"잡았다\"고 답한다"],
@@ -2108,51 +2093,51 @@ function resetWin() { turns = 1; renderWin(); }
 renderWin();
 /* ---------- 3강: 도구 호출 따라가 보기 ---------- */
 const toolDefs = {
-  weather:  { name: "get_weather",  label: "날씨 조회" },
-  calc:     { name: "calculator",   label: "계산기" },
-  calendar: { name: "create_event", label: "일정 만들기" },
+  read: { name: "Read", label: "파일 읽기", act: "파일을 실제로 연다" },
+  edit: { name: "Edit", label: "파일 고치기", act: "파일을 실제로 고친다" },
+  bash: { name: "Bash", label: "명령 실행", act: "명령을 내 컴퓨터에서 실제로 실행한다" },
 };
 const toolQs = [
-  { label: "날씨", q: "지금 서울 날씨 어때? 우산 챙겨야 해?", tool: "weather",
-    input: '{ "city": "서울" }', result: '{ "temp": 12, "rain_chance": 70 }',
-    answer: "지금 서울은 12도이고 비 올 확률이 70%예요. 우산 챙기세요.",
-    noTool: "지금 서울 날씨는 제가 확인할 수 없어요. 날씨 앱에서 확인해 주세요.",
-    noToolWhy: "지금 날씨는 학습이 끝난 뒤의 일이라 모른다. 가져올 방법도 없다." },
-  { label: "계산", q: "38,472 × 917은 얼마야?", tool: "calc",
-    input: '{ "expression": "38472 * 917" }', result: "35278824",
-    answer: "38,472 × 917 = 35,278,824예요.",
-    noTool: "38,472 × 917 = 35,278,224예요.",
-    noToolWhy: "그럴듯하지만 틀린 예시다 (정답 35,278,824). 실제로 계산하는 게 아니라 숫자 토큰을 이어 쓰는 것이라 큰 수에서 실수할 수 있다." },
-  { label: "일정", q: "내일 오후 3시에 팀 회의 잡아 줘.", tool: "calendar",
-    input: '{ "title": "팀 회의", "start": "2026-11-04 15:00" }', result: '{ "ok": true, "event_id": "evt_31" }',
-    answer: "내일(11/4) 오후 3시에 팀 회의를 잡았어요.",
-    noTool: "캘린더에 직접 일정을 넣을 수는 없어요. 대신 회의 초대 문구를 써 드릴까요?",
-    noToolWhy: "모델은 글만 쓸 수 있다. 캘린더를 바꾸는 행동은 도구가 있어야 한다." },
-  { label: "도구 필요 없음", q: "회의록 잘 쓰는 법 세 줄로 알려 줘.", tool: null,
-    answer: "결정된 것, 담당자, 마감일을 먼저 적으세요. 논의 과정은 짧게 줄이세요. 끝나면 바로 공유하세요." },
+  { label: "파일 보기", q: "login.js에 뭐가 들어 있어?", tool: "read",
+    input: '{ "file_path": "login.js" }', result: '1: const btn = document.querySelector("#login")\n2: btn.textContent = "Sign in"',
+    answer: "login.js는 로그인 버튼을 찾아서, 버튼 글자를 \"Sign in\"으로 정하는 코드예요.",
+    noTool: "제가 파일을 직접 볼 수는 없어요. 내용을 복사해서 붙여 넣어 주세요.",
+    noToolWhy: "Claude는 내 컴퓨터의 파일을 볼 수 없다. 읽어 올 도구가 없다." },
+  { label: "테스트 돌리기", q: "테스트 돌려 봐.", tool: "bash",
+    input: '{ "command": "npm test" }', result: "통과 12개, 실패 0개",
+    answer: "테스트 12개가 모두 통과했어요.",
+    noTool: "제가 직접 테스트를 돌릴 수는 없어요. 터미널에서 npm test를 실행하고 결과를 알려 주세요.",
+    noToolWhy: "명령을 실행하는 건 행동이다. Claude는 글만 쓸 수 있다." },
+  { label: "파일 고치기", q: "버튼 글자를 '로그인'으로 바꿔 줘.", tool: "edit",
+    input: '{ "file_path": "login.js",\n    "old_string": "Sign in", "new_string": "로그인" }', result: "수정 완료",
+    answer: "login.js 2번째 줄의 버튼 글자를 \"로그인\"으로 바꿨어요.",
+    noTool: "파일을 직접 고칠 수는 없어요. login.js 2번째 줄의 \"Sign in\"을 \"로그인\"으로 바꿔 주세요.",
+    noToolWhy: "고칠 방법은 글로 알려 줄 수 있지만, 파일을 실제로 바꾸는 건 도구가 있어야 한다. 그래서 내가 직접 고쳐야 한다." },
+  { label: "도구 필요 없음", q: "git이 뭐야? 한 줄로.", tool: null,
+    answer: "파일이 어떻게 바뀌어 왔는지 기록하고, 예전 상태로 돌아갈 수 있게 해 주는 도구예요." },
 ];
-const toolOn = { weather: true, calc: true, calendar: true };
+const toolOn = { read: true, edit: true, bash: true };
 let tq = 0, tstep = 1;
 function toolSteps() {
   const s = toolQs[tq], on = Object.keys(toolDefs).filter(k => toolOn[k]);
-  const rows = [{ who: "앱 → 모델", text: "내 질문에 \"너는 이 도구들을 쓸 수 있다\"는 목록을 붙여서 모델에게 보낸다.",
-    code: `질문: ${s.q}\n도구: ${on.length ? on.map(k => toolDefs[k].name).join(", ") : "없음"}` }];
+  const rows = [{ who: "Claude Code → Claude", text: "내 요청에 \"너는 이 도구들을 쓸 수 있다\"는 목록을 붙여서 Claude에게 보낸다.",
+    code: `요청: ${s.q}\n도구: ${on.length ? on.map(k => toolDefs[k].name).join(", ") : "없음"}` }];
   if (!s.tool) {
-    rows.push({ who: "모델 → 답", dark: true, text: s.answer });
-    return { rows, msg: "도구가 있어도 필요 없으면 쓰지 않는다. 쓸지 말지는 모델이 도구 설명을 보고 고른다." };
+    rows.push({ who: "Claude → 답", dark: true, text: s.answer });
+    return { rows, msg: "도구가 있어도 필요 없으면 쓰지 않는다. 쓸지 말지는 Claude가 도구 설명을 보고 고른다." };
   }
   const t = toolDefs[s.tool];
   if (!toolOn[s.tool]) {
-    rows.push({ who: "모델 → 답", dark: true, text: s.noTool });
+    rows.push({ who: "Claude → 답", dark: true, text: s.noTool });
     return { rows, msg: `<b>${t.label} 도구가 없다.</b> ${s.noToolWhy}` };
   }
-  rows.push({ who: "모델 → 앱", dark: true, text: "답 대신 도구 호출을 적어서 보낸다. 직접 실행하지는 않는다.",
+  rows.push({ who: "Claude → Claude Code", dark: true, text: "답 대신 도구 호출을 적어서 보낸다. 직접 실행하지는 않는다.",
     code: `{ "type": "tool_use", "name": "${t.name}",\n  "input": ${s.input} }` });
-  rows.push({ who: "앱이 실행", text: `앱(코드)이 ${t.label} 기능을 실제로 실행한다.`, code: `결과: ${s.result}` });
-  rows.push({ who: "앱 → 모델", text: "결과를 컨텍스트에 붙여서 다시 보낸다.",
+  rows.push({ who: "Claude Code가 실행", text: `Claude Code가 ${t.act}.`, code: `결과:\n${s.result}` });
+  rows.push({ who: "Claude Code → Claude", text: "결과를 컨텍스트에 붙여서 다시 보낸다.",
     code: `{ "type": "tool_result", "content": ${JSON.stringify(s.result)} }` });
-  rows.push({ who: "모델 → 답", dark: true, text: s.answer });
-  return { rows, msg: "모델에게 <b>두 번</b> 요청했다. 한 번은 도구 호출을 받으려고, 한 번은 결과를 주고 답을 받으려고." };
+  rows.push({ who: "Claude → 답", dark: true, text: s.answer });
+  return { rows, msg: "Claude에게 <b>두 번</b> 요청했다. 한 번은 도구 호출을 받으려고, 한 번은 결과를 주고 답을 받으려고. Claude Code 대화창의 접힌 줄 하나가 이 왕복 하나다." };
 }
 function renderTool() {
   document.getElementById("tool-qs").innerHTML = toolQs.map((s, i) =>
@@ -2180,15 +2165,6 @@ document.getElementById("tool-reset").addEventListener("click", () => { tstep = 
 renderTool();
 /* ---------- 4강: 에이전트 루프 ---------- */
 const agentTasks = [
-  { label: "출장 준비", task: "다음 주 수요일 10시에 부산 미팅이야. 출장 준비해 줘.",
-    turns: [
-      ["날씨부터 봐야 챙길 게 정해진다.", 'get_weather({ "city": "부산", "date": "수" })', "비 올 확률 80%"],
-      ["10시 미팅이면 아침 기차가 필요하다.", 'search_train({ "from": "서울", "to": "부산", "date": "수" })', "07:00, 09:30 자리 있음"],
-      ["09:30은 늦는다. 07:00으로 예매한다.", 'book_train({ "time": "07:00" })', "예매 완료"],
-      ["캘린더에도 넣어 둔다.", 'create_event({ "title": "부산 미팅", "start": "수 10:00" })', "등록됨"],
-    ],
-    answer: "수요일 07:00 KTX를 예매하고 캘린더에 미팅을 등록했어요. 비 소식이 있으니 우산 챙기세요.",
-    msg: "사람은 처음에 한 번만 말했다. 무엇을 어떤 순서로 할지는 모델이 <b>결과를 보면서</b> 정했다. 날씨를 봐서 우산을 챙기라고 했고, 기차 시간을 봐서 07:00을 골랐다." },
   { label: "버그 고치기 (Claude Code)", task: "로그인 버튼이 안 눌려. 고쳐 줘.",
     turns: [
       ["코드부터 본다.", 'Read({ "file": "login.js" })', "버튼에 disabled가 항상 걸려 있다"],
@@ -2199,6 +2175,15 @@ const agentTasks = [
     ],
     answer: "버튼이 항상 비활성화되던 조건을 고쳤어요. 비밀번호가 비어 있으면 막는 조건도 더했고, 테스트는 모두 통과해요.",
     msg: "3번째 반복에서 테스트가 실패하자, <b>그 결과를 보고 스스로 다시 고쳤다.</b> Claude Code가 일하는 방식이 이것이다." },
+  { label: "출장 준비", task: "다음 주 수요일 10시에 부산 미팅이야. 출장 준비해 줘.",
+    turns: [
+      ["날씨부터 봐야 챙길 게 정해진다.", 'get_weather({ "city": "부산", "date": "수" })', "비 올 확률 80%"],
+      ["10시 미팅이면 아침 기차가 필요하다.", 'search_train({ "from": "서울", "to": "부산", "date": "수" })', "07:00, 09:30 자리 있음"],
+      ["09:30은 늦는다. 07:00으로 예매한다.", 'book_train({ "time": "07:00" })', "예매 완료"],
+      ["캘린더에도 넣어 둔다.", 'create_event({ "title": "부산 미팅", "start": "수 10:00" })', "등록됨"],
+    ],
+    answer: "수요일 07:00 KTX를 예매하고 캘린더에 미팅을 등록했어요. 비 소식이 있으니 우산 챙기세요.",
+    msg: "사람은 처음에 한 번만 말했다. 무엇을 어떤 순서로 할지는 모델이 <b>결과를 보면서</b> 정했다. 날씨를 봐서 우산을 챙기라고 했고, 기차 시간을 봐서 07:00을 골랐다." },
 ];
 let at = 0, astep = 0;
 function renderAgent() {
