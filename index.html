@@ -437,10 +437,10 @@
   <div class="divider"></div>
 
   <h2>5단계 로드맵</h2>
-  <p class="body" style="margin:0 0 8px">오케스트레이션은 에이전트 여러 개를 나눠서 굴리는 것이고, 에이전트는 LLM에 도구를 붙여서 반복시키는 것이다. 그래서 LLM부터 순서대로 봤다.</p>
+  <p class="body" style="margin:0 0 8px">오케스트레이션은 에이전트 여러 개를 나눠서 굴리는 것이고, 에이전트는 LLM에 도구를 붙여서 반복시키는 거예요. 그래서 LLM부터 순서대로 봤어요.</p>
   <div class="cmap" id="cmap"></div>
   <ol class="steps" id="steps"></ol>
-  <p class="hint">진행률과 퀴즈 기록은 보는 사람의 브라우저에만 따로 저장된다. 각 강의 퀴즈를 한 번 끝까지 풀면 완료로 바뀐다. <button class="reset-btn" onclick="resetProgress()"><i class="ph ph-arrow-counter-clockwise"></i>내 기록 지우기</button></p>
+  <p class="hint">진행률과 퀴즈 기록은 보는 사람의 브라우저에만 따로 저장돼요. 각 강의 퀴즈를 한 번 끝까지 풀면 완료로 바뀌어요. <button class="reset-btn" onclick="resetProgress()"><i class="ph ph-arrow-counter-clockwise"></i>내 기록 지우기</button></p>
 
   <div class="divider"></div>
 
@@ -451,7 +451,7 @@
     <span>퀴즈로 확인</span><i class="ph ph-arrow-right"></i>
     <span>헷갈린 점 기록</span>
   </div>
-  <p class="hint">시각적으로 공부해 보라는 피드백을 받아서, 강의마다 직접 눌러 볼 수 있는 페이지로 만들었다. 강의 하나는 다섯 장의 카드로 넘겨 보고, 방향키(← →)로도 넘어간다.</p>
+  <p class="hint">시각적으로 공부해 보라는 피드백을 받아서, 강의마다 직접 눌러 볼 수 있는 페이지로 만들었어요. 강의 하나는 다섯 장의 카드로 넘겨 보고, 방향키(← →)로도 넘어가요.</p>
   <div class="anatomy">
     <div><i class="ph ph-book-open-text"></i><b>개념</b><small>한 문장 요약</small></div>
     <div><i class="ph ph-hand-pointing"></i><b>해 보기</b><small>눌러 보며 체험</small></div>
@@ -468,7 +468,7 @@
   <div class="divider"></div>
 
   <h2>돌아보기</h2>
-  <p class="body" style="margin:0">목요일에 채울 예정. 어려웠던 점, 새로 알게 된 점, 다음에 볼 것.</p>
+  <p class="body" style="margin:0">목요일에 채울 예정이에요. 어려웠던 점, 새로 알게 된 점, 다음에 볼 것을 적어요.</p>
 
   <div class="divider"></div>
   <button class="start-btn" onclick="go('lesson1')">1강 보기</button>
@@ -483,9 +483,9 @@
     <h1>LLM은<br>다음 단어를 맞히는 모델</h1>
     <p class="sub">ChatGPT나 Claude가 실제로 하는 일.</p>
     <div class="body" style="margin-top:40px">
-      <p>LLM(대형 언어 모델)은 지금까지 나온 글을 보고 <strong>다음에 올 단어를 예측</strong>한다.</p>
-      <p>단어 하나를 고르면 문장 끝에 붙이고, 다시 다음 단어를 예측한다. 이걸 수백 번 반복한 결과가 우리가 보는 답변이다.</p>
-      <p>엄청난 양의 글로 이 예측을 학습하면서 문법, 지식, 논리, 말투가 같이 따라왔다. 똑똑해 보이는 건 그 결과다.</p>
+      <p>LLM(대형 언어 모델)은 지금까지 나온 글을 보고 <strong>다음에 올 단어를 예측</strong>해요.</p>
+      <p>단어 하나를 고르면 문장 끝에 붙이고, 다시 다음 단어를 예측해요. 이걸 수백 번 반복한 결과가 우리가 보는 답변이에요.</p>
+      <p>엄청난 양의 글로 이 예측을 학습하면서 문법, 지식, 논리, 말투가 같이 따라왔어요. 똑똑해 보이는 건 그 결과예요.</p>
     </div>
     <div class="flow-steps">
       <div><small>입력</small>오늘 날씨가</div><i class="ph ph-arrow-right"></i>
@@ -498,7 +498,7 @@
   <!-- 2. 해 보기 -->
   <div class="lesson-step" data-step="demo" data-title="해 보기" hidden>
     <h1>다음 단어 예측 해 보기</h1>
-    <p class="sub">막대를 누르면 그 단어를 고른다. "확률대로 뽑기"를 여러 번 누르면 매번 다른 문장이 나온다.</p>
+    <p class="sub">막대를 누르면 그 단어를 골라요. "확률대로 뽑기"를 여러 번 누르면 매번 다른 문장이 나와요.</p>
     <div class="card" style="margin-top:40px">
       <div class="sentence" id="sentence"></div>
       <div id="bars"></div>
@@ -507,18 +507,18 @@
         <button onclick="resetDemo()">처음부터</button>
       </div>
     </div>
-    <p class="hint">이해하기 쉽게 단어로 나눴지만, 실제로는 단어보다 작은 <strong>토큰</strong> 단위로 예측한다. 다음 장에서 자세히.</p>
+    <p class="hint">이해하기 쉽게 단어로 나눴지만, 실제로는 단어보다 작은 <strong>토큰</strong> 단위로 예측해요. 다음 장에서 자세히.</p>
   </div>
 
   <!-- 3. 자세히 -->
   <div class="lesson-step" data-step="deep" data-title="자세히" hidden>
     <h1>자세히</h1>
-    <p class="sub">개념 카드에서 말한 것들이 실제로는 어떻게 생겼는지. 블록마다 한 줄 요약부터 읽으면 된다.</p>
+    <p class="sub">개념 카드에서 말한 것들이 실제로는 어떻게 생겼는지. 블록마다 한 줄 요약부터 읽으면 돼요.</p>
 
     <!-- 1. 기억 -->
     <h3><span class="h-num">01</span>기억이 없다는 증거</h3>
-    <p class="tldr">AI 앱은 질문할 때마다 지금까지의 대화를 <strong>통째로 다시 보낸다.</strong></p>
-    <p class="body">비유하면, 매번 처음 만나는 사람에게 "지금까지 우리가 나눈 대화는 이거야"라고 대화록을 건네고 나서 질문하는 것과 같다. 모델은 그 대화록을 읽고 다음 말을 이어 쓴다.</p>
+    <p class="tldr">AI 앱은 질문할 때마다 지금까지의 대화를 <strong>통째로 다시 보내요.</strong></p>
+    <p class="body">비유하면, 매번 처음 만나는 사람에게 "지금까지 우리가 나눈 대화는 이거야"라고 대화록을 건네고 나서 질문하는 것과 같아요. 모델은 그 대화록을 읽고 다음 말을 이어 써요.</p>
     <div class="code-pair">
       <div>
         <div class="code-label">첫 번째 질문을 할 때 보내는 것</div>
@@ -544,28 +544,28 @@
       </div>
     </div>
     <div class="explain">
-      <div><code>messages</code><span>지금까지의 대화 목록. 두 번째 요청에는 첫 질문과 답이 다시 들어가 있다.</span></div>
+      <div><code>messages</code><span>지금까지의 대화 목록. 두 번째 요청에는 첫 질문과 답이 다시 들어가 있어요.</span></div>
       <div><code>role: "user"</code><span>내가 한 말</span></div>
       <div><code>role: "assistant"</code><span>AI가 한 말</span></div>
       <div><code>model</code><span>어떤 모델을 쓸지</span></div>
       <div><code>max_tokens</code><span>답을 최대 얼마나 길게 쓸지 (토큰 수)</span></div>
     </div>
-    <p class="hint">Claude API의 요청 형식을 줄여서 옮겼다. 진하게 표시한 줄이 새로 추가된 부분.</p>
+    <p class="hint">Claude API의 요청 형식을 줄여서 옮겼어요. 진하게 표시한 줄이 새로 추가된 부분.</p>
 
     <!-- 2. 토큰 -->
     <h3><span class="h-num">02</span>토큰</h3>
-    <p class="tldr">AI는 글을 <strong>토큰</strong>이라는 조각으로 잘라서 읽고 쓴다. 단어보다 작을 때가 많다.</p>
-    <p class="body">레고 블록처럼 생각하면 된다. 자주 쓰는 덩어리("오늘")는 블록 하나, 덜 쓰는 건 여러 블록으로 나뉜다. 1강에서 "다음 단어를 맞힌다"고 했던 건 정확히는 <strong>다음 토큰</strong>을 맞히는 것이다.</p>
+    <p class="tldr">AI는 글을 <strong>토큰</strong>이라는 조각으로 잘라서 읽고 써요. 단어보다 작을 때가 많아요.</p>
+    <p class="body">레고 블록처럼 생각하면 돼요. 자주 쓰는 덩어리("오늘")는 블록 하나, 덜 쓰는 건 여러 블록으로 나뉘어요. 1강에서 "다음 단어를 맞힌다"고 했던 건 정확히는 <strong>다음 토큰</strong>을 맞히는 거예요.</p>
     <div class="card tokens-card">
       <div class="tokens"><span>오늘</span><span><i>·</i>날씨</span><span>가</span><span><i>·</i>맑</span><span>아서</span><span><i>·</i>공원</span><span>에</span></div>
-      <p class="hint" style="margin-top:16px">자르는 방식은 모델마다 다르다. 위는 이해를 위한 예시. <i>·</i>는 띄어쓰기.</p>
+      <p class="hint" style="margin-top:16px">자르는 방식은 모델마다 달라요. 위는 이해를 위한 예시예요. <i>·</i>는 띄어쓰기예요.</p>
     </div>
-    <div class="why"><b>왜 알아 둬야 하나</b>AI 요금과 한 번에 넣을 수 있는 글의 양이 모두 <strong>토큰 수</strong>로 정해진다.</div>
+    <div class="why"><b>왜 알아 둬야 하나</b>AI 요금과 한 번에 넣을 수 있는 글의 양이 모두 <strong>토큰 수</strong>로 정해져요.</div>
 
     <!-- 3. temperature -->
     <h3><span class="h-num">03</span>temperature</h3>
     <p class="tldr">다음 토큰을 고를 때 <strong>얼마나 모험을 할지</strong> 정하는 값.</p>
-    <p class="body">추첨 상자로 생각하면 된다. 값을 낮추면 1등 후보 쪽지가 상자를 거의 다 채워서 매번 1등이 뽑힌다. 값을 높이면 2등, 3등 쪽지도 골고루 들어가서 가끔 다른 게 뽑힌다. 아래 슬라이더를 왼쪽으로 밀어 보고 "20번 뽑아 보기"를 눌러 보면 차이가 보인다.</p>
+    <p class="body">추첨 상자로 생각하면 돼요. 값을 낮추면 1등 후보 쪽지가 상자를 거의 다 채워서 매번 1등이 뽑혀요. 값을 높이면 2등, 3등 쪽지도 골고루 들어가서 가끔 다른 게 뽑혀요. 아래 슬라이더를 왼쪽으로 밀어 보고 "20번 뽑아 보기"를 눌러 보면 차이가 보여요.</p>
     <div class="card">
       <div class="temp-head"><span>"오늘 날씨가" 다음 토큰</span><span>temperature <b id="temp-val">1.0</b></span></div>
       <input type="range" id="temp" min="0.1" max="1" step="0.05" value="1">
@@ -578,36 +578,36 @@
     </div>
     <div class="usecase">
       <div><b>낮게 두는 게 좋을 때</b><small>정답이 있는 일</small>
-        <ul><li>사실 확인, 분류, 정보 뽑아내기</li><li>코드 작성</li><li>같은 입력에 같은 결과가 나와야 하는 일. 예를 들어 문의 메일을 "환불 / 배송 / 기타"로 나누는데 할 때마다 바뀌면 곤란하다</li></ul></div>
+        <ul><li>사실 확인, 분류, 정보 뽑아내기</li><li>코드 작성</li><li>같은 입력에 같은 결과가 나와야 하는 일. 예를 들어 문의 메일을 "환불 / 배송 / 기타"로 나누는데 할 때마다 바뀌면 곤란해요</li></ul></div>
       <div><b>높게 두는 게 좋을 때</b><small>정답이 여러 개인 일</small>
-        <ul><li>아이디어 내기, 카피 쓰기, 이야기 만들기</li><li>여러 번 뽑아서 그중 좋은 걸 고를 때</li><li>항상 1등만 고르면 글이 뻔해지고 같은 표현을 반복하기 쉽다</li></ul></div>
+        <ul><li>아이디어 내기, 카피 쓰기, 이야기 만들기</li><li>여러 번 뽑아서 그중 좋은 걸 고를 때</li><li>항상 1등만 고르면 글이 뻔해지고 같은 표현을 반복하기 쉬워요</li></ul></div>
     </div>
     <div class="why"><b>헷갈리기 쉬운 것</b>
       <ul>
-        <li><strong>일정하다 ≠ 정확하다.</strong> 낮추면 같은 답이 나올 뿐이다. 그 답이 틀렸으면 매번 똑같이 틀린다. 정확도는 모델이 아는 것과 넣어 준 정보에 달려 있다.</li>
-        <li><strong>0으로 해도 완전히 같지는 않다.</strong> Claude 공식 문서에도 0에서 완전히 결정적이지는 않다고 나온다. "거의 같다" 정도.</li>
-        <li><strong>오케스트레이션에서는 역할별로 다르게 쓴다.</strong> 아이디어를 내는 에이전트는 높게, 결과를 검토하고 채점하는 에이전트는 낮게.</li>
+        <li><strong>일정해요 ≠ 정확해요.</strong> 낮추면 같은 답이 나올 뿐이에요. 그 답이 틀렸으면 매번 똑같이 틀려요. 정확도는 모델이 아는 것과 넣어 준 정보에 달려 있어요.</li>
+        <li><strong>0으로 해도 완전히 같지는 않아요.</strong> Claude 공식 문서에도 0에서 완전히 결정적이지는 않다고 나와요. "거의 같아요" 정도.</li>
+        <li><strong>오케스트레이션에서는 역할별로 다르게 써요.</strong> 아이디어를 내는 에이전트는 높게, 결과를 검토하고 채점하는 에이전트는 낮게.</li>
       </ul>
     </div>
 
     <!-- 4. 만들어지는 순서 -->
     <h3><span class="h-num">04</span>모델이 만들어지는 순서</h3>
-    <p class="tldr">책을 엄청 읽고 → 대답하는 법을 배우고 → 그다음부터는 <strong>더 배우지 않는다.</strong></p>
+    <p class="tldr">책을 엄청 읽고 → 대답하는 법을 배우고 → 그다음부터는 <strong>더 배우지 않아요.</strong></p>
     <div class="pipeline">
-      <div><small>01 · 책 엄청 읽기</small><b>사전학습</b>인터넷 글, 책, 코드를 엄청나게 읽으며 다음 토큰 맞히기를 연습한다. 지식과 말투가 여기서 생긴다.</div>
-      <div><small>02 · 대답하는 법 배우기</small><b>미세조정</b>질문에 답하고 지시를 따르는 법을 따로 배운다. 사람이 더 나은 답을 고른 데이터로 다듬기도 한다.</div>
-      <div><small>03 · 졸업</small><b>사용</b>여기서부터는 고정이다. 대화를 아무리 해도 모델은 바뀌지 않고, 공부를 마친 시점 이후의 일은 모른다.</div>
+      <div><small>01 · 책 엄청 읽기</small><b>사전학습</b>인터넷 글, 책, 코드를 엄청나게 읽으며 다음 토큰 맞히기를 연습해요. 지식과 말투가 여기서 생겨요.</div>
+      <div><small>02 · 대답하는 법 배우기</small><b>미세조정</b>질문에 답하고 지시를 따르는 법을 따로 배워요. 사람이 더 나은 답을 고른 데이터로 다듬기도 해요.</div>
+      <div><small>03 · 졸업</small><b>사용</b>여기서부터는 고정이에요. 대화를 아무리 해도 모델은 바뀌지 않고, 공부를 마친 시점 이후의 일은 몰라요.</div>
     </div>
     <div class="why"><b>03 단계(졸업 후 고정) 때문에 생기는 일 두 가지</b>
       <ul>
-        <li><strong>지식에 시점이 있다.</strong> 공부할 때 읽은 글까지만 안다. 졸업 후 신문을 한 번도 안 본 사람처럼, 똑똑하지만 최근 소식은 모른다. 그래서 AI가 "제 지식은 어느 시점까지예요"라고 말한다.</li>
-        <li><strong>대화로는 배우지 않는다.</strong> 대화 중에 알려 준 건 그 대화 안에서만 쓰인다. 대화 내용은 매번 다시 넣어 주는 입력일 뿐 모델에 저장되지 않아서, 새 대화를 열면 모른다.</li>
+        <li><strong>지식에 시점이 있어요.</strong> 공부할 때 읽은 글까지만 알아요. 졸업 후 신문을 한 번도 안 본 사람처럼, 똑똑하지만 최근 소식은 몰라요. 그래서 AI가 "제 지식은 어느 시점까지예요"라고 말해요.</li>
+        <li><strong>대화로는 배우지 않아요.</strong> 대화 중에 알려 준 건 그 대화 안에서만 쓰여요. 대화 내용은 매번 다시 넣어 주는 입력일 뿐 모델에 저장되지 않아서, 새 대화를 열면 몰라요.</li>
       </ul>
     </div>
     <div class="why"><b>헷갈리기 쉬운 것</b>
       <ul>
-        <li>AI 앱의 "메모리" 기능은 모델이 배우는 게 아니다. 앱이 내 정보를 메모해 뒀다가 대화할 때 입력에 끼워 넣는 것. 2강에서 다룬다.</li>
-        <li>최신 정보를 아는 AI는 검색 도구로 그때그때 찾아보는 것. 3강에서 다룬다.</li>
+        <li>AI 앱의 "메모리" 기능은 모델이 배우는 게 아니에요. 앱이 내 정보를 메모해 뒀다가 대화할 때 입력에 끼워 넣는 거예요. 2강에서 다뤄요.</li>
+        <li>최신 정보를 아는 AI는 검색 도구로 그때그때 찾아보는 거예요. 3강에서 다뤄요.</li>
       </ul>
     </div>
   </div>
@@ -617,9 +617,9 @@
     <h1>정리</h1>
     <p class="sub">1강에서 가져갈 것.</p>
     <ol class="key-list" style="margin-top:40px">
-      <li><span class="num">01</span><div><strong>글을 받아서 글을 내놓는다</strong>입력 텍스트 → 출력 텍스트. 한 토큰씩 예측해서 이어 붙인다.</div></li>
-      <li><span class="num">02</span><div><strong>기억이 없다</strong>대화가 이어지는 것처럼 보이는 건 매번 이전 대화 전체를 다시 넣어 주기 때문이다.</div></li>
-      <li><span class="num">03</span><div><strong>혼자서는 행동하지 못한다</strong>글만 쓸 수 있다. 검색이나 파일 저장은 못 한다.</div></li>
+      <li><span class="num">01</span><div><strong>글을 받아서 글을 내놓아요</strong>입력 텍스트 → 출력 텍스트. 한 토큰씩 예측해서 이어 붙여요.</div></li>
+      <li><span class="num">02</span><div><strong>기억이 없어요</strong>대화가 이어지는 것처럼 보이는 건 매번 이전 대화 전체를 다시 넣어 주기 때문이에요.</div></li>
+      <li><span class="num">03</span><div><strong>혼자서는 행동하지 못해요</strong>글만 쓸 수 있어요. 검색이나 파일 저장은 못 해요.</div></li>
     </ol>
     <div class="callout">
       <div class="title">다음으로 이어지는 것</div>
@@ -629,15 +629,15 @@
     <div class="qa">
       <details>
         <summary>기억이 없는데 대화는 어떻게 이어지나?</summary>
-        <p>앱이 질문할 때마다 이전 대화 전체를 다시 붙여서 보낸다. 모델은 매번 처음 보는 대화록을 읽고 이어 쓰는 것. 실제 요청 모양은 "자세히" 카드 01에 있다.</p>
+        <p>앱이 질문할 때마다 이전 대화 전체를 다시 붙여서 보내요. 모델은 매번 처음 보는 대화록을 읽고 이어 쓰는 거예요. 실제 요청 모양은 "자세히" 카드 01에 있어요.</p>
       </details>
       <details>
         <summary>"제 지식은 어느 시점까지예요"는 무슨 뜻이고, 대화를 많이 하면 AI가 똑똑해지지 않나?</summary>
-        <p>모델은 공부(학습)를 마치면 그 상태로 굳는다. 그래서 공부할 때 읽은 글 이후의 일은 모르고, 대화 중에 알려 준 것도 그 대화 안에서만 쓰일 뿐 모델에 저장되지 않는다. 앱의 "메모리" 기능은 앱이 메모해 뒀다가 입력에 끼워 넣는 것이지 모델이 배우는 게 아니다.</p>
+        <p>모델은 공부(학습)를 마치면 그 상태로 굳어요. 그래서 공부할 때 읽은 글 이후의 일은 모르고, 대화 중에 알려 준 것도 그 대화 안에서만 쓰일 뿐 모델에 저장되지 않아요. 앱의 "메모리" 기능은 앱이 메모해 뒀다가 입력에 끼워 넣는 것이지 모델이 배우는 게 아니에요.</p>
       </details>
       <details>
         <summary>temperature를 낮춰서 답이 하나로 정해지는 게 좋은 거 아닌가?</summary>
-        <p>하는 일에 따라 다르다. 사실 확인이나 분류, 코드처럼 정답이 있는 일은 낮게, 아이디어나 글쓰기처럼 정답이 여러 개인 일은 높게 둔다. 그리고 낮춘다고 정확해지는 건 아니다. 같은 답이 나올 뿐, 틀린 답이면 매번 똑같이 틀린다.</p>
+        <p>하는 일에 따라 달라요. 사실 확인이나 분류, 코드처럼 정답이 있는 일은 낮게, 아이디어나 글쓰기처럼 정답이 여러 개인 일은 높게 둬요. 그리고 낮춘다고 정확해지는 건 아니에요. 같은 답이 나올 뿐, 틀린 답이면 매번 똑같이 틀려요.</p>
       </details>
     </div>
     <h3>용어</h3>
@@ -647,7 +647,7 @@
   <!-- 5. 퀴즈 -->
   <div class="lesson-step" data-step="quiz" data-title="퀴즈" hidden>
     <h1>1강 퀴즈</h1>
-    <p class="sub" style="margin-bottom:40px">27문제 중 12문제를 풀 때마다 새로 뽑고, 보기 순서도 섞는다. 객관식, O/X, 초성, 순서 맞추기.</p>
+    <p class="sub" style="margin-bottom:40px">27문제 중 12문제를 풀 때마다 새로 뽑고, 보기 순서도 섞어요. 객관식, O/X, 초성, 순서 맞추기.</p>
     <div id="quiz"></div>
   </div>
   </section>
@@ -656,12 +656,12 @@
 
   <!-- 1. 개념 -->
   <div class="lesson-step" data-step="concept" data-title="개념">
-    <h1>AI가 아는 건<br>지금 넣어 준 글뿐이다</h1>
+    <h1>AI가 아는 건<br>지금 넣어 준 글뿐이에요</h1>
     <p class="sub">프롬프트와 컨텍스트.</p>
     <div class="body" style="margin-top:40px">
-      <p><strong>프롬프트</strong>는 모델에게 주는 지시나 질문이다. "이 회의록 3줄로 요약해 줘" 같은 것.</p>
-      <p><strong>컨텍스트</strong>는 모델이 답을 쓰기 전에 한 번에 읽는 글 전체다. 내 질문만 들어가는 게 아니라, 앱이 미리 넣어 둔 지시, 지금까지의 대화, 첨부한 자료까지 모두 합쳐서 들어간다. 1강에서 본 <code class="inline">messages</code>가 바로 이것이다.</p>
-      <p>모델은 학습할 때 읽은 지식 말고는 <strong>컨텍스트에 있는 것만</strong> 볼 수 있다. 그래서 무엇을 넣어 주느냐가 답의 품질을 거의 결정한다.</p>
+      <p><strong>프롬프트</strong>는 모델에게 주는 지시나 질문이에요. "이 회의록 3줄로 요약해 줘" 같은 거예요.</p>
+      <p><strong>컨텍스트</strong>는 모델이 답을 쓰기 전에 한 번에 읽는 글 전체예요. 내 질문만 들어가는 게 아니라, 앱이 미리 넣어 둔 지시, 지금까지의 대화, 첨부한 자료까지 모두 합쳐서 들어가요. 1강에서 본 <code class="inline">messages</code>가 바로 이거예요.</p>
+      <p>모델은 학습할 때 읽은 지식 말고는 <strong>컨텍스트에 있는 것만</strong> 볼 수 있어요. 그래서 무엇을 넣어 주느냐가 답의 품질을 거의 결정해요.</p>
     </div>
     <div class="ctx-diagram">
       <div class="ctx-stack">
@@ -681,7 +681,7 @@
   <!-- 2. 해 보기 -->
   <div class="lesson-step" data-step="demo" data-title="해 보기" hidden>
     <h1>컨텍스트 조립해 보기</h1>
-    <p class="sub">질문은 그대로 두고, 컨텍스트에 넣는 것만 바꿔 본다. 블록을 눌러서 켜고 끄면 답이 달라진다.</p>
+    <p class="sub">질문은 그대로 두고, 컨텍스트에 넣는 것만 바꿔 봐요. 블록을 눌러서 켜고 끄면 답이 달라져요.</p>
     <div class="card" style="margin-top:40px">
       <div class="ctx-toggles" id="ctx-toggles"></div>
       <div class="ctx-preview">
@@ -695,17 +695,17 @@
         <ul class="ctx-why" id="ctx-why"></ul>
       </div>
     </div>
-    <p class="hint">답은 이해를 위해 미리 써 둔 예시다. 실제 모델도 이런 식으로, 넣어 준 것만 가지고 답한다.</p>
+    <p class="hint">답은 이해를 위해 미리 써 둔 예시예요. 실제 모델도 이런 식으로, 넣어 준 것만 가지고 답해요.</p>
   </div>
 
   <!-- 3. 자세히 -->
   <div class="lesson-step" data-step="deep" data-title="자세히" hidden>
     <h1>자세히</h1>
-    <p class="sub">블록마다 한 줄 요약부터 읽으면 된다.</p>
+    <p class="sub">블록마다 한 줄 요약부터 읽으면 돼요.</p>
 
     <h3><span class="h-num">01</span>시스템 프롬프트</h3>
     <p class="tldr">앱이 대화 맨 앞에 넣어 두는 지시. <strong>같은 모델이 앱마다 성격이 다른 이유</strong>다.</p>
-    <p class="body">신입 직원에게 업무 매뉴얼을 먼저 쥐여 주고 손님을 받게 하는 것과 같다. 사용자 눈에는 안 보이지만, 질문할 때마다 매번 같이 간다.</p>
+    <p class="body">신입 직원에게 업무 매뉴얼을 먼저 쥐여 주고 손님을 받게 하는 것과 같아요. 사용자 눈에는 안 보이지만, 질문할 때마다 매번 같이 가요.</p>
 <pre class="code">{
   "model": "claude-sonnet-5-5",
   "max_tokens": 1024,
@@ -715,13 +715,13 @@
   ]
 }</pre>
     <div class="explain">
-      <div><code>system</code><span>시스템 프롬프트. 말투, 역할, 지켜야 할 규칙을 여기에 쓴다.</span></div>
+      <div><code>system</code><span>시스템 프롬프트. 말투, 역할, 지켜야 할 규칙을 여기에 써요.</span></div>
       <div><code>messages</code><span>사용자와 주고받은 대화 (1강에서 본 것)</span></div>
     </div>
 
     <h3><span class="h-num">02</span>컨텍스트 윈도우</h3>
-    <p class="tldr">컨텍스트에 한 번에 넣을 수 있는 글의 <strong>최대량</strong>. 토큰으로 센다.</p>
-    <p class="body">책상 크기로 생각하면 된다. 책상에 다 못 올리면 오래된 서류부터 치워야 한다. 대화가 길어져서 한계를 넘으면, 앱은 오래된 대화를 잘라 내거나 요약해서 넣는다. 아래에서 대화를 계속 추가해 보자.</p>
+    <p class="tldr">컨텍스트에 한 번에 넣을 수 있는 글의 <strong>최대량</strong>. 토큰으로 세요.</p>
+    <p class="body">책상 크기로 생각하면 돼요. 책상에 다 못 올리면 오래된 서류부터 치워야 해요. 대화가 길어져서 한계를 넘으면, 앱은 오래된 대화를 잘라 내거나 요약해서 넣어요. 아래에서 대화를 계속 추가해 보자.</p>
     <div class="card">
       <div class="win-head"><span>컨텍스트 윈도우 (이 예시에서는 대화 5개까지)</span><span id="win-count"></span></div>
       <div class="win" id="win"></div>
@@ -733,14 +733,14 @@
     </div>
     <div class="why"><b>왜 알아 둬야 하나</b>
       <ul>
-        <li>긴 대화에서 AI가 처음에 한 말을 잊는 이유가 이것이다. 중요한 건 다시 말해 주거나 새 대화를 여는 게 낫다.</li>
-        <li>요즘 모델의 윈도우는 수십만 토큰 단위로 꽤 넓지만 한계는 있다. 그리고 넣는 글도 토큰이라서, <strong>컨텍스트가 길수록 요금도 늘어난다.</strong></li>
+        <li>긴 대화에서 AI가 처음에 한 말을 잊는 이유가 이거예요. 중요한 건 다시 말해 주거나 새 대화를 여는 게 나아요.</li>
+        <li>요즘 모델의 윈도우는 수십만 토큰 단위로 꽤 넓지만 한계는 있어요. 그리고 넣는 글도 토큰이라서, <strong>컨텍스트가 길수록 요금도 늘어나요.</strong></li>
       </ul>
     </div>
 
     <h3><span class="h-num">03</span>좋은 프롬프트</h3>
-    <p class="tldr">AI는 내 상황을 모른다. <strong>필요한 건 다 적어 준다.</strong></p>
-    <p class="body">처음 온 외주 작업자에게 일을 맡긴다고 생각하면 된다. "요약해 줘"만 들으면 누구를 위한 건지, 얼마나 길게 쓸지, 무엇이 중요한지 모른다.</p>
+    <p class="tldr">AI는 내 상황을 몰라요. <strong>필요한 건 다 적어 줘요.</strong></p>
+    <p class="body">처음 온 외주 작업자에게 일을 맡긴다고 생각하면 돼요. "요약해 줘"만 들으면 누구를 위한 건지, 얼마나 길게 쓸지, 무엇이 중요한지 몰라요.</p>
     <div class="pipeline four">
       <div><small>01</small><b>역할과 목표</b>무엇을 위해 하는 일인지</div>
       <div><small>02</small><b>맥락</b>배경, 대상, 참고 자료</div>
@@ -753,14 +753,14 @@
     </div>
 
     <h3><span class="h-num">04</span>메모리 기능의 정체</h3>
-    <p class="tldr">모델이 기억하는 게 아니다. <strong>앱이 메모해 뒀다가 컨텍스트에 끼워 넣는 것</strong>이다.</p>
+    <p class="tldr">모델이 기억하는 게 아니에요. <strong>앱이 메모해 뒀다가 컨텍스트에 끼워 넣는 것</strong>이에요.</p>
     <div class="pipeline four">
       <div><small>01</small><b>정보가 나옴</b>"나 다음 주에 이사해"</div>
-      <div><small>02</small><b>앱이 메모</b>앱이 따로 저장해 둔다</div>
+      <div><small>02</small><b>앱이 메모</b>앱이 따로 저장해 둬요</div>
       <div><small>03</small><b>새 대화</b>모델은 여전히 아무것도 모름</div>
-      <div><small>04</small><b>끼워 넣기</b>앱이 메모를 컨텍스트에 넣어 보낸다</div>
+      <div><small>04</small><b>끼워 넣기</b>앱이 메모를 컨텍스트에 넣어 보내요</div>
     </div>
-    <div class="why"><b>그래서</b>1강의 "대화로는 배우지 않는다"와 모순이 아니다. 모델은 그대로고, 컨텍스트에 들어가는 글이 늘었을 뿐이다.</div>
+    <div class="why"><b>그래서</b>1강의 "대화로는 배우지 않는다"와 모순이 아니에요. 모델은 그대로고, 컨텍스트에 들어가는 글이 늘었을 뿐이에요.</div>
   </div>
 
   <!-- 4. 정리 -->
@@ -768,14 +768,14 @@
     <h1>정리</h1>
     <p class="sub">2강에서 가져갈 것.</p>
     <ol class="key-list" style="margin-top:40px">
-      <li><span class="num">01</span><div><strong>모델은 컨텍스트에 있는 것만 본다</strong>학습한 지식 말고는, 지금 넣어 준 글이 전부다.</div></li>
-      <li><span class="num">02</span><div><strong>컨텍스트 = 시스템 프롬프트 + 이전 대화 + 자료 + 질문</strong>내 질문은 그중 일부일 뿐이다.</div></li>
-      <li><span class="num">03</span><div><strong>크기 제한이 있다</strong>컨텍스트 윈도우를 넘으면 오래된 내용부터 잘리거나 요약된다. 길수록 요금도 는다.</div></li>
+      <li><span class="num">01</span><div><strong>모델은 컨텍스트에 있는 것만 봐요</strong>학습한 지식 말고는, 지금 넣어 준 글이 전부예요.</div></li>
+      <li><span class="num">02</span><div><strong>컨텍스트 = 시스템 프롬프트 + 이전 대화 + 자료 + 질문</strong>내 질문은 그중 일부일 뿐이에요.</div></li>
+      <li><span class="num">03</span><div><strong>크기 제한이 있어요</strong>컨텍스트 윈도우를 넘으면 오래된 내용부터 잘리거나 요약돼요. 길수록 요금도 늘어요.</div></li>
       <li><span class="num">04</span><div><strong>좋은 프롬프트는 짐작할 게 없는 프롬프트</strong>역할과 목표, 맥락, 구체적 지시, 예시.</div></li>
     </ol>
     <div class="callout">
       <div class="title">다음으로 이어지는 것</div>
-      지금은 필요한 자료를 사람이 직접 컨텍스트에 넣었다. 모델이 필요한 정보를 <strong>스스로 가져오게</strong> 하려면 도구가 필요하다(3강).
+      지금은 필요한 자료를 사람이 직접 컨텍스트에 넣었어요. 모델이 필요한 정보를 <strong>스스로 가져오게</strong> 하려면 도구가 필요하다(3강).
     </div>
     <h3>용어</h3>
     <ul class="terms" data-terms="2강"></ul>
@@ -784,7 +784,7 @@
   <!-- 5. 퀴즈 -->
   <div class="lesson-step" data-step="quiz" data-title="퀴즈" hidden>
     <h1>2강 퀴즈</h1>
-    <p class="sub" style="margin-bottom:40px">문제 은행에서 12문제를 풀 때마다 새로 뽑고, 보기 순서도 섞는다.</p>
+    <p class="sub" style="margin-bottom:40px">문제 은행에서 12문제를 풀 때마다 새로 뽑고, 보기 순서도 섞어요.</p>
     <div id="quiz-lesson2"></div>
   </div>
   </section>
@@ -793,41 +793,41 @@
 
   <!-- 1. 개념 -->
   <div class="lesson-step" data-step="concept" data-title="개념">
-    <h1>AI는 도구를 직접 쓰지 않는다<br>써 달라고 적을 뿐이다</h1>
-    <p class="sub">도구 사용 (Tool use). 예시는 매일 쓰는 Claude Code로 본다.</p>
+    <h1>AI는 도구를 직접 쓰지 않아요<br>써 달라고 적을 뿐이에요</h1>
+    <p class="sub">도구 사용 (Tool use). 예시는 매일 쓰는 Claude Code로 봐요.</p>
     <div class="body" style="margin-top:40px">
-      <p>1강에서 LLM은 글만 쓸 수 있다고 했다. Claude(모델)도 마찬가지다. 혼자서는 내 컴퓨터의 파일을 열지도, 고치지도, 명령을 실행하지도 못한다.</p>
-      <p>그런데 Claude Code에서는 다 한다. <strong>도구</strong> 덕분이다. Claude Code(앱)가 "너는 <code class="inline">Read</code>(파일 읽기), <code class="inline">Edit</code>(파일 고치기), <code class="inline">Bash</code>(명령 실행)를 쓸 수 있다"는 목록을 같이 보내면, Claude는 필요할 때 <strong>"Read로 login.js 열어 줘"</strong> 같은 글을 쓴다. 실제로 파일을 여는 건 Claude Code다.</p>
-      <p>모델은 여전히 글만 쓴다. 그 글을 앱이 행동으로 바꿔 주는 것이다.</p>
+      <p>1강에서 LLM은 글만 쓸 수 있다고 했어요. Claude(모델)도 마찬가지예요. 혼자서는 내 컴퓨터의 파일을 열지도, 고치지도, 명령을 실행하지도 못해요.</p>
+      <p>그런데 Claude Code에서는 다 해요. <strong>도구</strong> 덕분이에요. Claude Code(앱)가 "너는 <code class="inline">Read</code>(파일 읽기), <code class="inline">Edit</code>(파일 고치기), <code class="inline">Bash</code>(명령 실행)를 쓸 수 있다"는 목록을 같이 보내면, Claude는 필요할 때 <strong>"Read로 login.js 열어 줘"</strong> 같은 글을 써요. 실제로 파일을 여는 건 Claude Code다.</p>
+      <p>모델은 여전히 글만 써요. 그 글을 앱이 행동으로 바꿔 주는 거예요.</p>
     </div>
     <div class="flow-steps">
-      <div><small>01 Claude Code</small>내 요청과 도구 목록(Read, Edit, Bash)을 보낸다</div>
+      <div><small>01 Claude Code</small>내 요청과 도구 목록(Read, Edit, Bash)을 보내요</div>
       <i class="ph ph-arrow-right"></i>
-      <div><small>02 Claude</small>"Read로 login.js 열어 줘"라고 쓴다</div>
+      <div><small>02 Claude</small>"Read로 login.js 열어 줘"라고 써요</div>
       <i class="ph ph-arrow-right"></i>
-      <div><small>03 Claude Code</small>실제로 파일을 열고, 내용을 다시 보낸다</div>
+      <div><small>03 Claude Code</small>실제로 파일을 열고, 내용을 다시 보내요</div>
       <i class="ph ph-arrow-right"></i>
-      <div><small>04 Claude</small>내용을 읽고 답한다</div>
+      <div><small>04 Claude</small>내용을 읽고 답해요</div>
     </div>
     <h3>비유로 보면</h3>
-    <p class="body">창문도 전화도 없는 방에 똑똑한 비서(Claude)가 있다. 비서는 쪽지만 쓸 수 있다. 문 밖에는 내 컴퓨터를 만질 수 있는 심부름꾼(Claude Code)이 있다.</p>
+    <p class="body">창문도 전화도 없는 방에 똑똑한 비서(Claude)가 있어요. 비서는 쪽지만 쓸 수 있어요. 문 밖에는 내 컴퓨터를 만질 수 있는 심부름꾼(Claude Code)이 있어요.</p>
     <div class="usecase">
-      <div><b>도구 목록이 없을 때</b><small>비서는 심부름꾼이 있는 줄 모른다</small><p class="prompt-ex">"login.js 왜 안 돼?"<br>→ "파일을 볼 수 없어요. 코드를 붙여 넣어 주세요"</p></div>
-      <div><b>도구 목록이 있을 때</b><small>"밖에 심부름꾼 있음. Read, Edit, Bash 가능" 메모가 같이 들어간다</small><p class="prompt-ex">"심부름꾼님, Read로 login.js 열어 주세요"<br>→ 심부름꾼이 파일 내용을 넣어 줌<br>→ "2번째 줄이 문제예요"</p></div>
+      <div><b>도구 목록이 없을 때</b><small>비서는 심부름꾼이 있는 줄 몰라요</small><p class="prompt-ex">"login.js 왜 안 돼?"<br>→ "파일을 볼 수 없어요. 코드를 붙여 넣어 주세요"</p></div>
+      <div><b>도구 목록이 있을 때</b><small>"밖에 심부름꾼 있음. Read, Edit, Bash 가능" 메모가 같이 들어가요</small><p class="prompt-ex">"심부름꾼님, Read로 login.js 열어 주세요"<br>→ 심부름꾼이 파일 내용을 넣어 줌<br>→ "2번째 줄이 문제예요"</p></div>
     </div>
-    <div class="why"><b>직접 확인하는 법</b>Claude Code 대화창에 접혀 있는 줄을 펼쳐 보면 Read, Edit, Bash가 보인다. 그게 Claude가 "이 도구를 이 값으로 불러 줘"라고 쓴 기록이다.</div>
+    <div class="why"><b>직접 확인하는 법</b>Claude Code 대화창에 접혀 있는 줄을 펼쳐 보면 Read, Edit, Bash가 보여요. 그게 Claude가 "이 도구를 이 값으로 불러 줘"라고 쓴 기록이에요.</div>
   </div>
 
   <!-- 2. 해 보기 -->
   <div class="lesson-step" data-step="demo" data-title="해 보기" hidden>
     <h1>도구 호출 따라가 보기</h1>
-    <p class="sub">Claude Code에 요청했을 때 화면 뒤에서 일어나는 일을 한 단계씩 본다.</p>
+    <p class="sub">Claude Code에 요청했을 때 화면 뒤에서 일어나는 일을 한 단계씩 봐요.</p>
     <div class="pipeline" style="margin-top:40px">
-      <div><small>등장인물 1</small><b>나</b>Claude Code에 요청을 쓴다</div>
+      <div><small>등장인물 1</small><b>나</b>Claude Code에 요청을 써요</div>
       <div><small>등장인물 2</small><b>Claude Code (앱)</b>내 컴퓨터에서 도구를 실제로 실행하는 손</div>
-      <div><small>등장인물 3</small><b>Claude (모델)</b>글만 쓰는 AI 본체. 도구가 필요하면 Claude Code에게 부탁한다</div>
+      <div><small>등장인물 3</small><b>Claude (모델)</b>글만 쓰는 AI 본체. 도구가 필요하면 Claude Code에게 부탁해요</div>
     </div>
-    <p class="hint">① 요청을 하나 고른다 → ② "다음 단계"를 눌러 1번부터 끝까지 본다 → ③ 아래 도구를 눌러 꺼 보고 같은 요청을 다시 본다.</p>
+    <p class="hint">① 요청을 하나 골라요 → ② "다음 단계"를 눌러 1번부터 끝까지 봐요 → ③ 아래 도구를 눌러 꺼 보고 같은 요청을 다시 봐요.</p>
     <div class="card" style="margin-top:24px">
       <div class="tool-row">
         <div class="code-label">① Claude Code에 할 요청 고르기</div>
@@ -844,17 +844,17 @@
       </div>
       <div class="temp-result" id="tool-msg"></div>
     </div>
-    <p class="hint">흐름은 실제와 같고, 파일 내용과 답은 이해를 위해 미리 써 둔 예시다.</p>
+    <p class="hint">흐름은 실제와 같고, 파일 내용과 답은 이해를 위해 미리 써 둔 예시예요.</p>
   </div>
 
   <!-- 3. 자세히 -->
   <div class="lesson-step" data-step="deep" data-title="자세히" hidden>
     <h1>자세히</h1>
-    <p class="sub">블록마다 한 줄 요약부터 읽으면 된다.</p>
+    <p class="sub">블록마다 한 줄 요약부터 읽으면 돼요.</p>
 
     <h3><span class="h-num">01</span>도구 설명서</h3>
-    <p class="tldr">Claude Code는 요청에 <strong>도구 목록을 설명서처럼</strong> 같이 보낸다. Claude는 이 설명만 보고 언제 쓸지 고른다.</p>
-    <p class="body">새로 온 직원에게 "사내 시스템은 이런 게 있고, 이럴 때 쓰면 된다"고 알려 주는 것과 같다. 시스템을 어떻게 만들었는지는 몰라도 된다. 이름과 쓰임새, 넣을 값만 알면 된다.</p>
+    <p class="tldr">Claude Code는 요청에 <strong>도구 목록을 설명서처럼</strong> 같이 보내요. Claude는 이 설명만 보고 언제 쓸지 골라요.</p>
+    <p class="body">새로 온 직원에게 "사내 시스템은 이런 게 있고, 이럴 때 쓰면 된다"고 알려 주는 것과 같아요. 시스템을 어떻게 만들었는지는 몰라도 돼요. 이름과 쓰임새, 넣을 값만 알면 돼요.</p>
     <div class="code-label">Claude Code가 Claude에게 보내는 요청 (간단히 줄임)</div>
 <pre class="code">{
   "model": "claude-sonnet-5-5",
@@ -876,15 +876,15 @@
   ]
 }</pre>
     <div class="explain">
-      <div><code>name</code><span>도구 이름. Claude가 부를 때 이 이름을 쓴다 (Read, Bash).</span></div>
-      <div><code>description</code><span>언제 쓰는 도구인지. Claude가 쓸지 말지 고르는 근거라서 제일 중요하다.</span></div>
+      <div><code>name</code><span>도구 이름. Claude가 부를 때 이 이름을 써요 (Read, Bash).</span></div>
+      <div><code>description</code><span>언제 쓰는 도구인지. Claude가 쓸지 말지 고르는 근거라서 제일 중요해요.</span></div>
       <div><code>input_schema</code><span>넣어야 하는 값. Read는 파일 경로, Bash는 실행할 명령.</span></div>
     </div>
-    <div class="why"><b>왜 알아 둬야 하나</b>도구 설명도 결국 컨텍스트에 들어가는 글이다. 설명이 애매하면 엉뚱할 때 부르거나, 필요할 때 안 부른다. 2강의 "짐작할 게 없게 적는다"가 여기에도 그대로 적용된다. 참고로 날씨 앱이라면 같은 모양으로 <code class="inline">get_weather</code> 같은 도구를 만들어 보낸다. 모양은 같고 이름, 설명, 넣는 값만 다르다.</div>
+    <div class="why"><b>왜 알아 둬야 하나</b>도구 설명도 결국 컨텍스트에 들어가는 글이에요. 설명이 애매하면 엉뚱할 때 부르거나, 필요할 때 안 불러요. 2강의 "짐작할 게 없게 적는다"가 여기에도 그대로 적용돼요. 참고로 날씨 앱이라면 같은 모양으로 <code class="inline">get_weather</code> 같은 도구를 만들어 보내요. 모양은 같고 이름, 설명, 넣는 값만 달라요.</div>
 
     <h3><span class="h-num">02</span>Claude의 응답과 결과 돌려주기</h3>
-    <p class="tldr">Claude는 답 대신 <strong>"Bash로 npm test 실행해 줘"</strong>를 적어서 멈춘다. Claude Code는 실행 결과를 붙여서 <strong>한 번 더</strong> 보낸다.</p>
-    <p class="body">식당에 비유하면 직원(Claude)이 주방(Claude Code)에 주문서를 넘기는 것이다. 요리는 주방이 하고, 직원은 나온 요리를 보고 손님(나)에게 설명한다.</p>
+    <p class="tldr">Claude는 답 대신 <strong>"Bash로 npm test 실행해 줘"</strong>를 적어서 멈춰요. Claude Code는 실행 결과를 붙여서 <strong>한 번 더</strong> 보내요.</p>
+    <p class="body">식당에 비유하면 직원(Claude)이 주방(Claude Code)에 주문서를 넘기는 거예요. 요리는 주방이 하고, 직원은 나온 요리를 보고 손님(나)에게 설명해요.</p>
     <div class="code-pair">
       <div>
         <div class="code-label">Claude의 응답</div>
@@ -913,14 +913,14 @@
       </div>
     </div>
     <div class="explain">
-      <div><code>stop_reason</code><span><code>tool_use</code>면 "도구를 써야 해서 멈췄다"는 뜻. Claude Code는 이걸 보고 명령을 실행한다.</span></div>
-      <div><code>input</code><span>Claude가 고른 값 (여기서는 <code>npm test</code>). Claude가 채운 것이라 틀릴 수도 있다.</span></div>
-      <div><code>tool_result</code><span>실행 결과. 사용자 쪽 메시지로 붙여서 보낸다. <code>id</code>로 어느 호출의 결과인지 짝을 맞춘다.</span></div>
+      <div><code>stop_reason</code><span><code>tool_use</code>면 "도구를 써야 해서 멈췄다"는 뜻. Claude Code는 이걸 보고 명령을 실행해요.</span></div>
+      <div><code>input</code><span>Claude가 고른 값 (여기서는 <code>npm test</code>). Claude가 채운 것이라 틀릴 수도 있어요.</span></div>
+      <div><code>tool_result</code><span>실행 결과. 사용자 쪽 메시지로 붙여서 보내요. <code>id</code>로 어느 호출의 결과인지 짝을 맞춰요.</span></div>
     </div>
-    <div class="why"><b>그래서</b>도구를 한 번 쓰면 Claude에게 요청이 최소 두 번 간다. 결과도 컨텍스트에 쌓이니까 토큰과 요금도 그만큼 는다. 긴 파일을 Read하면 그 내용이 전부 컨텍스트에 들어간다.</div>
+    <div class="why"><b>그래서</b>도구를 한 번 쓰면 Claude에게 요청이 최소 두 번 가요. 결과도 컨텍스트에 쌓이니까 토큰과 요금도 그만큼 늘어요. 긴 파일을 Read하면 그 내용이 전부 컨텍스트에 들어가요.</div>
 
     <h3><span class="h-num">03</span>누가 무엇을 하나</h3>
-    <p class="tldr">Claude는 <strong>고르고</strong>, Claude Code는 <strong>실행한다</strong>.</p>
+    <p class="tldr">Claude는 <strong>고르고</strong>, Claude Code는 <strong>실행해요</strong>.</p>
     <div class="usecase">
       <div><b>Claude (모델)</b><small>글로 판단하는 쪽</small>
         <ul><li>도구를 쓸지 말지</li><li>어떤 도구를, 어떤 값으로 (Edit로 몇 번째 줄을 어떻게)</li><li>결과를 읽고 답 쓰기</li></ul></div>
@@ -929,27 +929,27 @@
     </div>
     <div class="why"><b>왜 알아 둬야 하나</b>
       <ul>
-        <li>Claude Code가 명령을 실행하거나 파일을 고치기 전에 <strong>"허용할까요?"</strong>라고 묻는 이유다. 실행이 앱 손에 있으니, 되돌리기 어려운 일은 앱이 멈추고 사람에게 물을 수 있다.</li>
-        <li>Claude가 넣은 값이 틀릴 수 있어서(엉뚱한 파일 경로 등), 앱이 실행 전에 검사하는 게 좋다.</li>
+        <li>Claude Code가 명령을 실행하거나 파일을 고치기 전에 <strong>"허용할까요?"</strong>라고 묻는 이유예요. 실행이 앱 손에 있으니, 되돌리기 어려운 일은 앱이 멈추고 사람에게 물을 수 있어요.</li>
+        <li>Claude가 넣은 값이 틀릴 수 있어서(엉뚱한 파일 경로 등), 앱이 실행 전에 검사하는 게 좋아요.</li>
       </ul>
     </div>
 
     <h3><span class="h-num">04</span>도구로 할 수 있게 된 것</h3>
-    <p class="tldr">1강의 "혼자서는 행동하지 못한다"가 여기서 풀린다.</p>
+    <p class="tldr">1강의 "혼자서는 행동하지 못한다"가 여기서 풀려요.</p>
     <div class="pipeline">
       <div><small>01</small><b>가져오기</b>Read(파일 읽기), Grep(코드 검색), 웹 검색. 내 파일과 최신 정보</div>
-      <div><small>02</small><b>확인하기</b>Bash로 테스트, 빌드 실행. 글로 짐작하지 않고 실제로 돌려 본다</div>
+      <div><small>02</small><b>확인하기</b>Bash로 테스트, 빌드 실행. 글로 짐작하지 않고 실제로 돌려 봐요</div>
       <div><small>03</small><b>바꾸기</b>Edit, Write(파일 고치기, 만들기), git 커밋. 내 컴퓨터를 실제로 바꾸는 일</div>
     </div>
     <h3><span class="h-num">05</span>MCP: 도구를 새로 꽂는 방법</h3>
-    <p class="tldr">Read, Edit, Bash는 기본 도구다. <strong>Gmail, Figma 같은 도구는 MCP로 꽂아서</strong> 늘린다.</p>
-    <p class="body">충전기가 USB-C로 통일되면 아무 충전기나 꽂아 쓸 수 있는 것과 같다. MCP(Model Context Protocol)는 "도구를 이런 모양으로 만들면 어느 AI 앱에든 꽂힌다"는 공통 규칙이다. 이 규칙대로 만든 도구 묶음을 <strong>MCP 서버</strong>라고 부른다.</p>
+    <p class="tldr">Read, Edit, Bash는 기본 도구예요. <strong>Gmail, Figma 같은 도구는 MCP로 꽂아서</strong> 늘려요.</p>
+    <p class="body">충전기가 USB-C로 통일되면 아무 충전기나 꽂아 쓸 수 있는 것과 같아요. MCP(Model Context Protocol)는 "도구를 이런 모양으로 만들면 어느 AI 앱에든 꽂힌다"는 공통 규칙이에요. 이 규칙대로 만든 도구 묶음을 <strong>MCP 서버</strong>라고 불러요.</p>
     <div class="pipeline">
       <div><small>01</small><b>기본 도구</b>Claude Code에 처음부터 있음. Read, Edit, Bash</div>
       <div><small>02</small><b>MCP 서버 꽂기</b>Gmail MCP를 연결하면 메일 검색, 메일 쓰기 같은 도구가 생김</div>
-      <div><small>03</small><b>목록이 늘어남</b>Claude가 받는 도구 목록에 함께 들어감. 쓰는 방식은 Read와 똑같다</div>
+      <div><small>03</small><b>목록이 늘어남</b>Claude가 받는 도구 목록에 함께 들어감. 쓰는 방식은 Read와 똑같아요</div>
     </div>
-    <div class="why"><b>실제 예: 내 Claude Code</b>내 Claude Code에는 이미 Figma, Gmail, Google Drive, Railway가 MCP로 연결돼 있다. 그래서 "지난주 회의 메일 찾아 줘"라고 하면, Claude가 "Gmail 메일 검색 도구를 '회의'로 불러 줘"라고 쓰고, Gmail MCP 서버가 실제로 찾아서 돌려준다. 3강에서 본 흐름 그대로다.</div>
+    <div class="why"><b>실제 예: 내 Claude Code</b>내 Claude Code에는 이미 Figma, Gmail, Google Drive, Railway가 MCP로 연결돼 있어요. 그래서 "지난주 회의 메일 찾아 줘"라고 하면, Claude가 "Gmail 메일 검색 도구를 '회의'로 불러 줘"라고 쓰고, Gmail MCP 서버가 실제로 찾아서 돌려줘요. 3강에서 본 흐름 그대로예요.</div>
   </div>
 
   <!-- 4. 정리 -->
@@ -957,49 +957,49 @@
     <h1>정리</h1>
     <p class="sub">3강에서 가져갈 것.</p>
     <ol class="key-list" style="margin-top:40px">
-      <li><span class="num">01</span><div><strong>모델은 도구를 직접 실행하지 않는다</strong>"이 도구를 이 값으로 불러 달라"는 글을 쓸 뿐, 실행은 앱이 한다.</div></li>
-      <li><span class="num">02</span><div><strong>도구 목록은 설명서로 같이 보낸다</strong>이름, 설명, 입력 형식. 모델은 설명을 보고 쓸지 말지 고른다.</div></li>
-      <li><span class="num">03</span><div><strong>결과는 다시 컨텍스트로 들어간다</strong>앱이 실행 결과를 붙여서 한 번 더 보내고, 모델이 그걸 읽고 답한다.</div></li>
+      <li><span class="num">01</span><div><strong>모델은 도구를 직접 실행하지 않아요</strong>"이 도구를 이 값으로 불러 달라"는 글을 쓸 뿐, 실행은 앱이 해요.</div></li>
+      <li><span class="num">02</span><div><strong>도구 목록은 설명서로 같이 보내요</strong>이름, 설명, 입력 형식. 모델은 설명을 보고 쓸지 말지 골라요.</div></li>
+      <li><span class="num">03</span><div><strong>결과는 다시 컨텍스트로 들어가요</strong>앱이 실행 결과를 붙여서 한 번 더 보내고, 모델이 그걸 읽고 답해요.</div></li>
       <li><span class="num">04</span><div><strong>도구 덕분에 할 수 있게 된 것</strong>최신 정보, 정확한 계산, 내 데이터, 실제 행동.</div></li>
     </ol>
     <div class="callout">
       <div class="title">다음으로 이어지는 것</div>
-      지금은 도구를 한 번 쓰고 끝났다. "자료 찾기 → 읽기 → 정리해서 저장하기"처럼 여러 번 써야 하는 일은, 모델이 결과를 보고 다음 도구를 또 고르는 걸 <strong>일이 끝날 때까지 반복</strong>하면 된다. 이게 <strong>에이전트</strong>다(4강).
+      지금은 도구를 한 번 쓰고 끝났어요. "자료 찾기 → 읽기 → 정리해서 저장하기"처럼 여러 번 써야 하는 일은, 모델이 결과를 보고 다음 도구를 또 고르는 걸 <strong>일이 끝날 때까지 반복</strong>하면 돼요. 이게 <strong>에이전트</strong>다(4강).
     </div>
     <h3>공부하면서 생긴 질문</h3>
     <div class="qa">
       <details>
         <summary>"해 보기"의 1번 "질문과 함께, 쓸 수 있는 도구 목록을 보낸다"는 무슨 뜻인가?</summary>
-        <p>내가 "서울 날씨 어때?"라고 쓰면, 앱은 그 질문만 보내지 않는다. "참고로 너는 get_weather(날씨 조회), calculator(계산기), create_event(일정 만들기)를 쓸 수 있다"는 목록을 같이 붙여서 모델에게 보낸다. 모델은 이 목록을 보고 나서야 "날씨 도구를 쓰면 되겠다"고 판단할 수 있다. 목록에 없는 도구는 모델이 존재조차 모른다. 아래 도구 버튼을 끄는 건, 앱에 그 기능이 연결돼 있지 않은 상황을 만들어 보는 것이다.</p>
+        <p>내가 "서울 날씨 어때?"라고 쓰면, 앱은 그 질문만 보내지 않아요. "참고로 너는 get_weather(날씨 조회), calculator(계산기), create_event(일정 만들기)를 쓸 수 있다"는 목록을 같이 붙여서 모델에게 보내요. 모델은 이 목록을 보고 나서야 "날씨 도구를 쓰면 되겠다"고 판단할 수 있어요. 목록에 없는 도구는 모델이 존재조차 몰라요. 아래 도구 버튼을 끄는 건, 앱에 그 기능이 연결돼 있지 않은 상황을 만들어 보는 거예요.</p>
       </details>
       <details>
         <summary>도구 목록은 왜 굳이 같이 보내나? 보내면 뭐가 달라지나?</summary>
-        <p>창문도 전화도 없는 방에 똑똑한 비서(모델)가 있다고 생각하면 된다. 비서는 쪽지만 쓸 수 있다. 문 밖에는 심부름꾼(앱)이 있지만, 비서는 그걸 모른다.</p>
-        <p>목록이 없을 때: "서울 날씨 어때?" 쪽지가 들어오면 비서는 밖을 볼 수 없으니 "모르겠어요"라고 쓴다.</p>
-        <p>목록이 있을 때: "밖에 심부름꾼 있음. 날씨 확인, 계산, 일정 등록을 시킬 수 있음"이라는 메모가 같이 들어온다. 그러면 비서는 "심부름꾼님, 서울 날씨 봐 주세요"라고 쓴다. 심부름꾼이 확인해서 "12도, 비 70%"를 넣어 주면, 비서가 그걸 보고 답한다.</p>
-        <p>메모를 매번 넣는 건 비서가 기억을 못 하기 때문이다(1강). 결국 도구 목록은 "너 이런 것도 시킬 수 있어"라고 알려 주는 메모다.</p>
+        <p>창문도 전화도 없는 방에 똑똑한 비서(모델)가 있다고 생각하면 돼요. 비서는 쪽지만 쓸 수 있어요. 문 밖에는 심부름꾼(앱)이 있지만, 비서는 그걸 몰라요.</p>
+        <p>목록이 없을 때: "서울 날씨 어때?" 쪽지가 들어오면 비서는 밖을 볼 수 없으니 "모르겠어요"라고 써요.</p>
+        <p>목록이 있을 때: "밖에 심부름꾼 있음. 날씨 확인, 계산, 일정 등록을 시킬 수 있음"이라는 메모가 같이 들어와요. 그러면 비서는 "심부름꾼님, 서울 날씨 봐 주세요"라고 써요. 심부름꾼이 확인해서 "12도, 비 70%"를 넣어 주면, 비서가 그걸 보고 답해요.</p>
+        <p>메모를 매번 넣는 건 비서가 기억을 못 하기 때문이다(1강). 결국 도구 목록은 "너 이런 것도 시킬 수 있어"라고 알려 주는 메모예요.</p>
       </details>
       <details>
         <summary>그럼 심부름꾼이 에이전트인가?</summary>
-        <p>아니다. 심부름꾼은 시킨 것만 하는 손발(앱)이다. 에이전트는 비서와 심부름꾼이 <strong>일이 끝날 때까지 알아서 주고받는 방식 전체</strong>를 말한다.</p>
+        <p>아니에요. 심부름꾼은 시킨 것만 하는 손발(앱)이에요. 에이전트는 비서와 심부름꾼이 <strong>일이 끝날 때까지 알아서 주고받는 방식 전체</strong>를 말해요.</p>
         <p>3강: "서울 날씨 봐 줘" → 심부름 한 번 → 답. 끝.</p>
-        <p>에이전트: "다음 주 부산 출장 준비해 줘" → 비서가 날씨 확인을 시킴 → 결과를 보고 기차표 검색을 시킴 → 결과를 보고 호텔 검색을 시킴 → 일정에 등록을 시킴 → "다 됐어요". 중간에 사람이 다음 할 일을 정해 주지 않는다. 비서가 결과를 보고 다음 심부름을 스스로 정한다. 자세한 건 4강.</p>
+        <p>에이전트: "다음 주 부산 출장 준비해 줘" → 비서가 날씨 확인을 시킴 → 결과를 보고 기차표 검색을 시킴 → 결과를 보고 호텔 검색을 시킴 → 일정에 등록을 시킴 → "다 됐어요". 중간에 사람이 다음 할 일을 정해 주지 않아요. 비서가 결과를 보고 다음 심부름을 스스로 정해요. 자세한 건 4강.</p>
       </details>
       <details>
         <summary>"기능 하나하나가 도구"라는 건 무슨 말인가?</summary>
-        <p>Claude Code로 확인했다. Claude도 파일을 직접 못 연다. 앱(Claude Code)이 <code class="inline">Read</code>(파일 읽기), <code class="inline">Edit</code>(파일 고치기), <code class="inline">Bash</code>(명령 실행) 같은 도구 목록을 주고, Claude는 "Read를 이 파일로 불러 줘"라고 쓴다. 앱이 실제로 파일을 열어 내용을 넣어 주면, Claude가 그걸 보고 다음 작업을 정한다. 데모의 get_weather와 같은 구조다. 대화창에 접혀 있는 줄을 펼치면 어떤 도구를 어떤 값으로 불렀는지 그대로 보인다.</p>
+        <p>Claude Code로 확인했어요. Claude도 파일을 직접 못 열어요. 앱(Claude Code)이 <code class="inline">Read</code>(파일 읽기), <code class="inline">Edit</code>(파일 고치기), <code class="inline">Bash</code>(명령 실행) 같은 도구 목록을 주고, Claude는 "Read를 이 파일로 불러 줘"라고 써요. 앱이 실제로 파일을 열어 내용을 넣어 주면, Claude가 그걸 보고 다음 작업을 정해요. 데모의 get_weather와 같은 구조예요. 대화창에 접혀 있는 줄을 펼치면 어떤 도구를 어떤 값으로 불렀는지 그대로 보여요.</p>
       </details>
       <details>
         <summary>get_weather와 Claude Code의 Bash, Edit은 같은 건가?</summary>
-        <p>같은 종류다. 셋 다 앱이 "이런 도구가 있다"고 이름, 설명, 입력 형식을 적어서 모델에게 보내는 도구다. get_weather는 날씨 앱이 만든 예시이고, Bash와 Edit은 Claude Code가 만든 것이다. 모델 입장에서는 구분이 없다. 목록에 적힌 걸 보고 골라서 "이 이름으로, 이 값을 넣어 불러 줘"라고 쓸 뿐이다. 실제로 무슨 일이 일어나는지(날씨 조회든 명령 실행이든)는 앱이 정한다.</p>
+        <p>같은 종류예요. 셋 다 앱이 "이런 도구가 있다"고 이름, 설명, 입력 형식을 적어서 모델에게 보내는 도구예요. get_weather는 날씨 앱이 만든 예시이고, Bash와 Edit은 Claude Code가 만든 거예요. 모델 입장에서는 구분이 없어요. 목록에 적힌 걸 보고 골라서 "이 이름으로, 이 값을 넣어 불러 줘"라고 쓸 뿐이에요. 실제로 무슨 일이 일어나는지(날씨 조회든 명령 실행이든)는 앱이 정해요.</p>
       </details>
       <details>
         <summary>MCP는 뭔가?</summary>
-        <p>Claude Code에 <strong>도구를 새로 꽂는 방법</strong>이다. Read, Edit, Bash는 처음부터 들어 있는 기본 도구다. 그런데 Gmail 검색이나 Figma 수정은 기본으로는 못 한다. 누군가 그 도구를 만들어 붙여 줘야 한다.</p>
-        <p>MCP는 그 붙이는 방식을 하나로 정한 규칙이다. Gmail 쪽에서 이 규칙대로 도구 묶음(MCP 서버)을 만들어 두면, Claude Code든 Claude 데스크톱이든 꽂기만 하면 된다. 휴대폰 충전기가 USB-C로 통일된 것과 같다.</p>
-        <p>꽂고 나면 Claude가 받는 도구 목록에 Read, Edit, Bash 옆으로 Gmail 메일 검색 같은 도구가 늘어난다. 쓰는 방식은 3강과 똑같다. "메일 검색 도구를 '회의'로 불러 줘"라고 쓰면, MCP 서버가 실제로 Gmail에서 찾아 돌려준다.</p>
-        <p>내 Claude Code에도 이미 Figma, Gmail, Google Drive, Railway가 MCP로 연결돼 있었다.</p>
-        <p>이름 풀이: <strong>M</strong>odel(모델, 1강) + <strong>C</strong>ontext(컨텍스트, 2강) + <strong>P</strong>rotocol(약속). "모델에게 컨텍스트를 넣어 주는 방식에 대한 약속"이라는 뜻이다. 도구 목록과 도구 결과도 결국 컨텍스트에 들어가는 글이라서 이런 이름이 붙었다. Anthropic이 만들어 공개했고, 지금은 다른 회사 AI 앱들도 같이 쓴다.</p>
+        <p>Claude Code에 <strong>도구를 새로 꽂는 방법</strong>이에요. Read, Edit, Bash는 처음부터 들어 있는 기본 도구예요. 그런데 Gmail 검색이나 Figma 수정은 기본으로는 못 해요. 누군가 그 도구를 만들어 붙여 줘야 해요.</p>
+        <p>MCP는 그 붙이는 방식을 하나로 정한 규칙이에요. Gmail 쪽에서 이 규칙대로 도구 묶음(MCP 서버)을 만들어 두면, Claude Code든 Claude 데스크톱이든 꽂기만 하면 돼요. 휴대폰 충전기가 USB-C로 통일된 것과 같아요.</p>
+        <p>꽂고 나면 Claude가 받는 도구 목록에 Read, Edit, Bash 옆으로 Gmail 메일 검색 같은 도구가 늘어나요. 쓰는 방식은 3강과 똑같아요. "메일 검색 도구를 '회의'로 불러 줘"라고 쓰면, MCP 서버가 실제로 Gmail에서 찾아 돌려줘요.</p>
+        <p>내 Claude Code에도 이미 Figma, Gmail, Google Drive, Railway가 MCP로 연결돼 있었어요.</p>
+        <p>이름 풀이: <strong>M</strong>odel(모델, 1강) + <strong>C</strong>ontext(컨텍스트, 2강) + <strong>P</strong>rotocol(약속). "모델에게 컨텍스트를 넣어 주는 방식에 대한 약속"이라는 뜻이에요. 도구 목록과 도구 결과도 결국 컨텍스트에 들어가는 글이라서 이런 이름이 붙었어요. Anthropic이 만들어 공개했고, 지금은 다른 회사 AI 앱들도 같이 써요.</p>
       </details>
     </div>
     <h3>용어</h3>
@@ -1009,7 +1009,7 @@
   <!-- 5. 퀴즈 -->
   <div class="lesson-step" data-step="quiz" data-title="퀴즈" hidden>
     <h1>3강 퀴즈</h1>
-    <p class="sub" style="margin-bottom:40px">문제 은행에서 12문제를 풀 때마다 새로 뽑고, 보기 순서도 섞는다.</p>
+    <p class="sub" style="margin-bottom:40px">문제 은행에서 12문제를 풀 때마다 새로 뽑고, 보기 순서도 섞어요.</p>
     <div id="quiz-lesson3"></div>
   </div>
   </section>
@@ -1018,35 +1018,35 @@
 
   <!-- 1. 개념 -->
   <div class="lesson-step" data-step="concept" data-title="개념">
-    <h1>에이전트는 도구 쓰기를<br>일이 끝날 때까지 반복하는 것이다</h1>
+    <h1>에이전트는 도구 쓰기를<br>일이 끝날 때까지 반복하는 거예요</h1>
     <p class="sub">에이전트 (Agent).</p>
     <div class="body" style="margin-top:40px">
-      <p>3강에서는 도구를 <strong>한 번</strong> 쓰고 끝났다. "테스트 돌려 봐"라고 하면 Bash를 한 번 부르고 답했다.</p>
-      <p>그런데 "로그인 버튼 고쳐 줘" 같은 일은 한 번으로 안 끝난다. 파일을 읽고, 고치고, 테스트를 돌리고, 실패하면 다시 고쳐야 한다. 무엇을 할지는 앞의 결과를 봐야 정해진다.</p>
-      <p><strong>에이전트</strong>는 모델이 결과를 보고 <strong>다음에 할 일을 스스로 정하면서</strong>, 일이 끝날 때까지 도구 쓰기를 반복하는 방식이다. 사람은 처음에 한 번만 말하면 된다.</p>
+      <p>3강에서는 도구를 <strong>한 번</strong> 쓰고 끝났어요. "테스트 돌려 봐"라고 하면 Bash를 한 번 부르고 답했어요.</p>
+      <p>그런데 "로그인 버튼 고쳐 줘" 같은 일은 한 번으로 안 끝나요. 파일을 읽고, 고치고, 테스트를 돌리고, 실패하면 다시 고쳐야 해요. 무엇을 할지는 앞의 결과를 봐야 정해져요.</p>
+      <p><strong>에이전트</strong>는 모델이 결과를 보고 <strong>다음에 할 일을 스스로 정하면서</strong>, 일이 끝날 때까지 도구 쓰기를 반복하는 방식이에요. 사람은 처음에 한 번만 말하면 돼요.</p>
     </div>
     <div class="flow-steps">
       <div><small>01 생각</small>지금 뭘 해야 하지?</div>
       <i class="ph ph-arrow-right"></i>
-      <div><small>02 행동</small>도구를 부른다 (3강)</div>
+      <div><small>02 행동</small>도구를 불러요 (3강)</div>
       <i class="ph ph-arrow-right"></i>
-      <div><small>03 확인</small>결과를 읽는다</div>
+      <div><small>03 확인</small>결과를 읽어요</div>
       <i class="ph ph-arrow-right"></i>
-      <div><small>04 다 됐나?</small>아니면 01로 돌아간다. 다 됐으면 답한다</div>
+      <div><small>04 다 됐나?</small>아니면 01로 돌아가요. 다 됐으면 답해요</div>
     </div>
     <h3>비유로 보면</h3>
-    <p class="body">3강의 방 안 비서와 심부름꾼 그대로다. 달라진 건 비서가 심부름 결과를 보고 <strong>다음 심부름을 알아서 또 시킨다</strong>는 것뿐이다.</p>
+    <p class="body">3강의 방 안 비서와 심부름꾼 그대로예요. 달라진 건 비서가 심부름 결과를 보고 <strong>다음 심부름을 알아서 또 시켜요</strong>는 것뿐이에요.</p>
     <div class="usecase">
       <div><b>3강: 도구 한 번</b><small>"테스트 돌려 봐"</small><p class="prompt-ex">Bash로 npm test → "12개 통과" → 답. 끝</p></div>
       <div><b>4강: 에이전트</b><small>"로그인 버튼 고쳐 줘"</small><p class="prompt-ex">Read로 파일 열기 → 원인 발견 → Edit로 고치기 → Bash로 테스트 → "실패 1개" → 다시 Edit → 다시 테스트 → "통과" → 답</p></div>
     </div>
-    <div class="why"><b>실제 예: 지금 쓰는 Claude Code가 에이전트다</b>"3강 만들어 줘" 한마디에 Claude는 파일 읽기 → 내용 써 넣기 → 오류 검사 → 화면 캡처 → 버튼이 잘 안 보여서 다시 고치기까지 했다. 각 단계를 사람이 시키지 않았다. 결과를 보고 다음 할 일을 스스로 정했다.</div>
+    <div class="why"><b>실제 예: 지금 쓰는 Claude Code가 에이전트예요</b>"3강 만들어 줘" 한마디에 Claude는 파일 읽기 → 내용 써 넣기 → 오류 검사 → 화면 캡처 → 버튼이 잘 안 보여서 다시 고치기까지 했어요. 각 단계를 사람이 시키지 않았어요. 결과를 보고 다음 할 일을 스스로 정했어요.</div>
   </div>
 
   <!-- 2. 해 보기 -->
   <div class="lesson-step" data-step="demo" data-title="해 보기" hidden>
     <h1>에이전트 루프 따라가 보기</h1>
-    <p class="sub">일을 하나 고르고 "다음 반복"을 누른다. 반복마다 모델이 생각하고, 도구를 부르고, 결과를 본다.</p>
+    <p class="sub">일을 하나 고르고 "다음 반복"을 눌러요. 반복마다 모델이 생각하고, 도구를 부르고, 결과를 봐요.</p>
     <div class="card" style="margin-top:40px">
       <div class="code-label">맡길 일 고르기</div>
       <div class="ctx-toggles" id="agent-tasks"></div>
@@ -1057,17 +1057,17 @@
       </div>
       <div class="temp-result" id="agent-msg"></div>
     </div>
-    <p class="hint">흐름은 실제와 같고, 도구 결과와 답은 이해를 위해 미리 써 둔 예시다. 버그 고치기는 Claude Code가 실제로 일하는 모습과 같다.</p>
+    <p class="hint">흐름은 실제와 같고, 도구 결과와 답은 이해를 위해 미리 써 둔 예시예요. 버그 고치기는 Claude Code가 실제로 일하는 모습과 같아요.</p>
   </div>
 
   <!-- 3. 자세히 -->
   <div class="lesson-step" data-step="deep" data-title="자세히" hidden>
     <h1>자세히</h1>
-    <p class="sub">블록마다 한 줄 요약부터 읽으면 된다.</p>
+    <p class="sub">블록마다 한 줄 요약부터 읽으면 돼요.</p>
 
-    <h3><span class="h-num">01</span>에이전트는 반복문이다</h3>
-    <p class="tldr">3강의 왕복(요청 → 도구 → 결과)을 <strong>while로 감싼 것</strong>이 에이전트다.</p>
-    <p class="body">코드로 보면 생각보다 단순하다. 모델이 도구를 부르면 실행해서 결과를 붙이고 또 묻는다. 모델이 도구 없이 답하면 끝이다.</p>
+    <h3><span class="h-num">01</span>에이전트는 반복문이에요</h3>
+    <p class="tldr">3강의 왕복(요청 → 도구 → 결과)을 <strong>while로 감싼 것</strong>이 에이전트예요.</p>
+    <p class="body">코드로 보면 생각보다 단순해요. 모델이 도구를 부르면 실행해서 결과를 붙이고 또 물어요. 모델이 도구 없이 답하면 끝이에요.</p>
 <pre class="code pseudo">let messages = [{ role: "user", content: "로그인 버튼 고쳐 줘" }];
 
 <span class="add">while (true) {</span>
@@ -1078,36 +1078,36 @@
   messages.push(toolResult(result));              <span class="c">// 확인 (결과를 컨텍스트에)</span>
 <span class="add">}</span></pre>
     <div class="explain">
-      <div><code>while (true)</code><span>끝날 때까지 반복. 몇 번 돌지는 미리 정하지 않는다.</span></div>
-      <div><code>stop_reason</code><span>3강에서 본 것. <code>tool_use</code>가 아니면 모델이 "다 됐다"고 답한 것이다.</span></div>
-      <div><code>messages.push</code><span>결과가 계속 컨텍스트에 쌓인다. 그래서 모델이 앞의 결과를 보고 다음을 정할 수 있다.</span></div>
+      <div><code>while (true)</code><span>끝날 때까지 반복. 몇 번 돌지는 미리 정하지 않아요.</span></div>
+      <div><code>stop_reason</code><span>3강에서 본 거예요. <code>tool_use</code>가 아니면 모델이 "다 됐다"고 답한 거예요.</span></div>
+      <div><code>messages.push</code><span>결과가 계속 컨텍스트에 쌓여요. 그래서 모델이 앞의 결과를 보고 다음을 정할 수 있어요.</span></div>
     </div>
 
     <h3><span class="h-num">02</span>다음 할 일을 누가 정하나</h3>
-    <p class="tldr">챗봇, 워크플로, 에이전트는 <strong>다음 단계를 누가 정하느냐</strong>로 나뉜다.</p>
+    <p class="tldr">챗봇, 워크플로, 에이전트는 <strong>다음 단계를 누가 정하느냐</strong>로 나뉘어요.</p>
     <div class="pipeline">
-      <div><small>챗봇</small><b>사람이 정한다</b>한 번 답하고 멈춘다. 다음은 사람이 또 물어야 한다</div>
-      <div><small>워크플로</small><b>미리 짠 순서가 정한다</b>"메일 받기 → 분류 → 저장"처럼 개발자가 순서를 고정해 둔다</div>
-      <div><small>에이전트</small><b>모델이 정한다</b>결과를 보고 다음에 무엇을 할지 그때그때 고른다</div>
+      <div><small>챗봇</small><b>사람이 정해요</b>한 번 답하고 멈춰요. 다음은 사람이 또 물어야 해요</div>
+      <div><small>워크플로</small><b>미리 짠 순서가 정해요</b>"메일 받기 → 분류 → 저장"처럼 개발자가 순서를 고정해 둬요</div>
+      <div><small>에이전트</small><b>모델이 정해요</b>결과를 보고 다음에 무엇을 할지 그때그때 골라요</div>
     </div>
-    <div class="why"><b>그래서</b>순서가 늘 같은 일이면 워크플로가 더 싸고 안정적이다. 버그 찾기처럼 해 봐야 다음 할 일이 보이는 일에 에이전트가 맞다. 무조건 에이전트가 좋은 게 아니다.</div>
+    <div class="why"><b>그래서</b>순서가 늘 같은 일이면 워크플로가 더 싸고 안정적이에요. 버그 찾기처럼 해 봐야 다음 할 일이 보이는 일에 에이전트가 맞아요. 무조건 에이전트가 좋은 게 아니에요.</div>
 
     <h3><span class="h-num">03</span>언제 멈추나</h3>
-    <p class="tldr">멈출 조건을 정해 두지 않으면 <strong>계속 돈다</strong>.</p>
+    <p class="tldr">멈출 조건을 정해 두지 않으면 <strong>계속 돌아요</strong>.</p>
     <div class="pipeline">
-      <div><small>01</small><b>일이 끝났을 때</b>모델이 "다 됐다"고 판단하고 도구 없이 답한다</div>
-      <div><small>02</small><b>횟수 제한</b>"최대 20번까지만"처럼 앱이 정해 둔다</div>
-      <div><small>03</small><b>사람 확인</b>중요한 단계에서 멈추고 사람에게 허락을 받는다</div>
+      <div><small>01</small><b>일이 끝났을 때</b>모델이 "다 됐다"고 판단하고 도구 없이 답해요</div>
+      <div><small>02</small><b>횟수 제한</b>"최대 20번까지만"처럼 앱이 정해 둬요</div>
+      <div><small>03</small><b>사람 확인</b>중요한 단계에서 멈추고 사람에게 허락을 받아요</div>
     </div>
-    <div class="why"><b>실제 예</b>Claude Code가 명령을 실행하거나 파일을 바꾸기 전에 "허용할까요?"라고 묻는 창이 3번이다. 실행은 앱 손에 있으니(3강) 앱이 중간에 세울 수 있다.</div>
+    <div class="why"><b>실제 예</b>Claude Code가 명령을 실행하거나 파일을 바꾸기 전에 "허용할까요?"라고 묻는 창이 3번이에요. 실행은 앱 손에 있으니(3강) 앱이 중간에 세울 수 있어요.</div>
 
     <h3><span class="h-num">04</span>조심할 것</h3>
-    <p class="tldr">오래 일할수록 <strong>책상(컨텍스트)이 차고</strong>, 틀린 길로 계속 갈 수도 있다.</p>
+    <p class="tldr">오래 일할수록 <strong>책상(컨텍스트)이 차고</strong>, 틀린 길로 계속 갈 수도 있어요.</p>
     <div class="why">
       <ul>
-        <li><strong>컨텍스트가 쌓인다.</strong> 반복마다 도구 결과가 붙는다. 길어지면 2강의 윈도우 한계에 걸리고 요금도 는다. 5강에서 일을 나누는 이유 중 하나다.</li>
-        <li><strong>처음 판단이 틀리면 계속 틀린 쪽으로 간다.</strong> 그래서 테스트처럼 결과를 확인할 수단을 도구로 주면 스스로 바로잡을 수 있다.</li>
-        <li><strong>위험한 도구는 사람 확인.</strong> 삭제, 결제, 메일 발송처럼 되돌리기 어려운 일은 멈추게 만든다.</li>
+        <li><strong>컨텍스트가 쌓여요.</strong> 반복마다 도구 결과가 붙어요. 길어지면 2강의 윈도우 한계에 걸리고 요금도 늘어요. 5강에서 일을 나누는 이유 중 하나예요.</li>
+        <li><strong>처음 판단이 틀리면 계속 틀린 쪽으로 가요.</strong> 그래서 테스트처럼 결과를 확인할 수단을 도구로 주면 스스로 바로잡을 수 있어요.</li>
+        <li><strong>위험한 도구는 사람 확인.</strong> 삭제, 결제, 메일 발송처럼 되돌리기 어려운 일은 멈추게 만들어요.</li>
       </ul>
     </div>
   </div>
@@ -1118,13 +1118,13 @@
     <p class="sub">4강에서 가져갈 것.</p>
     <ol class="key-list" style="margin-top:40px">
       <li><span class="num">01</span><div><strong>에이전트 = 도구 쓰기를 끝날 때까지 반복</strong>생각 → 행동 → 확인 → 다 됐나? 아니면 다시.</div></li>
-      <li><span class="num">02</span><div><strong>다음 할 일을 모델이 정한다</strong>사람은 처음에 한 번만 말한다. 챗봇은 사람이, 워크플로는 미리 짠 순서가 정한다.</div></li>
-      <li><span class="num">03</span><div><strong>코드로는 반복문 하나</strong>모델이 도구를 부르는 동안 실행하고 결과를 붙여 다시 묻는다.</div></li>
-      <li><span class="num">04</span><div><strong>멈출 조건과 사람 확인이 필요하다</strong>오래 돌수록 컨텍스트가 차고, 틀린 길로 갈 수 있다.</div></li>
+      <li><span class="num">02</span><div><strong>다음 할 일을 모델이 정해요</strong>사람은 처음에 한 번만 말해요. 챗봇은 사람이, 워크플로는 미리 짠 순서가 정해요.</div></li>
+      <li><span class="num">03</span><div><strong>코드로는 반복문 하나</strong>모델이 도구를 부르는 동안 실행하고 결과를 붙여 다시 물어요.</div></li>
+      <li><span class="num">04</span><div><strong>멈출 조건과 사람 확인이 필요해요</strong>오래 돌수록 컨텍스트가 차고, 틀린 길로 갈 수 있어요.</div></li>
     </ol>
     <div class="callout">
       <div class="title">다음으로 이어지는 것</div>
-      에이전트 하나가 큰일을 다 하면 책상이 넘치고 오래 걸린다. 에이전트 여러 개에게 <strong>나눠 맡기고 결과를 모으는 것</strong>이 오케스트레이션이다(5강).
+      에이전트 하나가 큰일을 다 하면 책상이 넘치고 오래 걸려요. 에이전트 여러 개에게 <strong>나눠 맡기고 결과를 모으는 것</strong>이 오케스트레이션이다(5강).
     </div>
     <h3>용어</h3>
     <ul class="terms" data-terms="4강"></ul>
@@ -1133,7 +1133,7 @@
   <!-- 5. 퀴즈 -->
   <div class="lesson-step" data-step="quiz" data-title="퀴즈" hidden>
     <h1>4강 퀴즈</h1>
-    <p class="sub" style="margin-bottom:40px">문제 은행에서 12문제를 풀 때마다 새로 뽑고, 보기 순서도 섞는다.</p>
+    <p class="sub" style="margin-bottom:40px">문제 은행에서 12문제를 풀 때마다 새로 뽑고, 보기 순서도 섞어요.</p>
     <div id="quiz-lesson4"></div>
   </div>
   </section>
@@ -1142,15 +1142,15 @@
 
   <!-- 1. 개념 -->
   <div class="lesson-step" data-step="concept" data-title="개념">
-    <h1>에이전트 하나에게 다 맡기지 않고<br>여럿에게 나눠 맡긴다</h1>
+    <h1>에이전트 하나에게 다 맡기지 않고<br>여럿에게 나눠 맡겨요</h1>
     <p class="sub">오케스트레이션 (Orchestration).</p>
     <div class="body" style="margin-top:40px">
-      <p>4강의 에이전트 하나에게 "경쟁 앱 세 개를 조사해서 비교표 만들어 줘"를 맡기면, 혼자서 A, B, C를 차례로 조사한다. 오래 걸리고, 조사 자료가 계속 쌓여서 책상(컨텍스트)이 넘친다.</p>
-      <p><strong>오케스트레이션</strong>은 회사의 팀처럼 일을 나누는 것이다. <strong>팀장</strong> 에이전트가 일을 쪼개서 <strong>팀원</strong> 에이전트들에게 맡기고, 팀원들이 돌려준 결과를 모아서 마무리한다.</p>
-      <p>팀원도 각자 4강의 에이전트다. 각자 자기 책상에서 일하고, 팀장에게는 <strong>요약만</strong> 돌려준다.</p>
+      <p>4강의 에이전트 하나에게 "경쟁 앱 세 개를 조사해서 비교표 만들어 줘"를 맡기면, 혼자서 A, B, C를 차례로 조사해요. 오래 걸리고, 조사 자료가 계속 쌓여서 책상(컨텍스트)이 넘쳐요.</p>
+      <p><strong>오케스트레이션</strong>은 회사의 팀처럼 일을 나누는 거예요. <strong>팀장</strong> 에이전트가 일을 쪼개서 <strong>팀원</strong> 에이전트들에게 맡기고, 팀원들이 돌려준 결과를 모아서 마무리해요.</p>
+      <p>팀원도 각자 4강의 에이전트예요. 각자 자기 책상에서 일하고, 팀장에게는 <strong>요약만</strong> 돌려줘요.</p>
     </div>
     <div class="orch">
-      <div class="blk dark boss"><small>팀장 (오케스트레이터)</small>일을 나누고, 결과를 모아 마무리한다</div>
+      <div class="blk dark boss"><small>팀장 (오케스트레이터)</small>일을 나누고, 결과를 모아 마무리해요</div>
       <i class="ph ph-arrows-down-up"></i>
       <div class="orch-workers">
         <div class="blk"><small>팀원 1 (서브에이전트)</small>A 앱 조사</div>
@@ -1158,13 +1158,13 @@
         <div class="blk"><small>팀원 3 (서브에이전트)</small>C 앱 조사</div>
       </div>
     </div>
-    <div class="why"><b>실제 예: Claude Code도 팀원을 부를 수 있다</b>Claude Code에는 다른 에이전트를 띄우는 도구가 있다. 큰 코드베이스를 뒤져야 할 때 Claude가 팀장이 되어 "이 폴더 조사해 와"라고 팀원 에이전트에게 맡기고, 요약만 받아서 이어서 일한다. (이 사이트를 만들 때는 일이 작아서 혼자 했다.)</div>
+    <div class="why"><b>실제 예: Claude Code도 팀원을 부를 수 있어요</b>Claude Code에는 다른 에이전트를 띄우는 도구가 있어요. 큰 코드베이스를 뒤져야 할 때 Claude가 팀장이 되어 "이 폴더 조사해 와"라고 팀원 에이전트에게 맡기고, 요약만 받아서 이어서 일해요. (이 사이트를 만들 때는 일이 작아서 혼자 했어요.)</div>
   </div>
 
   <!-- 2. 해 보기 -->
   <div class="lesson-step" data-step="demo" data-title="해 보기" hidden>
     <h1>혼자 vs 나눠서</h1>
-    <p class="sub">같은 일을 에이전트 하나가 할 때와 팀으로 나눌 때를 비교한다. 위의 버튼으로 바꿔 본다.</p>
+    <p class="sub">같은 일을 에이전트 하나가 할 때와 팀으로 나눌 때를 비교해요. 위의 버튼으로 바꿔 봐요.</p>
     <div class="card" style="margin-top:40px">
       <div class="code-label">맡긴 일: 경쟁 앱 A, B, C를 조사해서 비교표 만들어 줘</div>
       <div class="ctx-toggles" id="orch-modes"></div>
@@ -1172,56 +1172,56 @@
       <div class="orch-stats" id="orch-stats"></div>
       <div class="temp-result" id="orch-msg"></div>
     </div>
-    <p class="hint">"책상"은 각 에이전트의 컨텍스트가 찬 정도다. 시간과 토큰 숫자는 차이를 보여 주려고 만든 예시다.</p>
+    <p class="hint">"책상"은 각 에이전트의 컨텍스트가 찬 정도예요. 시간과 토큰 숫자는 차이를 보여 주려고 만든 예시예요.</p>
   </div>
 
   <!-- 3. 자세히 -->
   <div class="lesson-step" data-step="deep" data-title="자세히" hidden>
     <h1>자세히</h1>
-    <p class="sub">블록마다 한 줄 요약부터 읽으면 된다.</p>
+    <p class="sub">블록마다 한 줄 요약부터 읽으면 돼요.</p>
 
     <h3><span class="h-num">01</span>왜 나누나</h3>
-    <p class="tldr">책상이 안 넘치고, <strong>동시에</strong> 할 수 있고, 역할마다 <strong>전문가</strong>로 만들 수 있다.</p>
+    <p class="tldr">책상이 안 넘치고, <strong>동시에</strong> 할 수 있고, 역할마다 <strong>전문가</strong>로 만들 수 있어요.</p>
     <div class="pipeline">
-      <div><small>01</small><b>책상이 안 넘친다</b>자세한 조사 과정은 팀원 책상에서 끝난다. 팀장은 요약만 받는다 (2강)</div>
-      <div><small>02</small><b>동시에 한다</b>서로 상관없는 일은 한꺼번에 돌려서 시간을 줄인다</div>
-      <div><small>03</small><b>역할별로 맞춘다</b>팀원마다 시스템 프롬프트(2강)와 도구(3강)를 다르게 준다</div>
+      <div><small>01</small><b>책상이 안 넘쳐요</b>자세한 조사 과정은 팀원 책상에서 끝나요. 팀장은 요약만 받아요 (2강)</div>
+      <div><small>02</small><b>동시에 해요</b>서로 상관없는 일은 한꺼번에 돌려서 시간을 줄여요</div>
+      <div><small>03</small><b>역할별로 맞춰요</b>팀원마다 시스템 프롬프트(2강)와 도구(3강)를 다르게 줘요</div>
     </div>
 
     <h3><span class="h-num">02</span>대표 패턴 네 가지</h3>
-    <p class="tldr">대부분 이 네 가지의 조합이다.</p>
+    <p class="tldr">대부분 이 네 가지의 조합이에요.</p>
     <div class="pipeline four">
       <div><small>01</small><b>순서대로 넘기기</b>앞의 결과가 다음의 입력. 조사 → 초안 → 교정</div>
       <div><small>02</small><b>동시에 나눠 하기</b>같은 종류의 일을 여럿이 한꺼번에. A, B, C 동시 조사</div>
-      <div><small>03</small><b>팀장과 팀원</b>팀장이 상황을 보고 일을 쪼개서 나눠 준다. 몇 갈래일지 미리 모를 때</div>
+      <div><small>03</small><b>팀장과 팀원</b>팀장이 상황을 보고 일을 쪼개서 나눠 줘요. 몇 갈래일지 미리 모를 때</div>
       <div><small>04</small><b>만들고 검토하기</b>한 에이전트가 만들고, 다른 에이전트가 문제를 찾고, 고치기를 반복</div>
     </div>
     <div class="why"><b>구분하는 법</b>
       <ul>
-        <li>순서가 정해져 있다 → 01</li>
+        <li>순서가 정해져 있어요 → 01</li>
         <li>서로 상관없는 일 여러 개 → 02</li>
-        <li>해 봐야 몇 개로 나눌지 안다 → 03</li>
-        <li>품질 확인이 중요하다 → 04 (사람이 쓴 글을 다른 사람이 검토하는 것과 같다)</li>
+        <li>해 봐야 몇 개로 나눌지 알아요 → 03</li>
+        <li>품질 확인이 중요해요 → 04 (사람이 쓴 글을 다른 사람이 검토하는 것과 같아요)</li>
       </ul>
     </div>
 
-    <h3><span class="h-num">03</span>팀원은 팀장의 대화를 못 본다</h3>
-    <p class="tldr">팀원이 아는 건 <strong>팀장이 써 준 지시뿐</strong>이다. 그래서 지시를 잘 써야 한다.</p>
-    <p class="body">팀원 에이전트는 빈 책상에서 시작한다. 사용자와 팀장이 나눈 대화도, 팀장이 이미 알아낸 것도 모른다. 2강의 "AI가 아는 건 지금 넣어 준 글뿐이다"가 그대로 적용된다.</p>
+    <h3><span class="h-num">03</span>팀원은 팀장의 대화를 못 봐요</h3>
+    <p class="tldr">팀원이 아는 건 <strong>팀장이 써 준 지시뿐</strong>이에요. 그래서 지시를 잘 써야 해요.</p>
+    <p class="body">팀원 에이전트는 빈 책상에서 시작해요. 사용자와 팀장이 나눈 대화도, 팀장이 이미 알아낸 것도 몰라요. 2강의 "AI가 아는 건 지금 넣어 준 글뿐이다"가 그대로 적용돼요.</p>
     <div class="usecase">
       <div><b>나쁜 지시</b><small>팀원이 짐작해야 할 게 많음</small><p class="prompt-ex">A 앱 조사해 줘.</p></div>
-      <div><b>좋은 지시</b><small>짐작할 게 없음</small><p class="prompt-ex">우리 가계부 앱과 비교하려고 한다. A 앱의 가격, 주요 기능 5개, 최근 업데이트를 조사해서 반 쪽 이내로 정리해 줘. 출처 링크도 붙여 줘.</p></div>
+      <div><b>좋은 지시</b><small>짐작할 게 없음</small><p class="prompt-ex">우리 가계부 앱과 비교하려고 해요. A 앱의 가격, 주요 기능 5개, 최근 업데이트를 조사해서 반 쪽 이내로 정리해 줘. 출처 링크도 붙여 줘.</p></div>
     </div>
 
     <h3><span class="h-num">04</span>나누지 않는 게 나을 때</h3>
-    <p class="tldr">나누면 <strong>비용이 늘고 정보가 샌다</strong>. 작은 일은 혼자가 낫다.</p>
+    <p class="tldr">나누면 <strong>비용이 늘고 정보가 새요</strong>. 작은 일은 혼자가 나아요.</p>
     <div class="why">
       <ul>
-        <li><strong>토큰이 더 든다.</strong> 에이전트마다 지시와 결과를 따로 읽으니 전체 사용량은 오히려 는다.</li>
-        <li><strong>전달하면서 빠진다.</strong> 요약을 주고받는 사이에 중요한 내용이 빠질 수 있다.</li>
-        <li><strong>서로 얽힌 일은 나누기 어렵다.</strong> 한 파일을 여럿이 동시에 고치면 충돌한다.</li>
+        <li><strong>토큰이 더 들어요.</strong> 에이전트마다 지시와 결과를 따로 읽으니 전체 사용량은 오히려 늘어요.</li>
+        <li><strong>전달하면서 빠져요.</strong> 요약을 주고받는 사이에 중요한 내용이 빠질 수 있어요.</li>
+        <li><strong>서로 얽힌 일은 나누기 어려워요.</strong> 한 파일을 여럿이 동시에 고치면 충돌해요.</li>
       </ul>
-      그래서 혼자 해 보고, 책상이 넘치거나 너무 오래 걸릴 때 나누는 게 순서다.
+      그래서 혼자 해 보고, 책상이 넘치거나 너무 오래 걸릴 때 나누는 게 순서예요.
     </div>
   </div>
 
@@ -1230,14 +1230,14 @@
     <h1>정리</h1>
     <p class="sub">5강에서 가져갈 것.</p>
     <ol class="key-list" style="margin-top:40px">
-      <li><span class="num">01</span><div><strong>오케스트레이션 = 에이전트 여럿에게 나눠 맡기고 모으기</strong>팀장(오케스트레이터)이 나누고, 팀원(서브에이전트)이 각자 일한다.</div></li>
-      <li><span class="num">02</span><div><strong>나누는 이유</strong>책상이 안 넘치고, 동시에 하고, 역할별로 맞출 수 있다.</div></li>
+      <li><span class="num">01</span><div><strong>오케스트레이션 = 에이전트 여럿에게 나눠 맡기고 모으기</strong>팀장(오케스트레이터)이 나누고, 팀원(서브에이전트)이 각자 일해요.</div></li>
+      <li><span class="num">02</span><div><strong>나누는 이유</strong>책상이 안 넘치고, 동시에 하고, 역할별로 맞출 수 있어요.</div></li>
       <li><span class="num">03</span><div><strong>패턴 네 가지</strong>순서대로 넘기기, 동시에 나눠 하기, 팀장과 팀원, 만들고 검토하기.</div></li>
-      <li><span class="num">04</span><div><strong>팀원은 지시만 안다</strong>지시를 잘 써야 하고, 작은 일은 나누지 않는 게 낫다.</div></li>
+      <li><span class="num">04</span><div><strong>팀원은 지시만 알아요</strong>지시를 잘 써야 하고, 작은 일은 나누지 않는 게 나아요.</div></li>
     </ol>
     <div class="callout">
       <div class="title">이번 주에 쌓아 온 것</div>
-      LLM은 글을 이어 쓰는 기계다(1강). 넣어 준 글만 본다(2강). 도구를 주면 일을 시킬 수 있다(3강). 그걸 반복하면 에이전트다(4강). 에이전트 여럿을 나눠 굴리면 오케스트레이션이다(5강). 앞의 것 위에 하나씩 얹은 구조다.
+      LLM은 글을 이어 쓰는 기계다(1강). 넣어 준 글만 본다(2강). 도구를 주면 일을 시킬 수 있다(3강). 그걸 반복하면 에이전트다(4강). 에이전트 여럿을 나눠 굴리면 오케스트레이션이다(5강). 앞의 것 위에 하나씩 얹은 구조예요.
     </div>
     <h3>용어</h3>
     <ul class="terms" data-terms="5강"></ul>
@@ -1246,7 +1246,7 @@
   <!-- 5. 퀴즈 -->
   <div class="lesson-step" data-step="quiz" data-title="퀴즈" hidden>
     <h1>5강 퀴즈</h1>
-    <p class="sub" style="margin-bottom:40px">문제 은행에서 12문제를 풀 때마다 새로 뽑고, 보기 순서도 섞는다.</p>
+    <p class="sub" style="margin-bottom:40px">문제 은행에서 12문제를 풀 때마다 새로 뽑고, 보기 순서도 섞어요.</p>
     <div id="quiz-lesson5"></div>
   </div>
   </section>
@@ -1269,7 +1269,7 @@ function resetProgress() {
 }
 function lastScore(id) { const d = loadQuiz(id); const a = d && d.attempts && d.attempts[d.attempts.length - 1]; return a ? `${a.score}/${a.total}` : ""; }
 
-/* ---------- 탭 / 개요 (강의 완료는 보는 사람의 퀴즈 기록으로 정한다. days는 내 공부 일지) ---------- */
+/* ---------- 탭 / 개요 (강의 완료는 보는 사람의 퀴즈 기록으로 정해요. days는 내 공부 일지) ---------- */
 const lessons = [
   { id: "lesson1", n: 1, title: "LLM이 뭔지", desc: "다음 단어 맞히기 기계" },
   { id: "lesson2", n: 2, title: "프롬프트와 컨텍스트", desc: "모델이 한 번에 읽는 글" },
@@ -1397,30 +1397,30 @@ const terms = [
   ["학습 (Training)", "모델이 데이터를 보며 예측 실력을 키우는 과정. 끝나면 모델 자체는 더 바뀌지 않음", "1강"],
   ["토큰 (Token)", "LLM이 글을 읽고 쓰는 단위. 단어보다 조금 작은 조각 (예: \"공원에\" → \"공원\" + \"에\")", "1강"],
   ["확률적 생성", "다음 토큰을 확률에 따라 골라서, 같은 질문에도 답이 달라질 수 있는 성질", "1강"],
-  ["temperature", "다음 토큰을 얼마나 무작위로 뽑을지 정하는 값. 낮으면 일정하고, 높으면 다양하다", "1강"],
-  ["사전학습 (Pre-training)", "엄청난 양의 글로 다음 토큰 예측을 연습하는 첫 단계. 지식과 말투가 여기서 생긴다", "1강"],
+  ["temperature", "다음 토큰을 얼마나 무작위로 뽑을지 정하는 값. 낮으면 일정하고, 높으면 다양해요", "1강"],
+  ["사전학습 (Pre-training)", "엄청난 양의 글로 다음 토큰 예측을 연습하는 첫 단계. 지식과 말투가 여기서 생겨요", "1강"],
   ["미세조정 (Fine-tuning)", "사전학습한 모델에게 질문에 답하고 지시를 따르는 법을 따로 가르치는 단계", "1강"],
-  ["API", "프로그램끼리 요청을 주고받는 창구. 앱은 API로 모델에 대화 전체를 보낸다", "1강"],
+  ["API", "프로그램끼리 요청을 주고받는 창구. 앱은 API로 모델에 대화 전체를 보내요", "1강"],
   ["프롬프트 (Prompt)", "모델에게 주는 지시나 질문", "2강"],
   ["컨텍스트 (Context)", "모델이 답을 쓰기 전에 한 번에 읽는 글 전체. 시스템 프롬프트 + 이전 대화 + 자료 + 질문", "2강"],
-  ["시스템 프롬프트", "앱이 대화 맨 앞에 넣어 두는 지시. 말투, 역할, 규칙을 정한다. 매번 같이 보낸다", "2강"],
-  ["컨텍스트 윈도우", "컨텍스트에 한 번에 넣을 수 있는 최대량. 토큰으로 센다. 넘으면 오래된 내용부터 잘린다", "2강"],
+  ["시스템 프롬프트", "앱이 대화 맨 앞에 넣어 두는 지시. 말투, 역할, 규칙을 정해요. 매번 같이 보내요", "2강"],
+  ["컨텍스트 윈도우", "컨텍스트에 한 번에 넣을 수 있는 최대량. 토큰으로 세요. 넘으면 오래된 내용부터 잘려요", "2강"],
   ["퓨샷 (Few-shot)", "프롬프트에 원하는 결과의 예시를 몇 개 보여 주는 방법", "2강"],
-  ["메모리 기능", "앱이 내 정보를 메모해 뒀다가 컨텍스트에 끼워 넣는 기능. 모델이 배우는 게 아니다", "2강"],
-  ["도구 (Tool)", "검색, 계산, 파일 저장처럼 모델이 글 바깥의 일을 하게 해 주는 기능. 실행은 앱이 한다", "3강"],
-  ["도구 호출 (Tool use)", "모델이 \"이 도구를 이 값으로 불러 달라\"고 적어서 응답하는 것. function calling이라고도 한다", "3강"],
-  ["도구 결과 (tool_result)", "앱이 도구를 실행한 결과. 컨텍스트에 붙여서 모델에게 다시 보낸다", "3강"],
-  ["입력 형식 (input_schema)", "도구에 어떤 값을 넣어야 하는지 정해 둔 것. 도구 이름, 설명과 함께 보낸다", "3강"],
+  ["메모리 기능", "앱이 내 정보를 메모해 뒀다가 컨텍스트에 끼워 넣는 기능. 모델이 배우는 게 아니에요", "2강"],
+  ["도구 (Tool)", "검색, 계산, 파일 저장처럼 모델이 글 바깥의 일을 하게 해 주는 기능. 실행은 앱이 해요", "3강"],
+  ["도구 호출 (Tool use)", "모델이 \"이 도구를 이 값으로 불러 달라\"고 적어서 응답하는 것. function calling이라고도 해요", "3강"],
+  ["도구 결과 (tool_result)", "앱이 도구를 실행한 결과. 컨텍스트에 붙여서 모델에게 다시 보내요", "3강"],
+  ["입력 형식 (input_schema)", "도구에 어떤 값을 넣어야 하는지 정해 둔 것. 도구 이름, 설명과 함께 보내요", "3강"],
   ["MCP", "도구를 AI 앱에 꽂는 공통 규칙 (Model Context Protocol). 충전기의 USB-C 같은 것", "3강"],
-  ["MCP 서버", "MCP 규칙대로 만든 도구 묶음. 예: Gmail MCP를 꽂으면 메일 검색, 메일 쓰기 도구가 생긴다", "3강"],
-  ["에이전트 (Agent)", "도구 쓰기를 일이 끝날 때까지 반복하는 AI. 다음 할 일을 모델이 결과를 보고 정한다", "4강"],
+  ["MCP 서버", "MCP 규칙대로 만든 도구 묶음. 예: Gmail MCP를 꽂으면 메일 검색, 메일 쓰기 도구가 생겨요", "3강"],
+  ["에이전트 (Agent)", "도구 쓰기를 일이 끝날 때까지 반복하는 AI. 다음 할 일을 모델이 결과를 보고 정해요", "4강"],
   ["에이전트 루프", "생각 → 행동(도구) → 확인(결과 읽기) → 다 됐나?를 끝날 때까지 되풀이하는 구조", "4강"],
   ["워크플로 (Workflow)", "다음 단계를 모델이 아니라 미리 짜 둔 순서가 정하는 자동화", "4강"],
   ["멈춤 조건", "에이전트가 끝나는 조건. 일이 끝났을 때, 횟수 제한, 사람 확인", "4강"],
   ["사람 확인 (Human-in-the-loop)", "되돌리기 어려운 행동 전에 멈추고 사람에게 허락을 받는 것", "4강"],
   ["오케스트레이션", "에이전트 여러 개에 일을 나눠 맡기고 결과를 모아 큰 작업을 처리하는 것", "5강"],
   ["오케스트레이터", "일을 나누고 결과를 모으는 팀장 역할의 에이전트", "5강"],
-  ["서브에이전트", "팀장에게 일을 받아 처리하고 요약을 돌려주는 팀원 에이전트. 자기 컨텍스트에서 따로 일한다", "5강"],
+  ["서브에이전트", "팀장에게 일을 받아 처리하고 요약을 돌려주는 팀원 에이전트. 자기 컨텍스트에서 따로 일해요", "5강"],
   ["병렬 처리", "서로 상관없는 일을 여러 에이전트가 동시에 하는 것", "5강"],
 ];
 /* 각 강의 정리에는 그 강의 용어만 (1강은 기본 용어 포함) */
@@ -1442,7 +1442,7 @@ const tree = {
   "오늘 점심은": [["김치찌개를", 0.4], ["샐러드를", 0.35], ["굶었다.", 0.25]],
   "오늘 회의가": [["길어서", 0.5], ["취소됐다.", 0.5]],
 };
-const generic = [["먹었다.", 0.35], ["했다.", 0.35], ["있었다.", 0.3]];
+const generic = [["먹었다.", 0.35], ["했어요.", 0.35], ["있었어요.", 0.3]];
 let words = ["오늘"];
 let lastNew = 0;
 
@@ -1453,7 +1453,7 @@ function renderDemo() {
   const bars = document.getElementById("bars");
   const last = words[words.length - 1];
   if (last.endsWith(".")) {
-    bars.innerHTML = `<p class="body" style="margin:0">문장 끝. 이렇게 <strong>한 단어씩</strong> 이어 붙여서 답변이 만들어진다.</p>`;
+    bars.innerHTML = `<p class="body" style="margin:0">문장 끝. 이렇게 <strong>한 단어씩</strong> 이어 붙여서 답변이 만들어져요.</p>`;
     return;
   }
   const opts = tree[words.join(" ")] || generic;
@@ -1502,81 +1502,81 @@ renderDemo();
 const OX = ["ph ph-circle", "ph ph-x"];
 const bank1 = [
   // 객관식 (mc)
-  { q: "LLM에게 \"사과는 영어로?\"라고 물었다. 모델 안에서 일어나는 일에 가장 가까운 것은?",
-    opts: ["내장된 영한사전에서 '사과'를 찾는다", "지금까지의 글 다음에 올 확률이 가장 높은 토큰으로 'apple'을 예측한다", "번역 규칙이 적힌 프로그램을 실행한다", "인터넷 번역기를 몰래 호출한다"], a: 1,
-    exp: "번역도 결국 다음 토큰 예측이다. 학습한 글에서 이 질문 뒤에 'apple'이 올 확률이 가장 높았을 뿐이다." },
-  { q: "\"1+1은?\" 다음에 \"거기에 3을 더하면?\"이라고 물었다. 두 번째 질문을 할 때 모델이 실제로 받는 입력은?",
+  { q: "LLM에게 \"사과는 영어로?\"라고 물었어요. 모델 안에서 일어나는 일에 가장 가까운 것은?",
+    opts: ["내장된 영한사전에서 '사과'를 찾아요", "지금까지의 글 다음에 올 확률이 가장 높은 토큰으로 'apple'을 예측해요", "번역 규칙이 적힌 프로그램을 실행해요", "인터넷 번역기를 몰래 호출해요"], a: 1,
+    exp: "번역도 결국 다음 토큰 예측이에요. 학습한 글에서 이 질문 뒤에 'apple'이 올 확률이 가장 높았을 뿐이에요." },
+  { q: "\"1+1은?\" 다음에 \"거기에 3을 더하면?\"이라고 물었어요. 두 번째 질문을 할 때 모델이 실제로 받는 입력은?",
     opts: ["\"거기에 3을 더하면?\"만", "\"거기에 3을 더하면?\"과 모델이 기억해 둔 숫자 2", "첫 질문 + 첫 답 + 두 번째 질문 전체", "두 번째 질문과 첫 답만"], a: 2,
-    exp: "모델에는 기억이 없다. 앱이 지금까지의 대화 전체를 이어 붙여 보내야 '거기'가 무엇인지 알 수 있다." },
+    exp: "모델에는 기억이 없어요. 앱이 지금까지의 대화 전체를 이어 붙여 보내야 '거기'가 무엇인지 알 수 있어요." },
   { q: "다음 중 틀린 설명은?",
-    opts: ["토큰은 단어보다 작은 조각일 수 있다", "같은 질문에도 답이 달라질 수 있다", "대화를 많이 할수록 모델이 그 대화로 학습해서 점점 똑똑해진다", "모델은 확률에 따라 다음 토큰을 고른다"], a: 2,
-    exp: "학습이 끝난 모델은 대화를 한다고 바뀌지 않는다. 대화 내용은 그때그때 입력으로 들어갈 뿐이다." },
-  { q: "\"오늘 서울 날씨 알려 줘\"에 LLM이 그럴듯한 답을 했지만 틀렸다. 가장 그럴듯한 이유는?",
-    opts: ["모델이 너무 작아서", "모델은 글만 쓸 수 있어서, 날씨를 실제로 확인하지 않고 그럴듯한 다음 단어를 이어 썼다", "날씨는 숫자라서 다룰 수 없다", "질문이 짧아서"], a: 1,
-    exp: "LLM은 혼자서 바깥 정보를 확인하지 못한다. 그래도 다음 단어는 계속 예측하기 때문에, 확인 없이 그럴듯한 답을 만들 수 있다." },
+    opts: ["토큰은 단어보다 작은 조각일 수 있어요", "같은 질문에도 답이 달라질 수 있어요", "대화를 많이 할수록 모델이 그 대화로 학습해서 점점 똑똑해져요", "모델은 확률에 따라 다음 토큰을 골라요"], a: 2,
+    exp: "학습이 끝난 모델은 대화를 한다고 바뀌지 않아요. 대화 내용은 그때그때 입력으로 들어갈 뿐이에요." },
+  { q: "\"오늘 서울 날씨 알려 줘\"에 LLM이 그럴듯한 답을 했지만 틀렸어요. 가장 그럴듯한 이유는?",
+    opts: ["모델이 너무 작아서", "모델은 글만 쓸 수 있어서, 날씨를 실제로 확인하지 않고 그럴듯한 다음 단어를 이어 썼어요", "날씨는 숫자라서 다룰 수 없어요", "질문이 짧아서"], a: 1,
+    exp: "LLM은 혼자서 바깥 정보를 확인하지 못해요. 그래도 다음 단어는 계속 예측하기 때문에, 확인 없이 그럴듯한 답을 만들 수 있어요." },
   { q: "AI가 \"제 지식은 특정 시점까지예요\"라고 말하는 이유는?",
     opts: ["회사가 일부러 숨기려고", "학습이 끝난 시점 이후의 글은 본 적이 없어서", "오래된 정보는 자동으로 지워져서", "인터넷 연결이 끊겨서"], a: 1,
-    exp: "모델은 학습을 마친 뒤 고정된다. 그 뒤에 나온 글은 읽은 적이 없으니 모른다." },
+    exp: "모델은 학습을 마친 뒤 고정돼요. 그 뒤에 나온 글은 읽은 적이 없으니 몰라요." },
   { q: "다음 중 temperature를 높게 두는 게 더 어울리는 일은?",
     opts: ["고객 문의를 '환불 / 배송 / 기타'로 분류하기", "계약서에서 날짜와 금액만 뽑아내기", "새 서비스 이름 후보를 여러 개 떠올리기", "코드 버그 고치기"], a: 2,
-    exp: "정답이 여러 개인 일은 다양한 답이 나와야 좋다. 나머지는 정답이 정해진 일이라 낮게 두는 편이 낫다." },
-  { q: "같은 고객 문의를 분류하는데 돌릴 때마다 결과가 '환불'이었다가 '배송'이었다가 바뀐다. 먼저 바꿔 볼 설정은?",
-    opts: ["temperature를 낮춘다", "max_tokens를 늘린다", "질문을 영어로 바꾼다", "더 긴 답을 달라고 한다"], a: 0,
-    exp: "결과가 들쭉날쭉한 건 무작위로 뽑는 정도가 커서일 수 있다. 정답이 있는 일은 temperature를 낮춘다." },
+    exp: "정답이 여러 개인 일은 다양한 답이 나와야 좋아요. 나머지는 정답이 정해진 일이라 낮게 두는 편이 나아요." },
+  { q: "같은 고객 문의를 분류하는데 돌릴 때마다 결과가 '환불'이었다가 '배송'이었다가 바뀌어요. 먼저 바꿔 볼 설정은?",
+    opts: ["temperature를 낮춰요", "max_tokens를 늘려요", "질문을 영어로 바꿔요", "더 긴 답을 달라고 해요"], a: 0,
+    exp: "결과가 들쭉날쭉한 건 무작위로 뽑는 정도가 커서일 수 있어요. 정답이 있는 일은 temperature를 낮춰요." },
   { q: "API 요청의 messages에서 AI가 한 말은 어떤 role로 들어가나?",
     opts: ["user", "assistant", "model", "max_tokens"], a: 1,
-    exp: "user는 내가 한 말, assistant는 AI가 한 말이다. model과 max_tokens는 role이 아니라 요청 설정이다." },
+    exp: "user는 내가 한 말, assistant는 AI가 한 말이에요. model과 max_tokens는 role이 아니라 요청 설정이에요." },
   { q: "AI 요금과 한 번에 넣을 수 있는 글의 양을 세는 단위는?",
     opts: ["글자 수", "단어 수", "토큰 수", "문장 수"], a: 2,
-    exp: "모델은 토큰 단위로 읽고 쓰기 때문에 요금과 길이 제한도 토큰으로 센다." },
-  { q: "어제 AI에게 내 이름을 알려 줬는데, 오늘 새 대화를 열었더니 모른다. 이유는?",
+    exp: "모델은 토큰 단위로 읽고 쓰기 때문에 요금과 길이 제한도 토큰으로 세요." },
+  { q: "어제 AI에게 내 이름을 알려 줬는데, 오늘 새 대화를 열었더니 몰라요. 이유는?",
     opts: ["대화 내용은 그 대화의 입력일 뿐 모델에 저장되지 않아서", "개인정보라서 하루가 지나면 지워져서", "밤사이 모델이 업데이트돼서", "이름이 토큰을 너무 많이 써서"], a: 0,
-    exp: "모델은 대화로 배우지 않는다. 새 대화에는 어제 대화가 입력으로 들어가지 않으니 모른다." },
+    exp: "모델은 대화로 배우지 않아요. 새 대화에는 어제 대화가 입력으로 들어가지 않으니 몰라요." },
   { q: "미세조정 단계에서 모델이 주로 배우는 것은?",
     opts: ["질문에 답하고 지시를 따르는 법", "인터넷 글을 처음으로 읽는 것", "사용자와 대화하며 실시간으로 배우는 것", "검색하는 법"], a: 0,
-    exp: "사전학습으로 지식과 말투를 익힌 뒤, 미세조정에서 대답하는 방식과 지시 따르기를 따로 배운다." },
+    exp: "사전학습으로 지식과 말투를 익힌 뒤, 미세조정에서 대답하는 방식과 지시 따르기를 따로 배워요." },
   { q: "max_tokens를 아주 작게(예: 10) 설정하면 어떻게 될까?",
-    opts: ["답이 더 정확해진다", "답이 중간에 잘릴 수 있다", "모델이 더 빨리 학습한다", "temperature가 자동으로 0이 된다"], a: 1,
-    exp: "max_tokens는 답을 최대 몇 토큰까지 쓸지다. 너무 작으면 문장이 끝나기 전에 끊긴다." },
+    opts: ["답이 더 정확해져요", "답이 중간에 잘릴 수 있어요", "모델이 더 빨리 학습해요", "temperature가 자동으로 0이 돼요"], a: 1,
+    exp: "max_tokens는 답을 최대 몇 토큰까지 쓸지예요. 너무 작으면 문장이 끝나기 전에 끊겨요." },
 
   // O/X (ox) — a: 0 = O, 1 = X
-  { q: "\"오늘 날씨가\" 다음 후보가 맑아서 50%, 추워서 30%, 흐려서 20%일 때, 모델이 \"흐려서\"를 고를 수도 있다.",
-    opts: ["O", "X"], ox: OX, a: 0, exp: "확률대로 뽑기 때문에 20%짜리도 뽑힐 수 있다." },
-  { q: "AI가 답을 한 글자씩 타이핑하듯 보여 주는 건 보기 좋으라고 넣은 연출일 뿐이다.",
-    opts: ["O", "X"], ox: OX, a: 1, exp: "실제로 토큰을 하나씩 만들어 내기 때문에, 만들어지는 대로 바로 보여 주는 것이다." },
-  { q: "temperature를 0에 가깝게 낮추면 AI의 답이 더 정확해진다.",
-    opts: ["O", "X"], ox: OX, a: 1, exp: "낮추면 답이 일정해질 뿐 정확해지지는 않는다. 틀린 답이라면 매번 똑같이 틀린다." },
-  { q: "temperature를 0으로 하면 언제나 글자 하나 다르지 않고 완전히 똑같은 답이 나온다.",
-    opts: ["O", "X"], ox: OX, a: 1, exp: "거의 같아지지만 완전히 결정적이지는 않다. Claude 공식 문서에도 그렇게 나온다." },
-  { q: "AI 앱의 \"메모리\" 기능은 모델이 내 대화를 학습해서 기억하는 것이다.",
-    opts: ["O", "X"], ox: OX, a: 1, exp: "앱이 내 정보를 메모해 뒀다가 대화할 때 입력에 끼워 넣는 것이다. 모델은 바뀌지 않는다." },
-  { q: "토큰 하나는 항상 단어 하나와 같다.",
-    opts: ["O", "X"], ox: OX, a: 1, exp: "단어보다 작은 조각인 경우가 많다. 자주 쓰는 덩어리는 한 토큰, 드문 건 여러 토큰으로 나뉜다." },
-  { q: "두 번째 질문을 보낼 때, 첫 번째 질문과 AI의 답도 같이 보낸다.",
-    opts: ["O", "X"], ox: OX, a: 0, exp: "messages에 지금까지의 대화를 전부 넣어서 보낸다. 그래서 모델이 앞의 대화를 아는 것처럼 보인다." },
+  { q: "\"오늘 날씨가\" 다음 후보가 맑아서 50%, 추워서 30%, 흐려서 20%일 때, 모델이 \"흐려서\"를 고를 수도 있어요.",
+    opts: ["O", "X"], ox: OX, a: 0, exp: "확률대로 뽑기 때문에 20%짜리도 뽑힐 수 있어요." },
+  { q: "AI가 답을 한 글자씩 타이핑하듯 보여 주는 건 보기 좋으라고 넣은 연출일 뿐이에요.",
+    opts: ["O", "X"], ox: OX, a: 1, exp: "실제로 토큰을 하나씩 만들어 내기 때문에, 만들어지는 대로 바로 보여 주는 거예요." },
+  { q: "temperature를 0에 가깝게 낮추면 AI의 답이 더 정확해져요.",
+    opts: ["O", "X"], ox: OX, a: 1, exp: "낮추면 답이 일정해질 뿐 정확해지지는 않아요. 틀린 답이라면 매번 똑같이 틀려요." },
+  { q: "temperature를 0으로 하면 언제나 글자 하나 다르지 않고 완전히 똑같은 답이 나와요.",
+    opts: ["O", "X"], ox: OX, a: 1, exp: "거의 같아지지만 완전히 결정적이지는 않아요. Claude 공식 문서에도 그렇게 나와요." },
+  { q: "AI 앱의 \"메모리\" 기능은 모델이 내 대화를 학습해서 기억하는 거예요.",
+    opts: ["O", "X"], ox: OX, a: 1, exp: "앱이 내 정보를 메모해 뒀다가 대화할 때 입력에 끼워 넣는 거예요. 모델은 바뀌지 않아요." },
+  { q: "토큰 하나는 항상 단어 하나와 같아요.",
+    opts: ["O", "X"], ox: OX, a: 1, exp: "단어보다 작은 조각인 경우가 많아요. 자주 쓰는 덩어리는 한 토큰, 드문 건 여러 토큰으로 나뉘어요." },
+  { q: "두 번째 질문을 보낼 때, 첫 번째 질문과 AI의 답도 같이 보내요.",
+    opts: ["O", "X"], ox: OX, a: 0, exp: "messages에 지금까지의 대화를 전부 넣어서 보내요. 그래서 모델이 앞의 대화를 아는 것처럼 보여요." },
 
   // 초성 (text)
   { type: "text", q: "다음 설명에 해당하는 용어는?", desc: "다음 토큰을 확률에 따라 골라서, 같은 질문에도 답이 달라질 수 있는 성질",
-    hint: "ㅎㄹㅈ ㅅㅅ", answers: ["확률적생성", "확률적 생성"], exp: "확률적 생성. 데모의 '확률대로 뽑기'가 이것이다." },
-  { type: "text", q: "다음 설명에 해당하는 용어는?", desc: "LLM이 글을 읽고 쓰는 단위. 단어보다 작은 조각일 수 있다.",
-    hint: "ㅌㅋ", answers: ["토큰", "token"], exp: "토큰. \"공원에\"가 \"공원\" + \"에\"처럼 나뉘기도 한다." },
-  { type: "text", q: "다음 설명에 해당하는 용어는?", desc: "엄청난 양의 글로 다음 토큰 예측을 연습하는 첫 단계. 지식과 말투가 여기서 생긴다.",
+    hint: "ㅎㄹㅈ ㅅㅅ", answers: ["확률적생성", "확률적 생성"], exp: "확률적 생성. 데모의 '확률대로 뽑기'가 이거예요." },
+  { type: "text", q: "다음 설명에 해당하는 용어는?", desc: "LLM이 글을 읽고 쓰는 단위. 단어보다 작은 조각일 수 있어요.",
+    hint: "ㅌㅋ", answers: ["토큰", "token"], exp: "토큰. \"공원에\"가 \"공원\" + \"에\"처럼 나뉘기도 해요." },
+  { type: "text", q: "다음 설명에 해당하는 용어는?", desc: "엄청난 양의 글로 다음 토큰 예측을 연습하는 첫 단계. 지식과 말투가 여기서 생겨요.",
     hint: "ㅅㅈㅎㅅ", answers: ["사전학습", "사전 학습", "pretraining", "pre-training"], exp: "사전학습. 책을 엄청 읽는 단계." },
   { type: "text", q: "다음 설명에 해당하는 용어는?", desc: "사전학습한 모델에게 질문에 답하고 지시를 따르는 법을 따로 가르치는 단계",
     hint: "ㅁㅅㅈㅈ", answers: ["미세조정", "미세 조정", "파인튜닝", "fine-tuning", "finetuning"], exp: "미세조정. 대답하는 법을 배우는 단계." },
-  { type: "text", q: "다음 설명에 해당하는 값의 이름은? (한글 또는 영어)", desc: "다음 토큰을 얼마나 무작위로 뽑을지 정하는 값. 낮으면 일정하고, 높으면 다양하다.",
-    hint: "ㅌㅍㄹㅊ", answers: ["temperature", "템퍼러처", "템퍼러쳐"], exp: "temperature. Claude API에서는 0~1 사이로 정한다." },
+  { type: "text", q: "다음 설명에 해당하는 값의 이름은? (한글 또는 영어)", desc: "다음 토큰을 얼마나 무작위로 뽑을지 정하는 값. 낮으면 일정하고, 높으면 다양해요.",
+    hint: "ㅌㅍㄹㅊ", answers: ["temperature", "템퍼러처", "템퍼러쳐"], exp: "temperature. Claude API에서는 0~1 사이로 정해요." },
 
   // 순서 맞추기 (order) — items는 정답 순서
   { type: "order", q: "LLM이 답을 만드는 과정을 순서대로 눌러 보자.",
-    items: ["지금까지의 글을 읽는다", "다음 토큰 후보마다 확률을 매긴다", "확률에 따라 하나를 고른다", "고른 토큰을 끝에 붙이고 처음으로 돌아간다"],
-    exp: "읽기 → 확률 매기기 → 하나 고르기 → 붙이고 반복. 이 반복이 답변 한 편을 만든다." },
+    items: ["지금까지의 글을 읽어요", "다음 토큰 후보마다 확률을 매겨요", "확률에 따라 하나를 골라요", "고른 토큰을 끝에 붙이고 처음으로 돌아가요"],
+    exp: "읽기 → 확률 매기기 → 하나 고르기 → 붙이고 반복. 이 반복이 답변 한 편을 만들어요." },
   { type: "order", q: "모델이 만들어져서 쓰이기까지의 순서대로 눌러 보자.",
     items: ["사전학습", "미세조정", "사용 (고정)"],
-    exp: "책을 엄청 읽고(사전학습) → 대답하는 법을 배우고(미세조정) → 그다음부터는 고정된 채로 쓰인다." },
+    exp: "책을 엄청 읽고(사전학습) → 대답하는 법을 배우고(미세조정) → 그다음부터는 고정된 채로 쓰여요." },
   { type: "order", q: "두 번째 질문을 보낼 때 messages 안에 들어가는 순서대로 눌러 보자.",
     items: ["user: 1+1은?", "assistant: 2", "user: 거기에 3을 더하면?"],
-    exp: "대화가 일어난 순서 그대로 쌓는다. 그래야 모델이 '거기'가 2라는 걸 안다." },
+    exp: "대화가 일어난 순서 그대로 쌓아요. 그래야 모델이 '거기'가 2라는 걸 알아요." },
 ];
 const kindOf = b => b.type === "text" ? "text" : b.type === "order" ? "order" : b.ox ? "ox" : "mc";
 const MIX = { mc: 6, ox: 3, text: 2, order: 1 };   // 한 번에 12문제
@@ -1742,65 +1742,65 @@ function makeQuiz(QUIZ_ID, bank, quiz) {
 
 const bank2 = [
   // 객관식
-  { q: "AI에게 우리 회사 연차 규정을 물었더니 일반적인 이야기만 했다. 가장 먼저 해 볼 것은?",
-    opts: ["temperature를 높인다", "연차 규정 문서를 컨텍스트에 넣어 준다", "더 큰 모델로 바꾼다", "같은 질문을 여러 번 한다"], a: 1,
-    exp: "모델은 우리 회사 규정을 학습한 적이 없다. 컨텍스트에 넣어 주면 그걸 보고 답한다." },
-  { q: "같은 Claude 모델을 쓰는데, A 앱은 친구처럼 반말로, B 앱은 딱딱한 존댓말로만 답한다. 가장 그럴듯한 이유는?",
+  { q: "AI에게 우리 회사 연차 규정을 물었더니 일반적인 이야기만 했어요. 가장 먼저 해 볼 것은?",
+    opts: ["temperature를 높여요", "연차 규정 문서를 컨텍스트에 넣어 줘요", "더 큰 모델로 바꿔요", "같은 질문을 여러 번 해요"], a: 1,
+    exp: "모델은 우리 회사 규정을 학습한 적이 없어요. 컨텍스트에 넣어 주면 그걸 보고 답해요." },
+  { q: "같은 Claude 모델을 쓰는데, A 앱은 친구처럼 반말로, B 앱은 딱딱한 존댓말로만 답해요. 가장 그럴듯한 이유는?",
     opts: ["앱마다 시스템 프롬프트가 달라서", "앱마다 모델을 따로 학습시켜서", "사용자의 말투를 자동으로 배워서", "temperature가 달라서"], a: 0,
-    exp: "시스템 프롬프트에 말투와 역할을 적어 두면 같은 모델도 다르게 행동한다." },
+    exp: "시스템 프롬프트에 말투와 역할을 적어 두면 같은 모델도 다르게 행동해요." },
   { q: "다음 중 컨텍스트에 들어가지 않는 것은?",
     opts: ["시스템 프롬프트", "이 대화에서 앞서 주고받은 말", "내가 첨부한 문서", "다른 사용자가 같은 앱에서 나눈 대화"], a: 3,
-    exp: "컨텍스트에는 이번 요청에 넣어 준 글만 들어간다. 다른 사람의 대화는 들어가지 않는다." },
-  { q: "대화가 아주 길어지자, AI가 처음에 알려 준 내 이름을 잊었다. 가장 그럴듯한 이유는?",
+    exp: "컨텍스트에는 이번 요청에 넣어 준 글만 들어가요. 다른 사람의 대화는 들어가지 않아요." },
+  { q: "대화가 아주 길어지자, AI가 처음에 알려 준 내 이름을 잊었어요. 가장 그럴듯한 이유는?",
     opts: ["모델이 대화 중에 다시 학습돼서", "컨텍스트 윈도우를 넘어서 앞부분이 잘리거나 요약돼서", "이름은 개인정보라 자동 삭제돼서", "temperature가 높아서"], a: 1,
-    exp: "한 번에 넣을 수 있는 양을 넘으면 앱이 오래된 대화부터 잘라 내거나 요약한다." },
+    exp: "한 번에 넣을 수 있는 양을 넘으면 앱이 오래된 대화부터 잘라 내거나 요약해요." },
   { q: "다음 중 가장 좋은 프롬프트는?",
     opts: ["요약해 줘", "이 회의록을 팀장 보고용으로 3줄 요약해 줘. 결정 사항과 담당자는 꼭 넣어 줘.", "잘 좀 요약해 줘, 부탁이야", "요약. 요약. 요약."], a: 1,
-    exp: "누구를 위한 건지(목표), 얼마나(형식), 무엇을 꼭(지시) 넣을지가 있어서 AI가 짐작할 게 없다." },
+    exp: "누구를 위한 건지(목표), 얼마나(형식), 무엇을 꼭(지시) 넣을지가 있어서 AI가 짐작할 게 없어요." },
   { q: "프롬프트에 원하는 결과의 예시를 몇 개 보여 주는 방법을 뭐라고 할까?",
     opts: ["퓨샷 (few-shot)", "temperature", "컨텍스트 윈도우", "미세조정"], a: 0,
-    exp: "예시를 몇 개(few) 보여 준다고 해서 퓨샷이다. 형식을 맞추고 싶을 때 효과가 크다." },
+    exp: "예시를 몇 개(few) 보여 준다고 해서 퓨샷이에요. 형식을 맞추고 싶을 때 효과가 커요." },
   { q: "시스템 프롬프트에 대한 설명으로 맞는 것은?",
-    opts: ["모델을 새로 학습시키는 명령이다", "앱이 대화 앞에 넣는 지시로, 보통 사용자에게는 안 보인다", "한 번만 보내면 모델이 계속 기억한다", "사용자가 마지막에 쓰는 질문이다"], a: 1,
-    exp: "시스템 프롬프트도 컨텍스트의 일부라서 요청할 때마다 매번 같이 보낸다." },
+    opts: ["모델을 새로 학습시키는 명령이에요", "앱이 대화 앞에 넣는 지시로, 보통 사용자에게는 안 보여요", "한 번만 보내면 모델이 계속 기억해요", "사용자가 마지막에 쓰는 질문이에요"], a: 1,
+    exp: "시스템 프롬프트도 컨텍스트의 일부라서 요청할 때마다 매번 같이 보내요." },
   { q: "AI 앱의 \"메모리\" 기능은 실제로 어떻게 동작할까?",
-    opts: ["모델이 대화를 학습해서 기억한다", "앱이 메모를 저장해 뒀다가 컨텍스트에 끼워 넣는다", "모델 안에 사용자별 칸이 따로 있다", "temperature를 0으로 고정한다"], a: 1,
-    exp: "모델은 바뀌지 않는다. 앱이 저장해 둔 메모를 매번 컨텍스트에 넣어서 기억하는 것처럼 보이게 한다." },
-  { q: "긴 PDF를 통째로 넣으려는데 컨텍스트 윈도우를 넘는다. 해결 방법으로 알맞지 않은 것은?",
-    opts: ["필요한 부분만 골라서 넣는다", "요약본을 만들어서 넣는다", "여러 번 나눠서 처리한다", "temperature를 높인다"], a: 3,
-    exp: "temperature는 뽑는 방식의 무작위성일 뿐, 넣을 수 있는 양과는 상관없다." },
+    opts: ["모델이 대화를 학습해서 기억해요", "앱이 메모를 저장해 뒀다가 컨텍스트에 끼워 넣어요", "모델 안에 사용자별 칸이 따로 있어요", "temperature를 0으로 고정해요"], a: 1,
+    exp: "모델은 바뀌지 않아요. 앱이 저장해 둔 메모를 매번 컨텍스트에 넣어서 기억하는 것처럼 보이게 해요." },
+  { q: "긴 PDF를 통째로 넣으려는데 컨텍스트 윈도우를 넘어요. 해결 방법으로 알맞지 않은 것은?",
+    opts: ["필요한 부분만 골라서 넣어요", "요약본을 만들어서 넣어요", "여러 번 나눠서 처리해요", "temperature를 높여요"], a: 3,
+    exp: "temperature는 뽑는 방식의 무작위성일 뿐, 넣을 수 있는 양과는 상관없어요." },
   { q: "컨텍스트 윈도우의 크기는 무엇으로 셀까?",
     opts: ["글자 수", "토큰 수", "질문 개수", "파일 크기(MB)"], a: 1,
-    exp: "모델은 토큰 단위로 읽기 때문에 윈도우도 토큰 수로 센다." },
-  { q: "\"보고서 써 줘\"라고만 했더니 엉뚱한 형식이 나왔다. 프롬프트에 가장 먼저 더할 것은?",
+    exp: "모델은 토큰 단위로 읽기 때문에 윈도우도 토큰 수로 세요." },
+  { q: "\"보고서 써 줘\"라고만 했더니 엉뚱한 형식이 나왔어요. 프롬프트에 가장 먼저 더할 것은?",
     opts: ["\"제발\" 같은 부탁의 말", "누가 읽을지, 분량, 꼭 넣을 항목", "같은 말을 세 번 반복", "느낌표"], a: 1,
-    exp: "AI는 내 상황을 모른다. 독자, 형식, 필수 항목처럼 짐작해야 했던 걸 적어 주면 된다." },
+    exp: "AI는 내 상황을 몰라요. 독자, 형식, 필수 항목처럼 짐작해야 했던 걸 적어 주면 돼요." },
   { q: "컨텍스트에 자료를 많이 넣을수록 생기는 일로 맞는 것은?",
-    opts: ["모델이 그 자료로 학습된다", "요금이 늘어나고, 윈도우 한계에 가까워진다", "temperature가 자동으로 낮아진다", "아무 변화도 없다"], a: 1,
-    exp: "넣는 글도 토큰이라 요금에 포함된다. 많이 넣을수록 윈도우도 빨리 찬다." },
+    opts: ["모델이 그 자료로 학습돼요", "요금이 늘어나고, 윈도우 한계에 가까워져요", "temperature가 자동으로 낮아져요", "아무 변화도 없어요"], a: 1,
+    exp: "넣는 글도 토큰이라 요금에 포함돼요. 많이 넣을수록 윈도우도 빨리 차요." },
 
   // O/X
-  { q: "모델은 컨텍스트에 넣어 주지 않은 우리 회사 내부 규정도 알고 있다.", opts: ["O", "X"], ox: OX, a: 1,
-    exp: "학습한 적 없는 내부 자료는 모른다. 넣어 줘야 안다." },
-  { q: "시스템 프롬프트도 컨텍스트의 일부다.", opts: ["O", "X"], ox: OX, a: 0,
-    exp: "시스템 프롬프트, 대화, 자료, 질문을 모두 합친 게 컨텍스트다." },
-  { q: "컨텍스트 윈도우를 넘은 대화는 모델이 따로 잘 저장해 둔다.", opts: ["O", "X"], ox: OX, a: 1,
-    exp: "넘친 부분은 잘리거나 요약된다. 모델에 따로 저장되지 않는다." },
-  { q: "메모리 기능이 꺼져 있으면, 새 대화를 열었을 때 이전 대화는 컨텍스트에 들어가지 않는다.", opts: ["O", "X"], ox: OX, a: 0,
-    exp: "새 대화는 빈 컨텍스트에서 시작한다. 그래서 이전 내용을 모른다." },
-  { q: "컨텍스트가 길수록 요금이 더 든다.", opts: ["O", "X"], ox: OX, a: 0,
-    exp: "AI가 쓰는 답뿐 아니라 넣어 주는 글도 토큰으로 세서 요금이 붙는다." },
-  { q: "시스템 프롬프트는 대화를 시작할 때 한 번만 보내면 모델이 계속 기억한다.", opts: ["O", "X"], ox: OX, a: 1,
-    exp: "모델은 기억이 없다. 앱이 요청할 때마다 시스템 프롬프트를 다시 넣는다." },
+  { q: "모델은 컨텍스트에 넣어 주지 않은 우리 회사 내부 규정도 알고 있어요.", opts: ["O", "X"], ox: OX, a: 1,
+    exp: "학습한 적 없는 내부 자료는 몰라요. 넣어 줘야 알아요." },
+  { q: "시스템 프롬프트도 컨텍스트의 일부예요.", opts: ["O", "X"], ox: OX, a: 0,
+    exp: "시스템 프롬프트, 대화, 자료, 질문을 모두 합친 게 컨텍스트예요." },
+  { q: "컨텍스트 윈도우를 넘은 대화는 모델이 따로 잘 저장해 둬요.", opts: ["O", "X"], ox: OX, a: 1,
+    exp: "넘친 부분은 잘리거나 요약돼요. 모델에 따로 저장되지 않아요." },
+  { q: "메모리 기능이 꺼져 있으면, 새 대화를 열었을 때 이전 대화는 컨텍스트에 들어가지 않아요.", opts: ["O", "X"], ox: OX, a: 0,
+    exp: "새 대화는 빈 컨텍스트에서 시작해요. 그래서 이전 내용을 몰라요." },
+  { q: "컨텍스트가 길수록 요금이 더 들어요.", opts: ["O", "X"], ox: OX, a: 0,
+    exp: "AI가 쓰는 답뿐 아니라 넣어 주는 글도 토큰으로 세서 요금이 붙어요." },
+  { q: "시스템 프롬프트는 대화를 시작할 때 한 번만 보내면 모델이 계속 기억해요.", opts: ["O", "X"], ox: OX, a: 1,
+    exp: "모델은 기억이 없어요. 앱이 요청할 때마다 시스템 프롬프트를 다시 넣어요." },
 
   // 초성
   { type: "text", q: "다음 설명에 해당하는 용어는?", desc: "모델이 답을 쓰기 전에 한 번에 읽는 글 전체. 시스템 프롬프트, 대화, 자료, 질문을 모두 합친 것.",
-    hint: "ㅋㅌㅅㅌ", answers: ["컨텍스트", "콘텍스트", "context"], exp: "컨텍스트. 모델이 볼 수 있는 전부다." },
+    hint: "ㅋㅌㅅㅌ", answers: ["컨텍스트", "콘텍스트", "context"], exp: "컨텍스트. 모델이 볼 수 있는 전부예요." },
   { type: "text", q: "다음 설명에 해당하는 용어는?", desc: "모델에게 주는 지시나 질문",
     hint: "ㅍㄹㅍㅌ", answers: ["프롬프트", "prompt"], exp: "프롬프트." },
-  { type: "text", q: "다음 설명에 해당하는 용어는?", desc: "앱이 대화 맨 앞에 넣어 두는 지시. 말투, 역할, 규칙을 정한다.",
+  { type: "text", q: "다음 설명에 해당하는 용어는?", desc: "앱이 대화 맨 앞에 넣어 두는 지시. 말투, 역할, 규칙을 정해요.",
     hint: "ㅅㅅㅌ ㅍㄹㅍㅌ", answers: ["시스템프롬프트", "시스템 프롬프트", "systemprompt", "system prompt"], exp: "시스템 프롬프트." },
-  { type: "text", q: "다음 설명에 해당하는 용어는?", desc: "컨텍스트에 한 번에 넣을 수 있는 글의 최대량. 토큰으로 센다.",
+  { type: "text", q: "다음 설명에 해당하는 용어는?", desc: "컨텍스트에 한 번에 넣을 수 있는 글의 최대량. 토큰으로 세요.",
     hint: "ㅋㅌㅅㅌ ㅇㄷㅇ", answers: ["컨텍스트윈도우", "컨텍스트 윈도우", "콘텍스트윈도우", "contextwindow", "context window"], exp: "컨텍스트 윈도우. 책상 크기." },
   { type: "text", q: "다음 설명에 해당하는 용어는?", desc: "프롬프트에 원하는 결과의 예시를 몇 개 보여 주는 방법",
     hint: "ㅍㅅ", answers: ["퓨샷", "few-shot", "fewshot", "퓨 샷"], exp: "퓨샷 (few-shot)." },
@@ -1808,70 +1808,70 @@ const bank2 = [
   // 순서
   { type: "order", q: "앱이 모델에 보내는 컨텍스트가 보통 쌓이는 순서대로 눌러 보자.",
     items: ["시스템 프롬프트", "이전 대화", "지금 쓴 질문"],
-    exp: "앱의 지시가 맨 앞, 그다음 지금까지의 대화, 마지막에 지금 질문이 붙는다." },
+    exp: "앱의 지시가 맨 앞, 그다음 지금까지의 대화, 마지막에 지금 질문이 붙어요." },
   { type: "order", q: "긴 대화에서 AI가 앞 내용을 잊게 되는 과정을 순서대로 눌러 보자.",
-    items: ["대화가 계속 길어진다", "컨텍스트가 윈도우 한계에 가까워진다", "앱이 오래된 대화를 잘라 내거나 요약한다", "모델은 앞부분 내용을 볼 수 없게 된다"],
-    exp: "모델이 잊는 게 아니라, 애초에 컨텍스트에 안 들어가서 못 보는 것이다." },
+    items: ["대화가 계속 길어져요", "컨텍스트가 윈도우 한계에 가까워져요", "앱이 오래된 대화를 잘라 내거나 요약해요", "모델은 앞부분 내용을 볼 수 없게 돼요"],
+    exp: "모델이 잊는 게 아니라, 애초에 컨텍스트에 안 들어가서 못 보는 거예요." },
   { type: "order", q: "메모리 기능이 동작하는 순서대로 눌러 보자.",
-    items: ["대화 중에 기억할 만한 정보가 나온다", "앱이 그 정보를 메모로 저장한다", "사용자가 새 대화를 연다", "앱이 메모를 컨텍스트에 끼워 넣어 보낸다"],
-    exp: "모델은 끝까지 그대로다. 앱이 메모를 넣어 줄 뿐이다." },
+    items: ["대화 중에 기억할 만한 정보가 나와요", "앱이 그 정보를 메모로 저장해요", "사용자가 새 대화를 열어요", "앱이 메모를 컨텍스트에 끼워 넣어 보내요"],
+    exp: "모델은 끝까지 그대로예요. 앱이 메모를 넣어 줄 뿐이에요." },
 ];
 
 const bank3 = [
   // 객관식
   { q: "AI에게 \"지금 서울 날씨\"를 정확히 답하게 하려면 무엇이 필요할까?",
-    opts: ["날씨 조회 도구를 쓸 수 있게 해 준다", "temperature를 낮춘다", "프롬프트에 \"정확히\"라고 쓴다", "같은 질문을 여러 번 한다"], a: 0,
-    exp: "지금 날씨는 학습이 끝난 뒤의 일이라 모델은 모른다. 도구로 가져와야 한다." },
+    opts: ["날씨 조회 도구를 쓸 수 있게 해 줘요", "temperature를 낮춰요", "프롬프트에 \"정확히\"라고 써요", "같은 질문을 여러 번 해요"], a: 0,
+    exp: "지금 날씨는 학습이 끝난 뒤의 일이라 모델은 몰라요. 도구로 가져와야 해요." },
   { q: "Claude Code에서 Bash 도구로 npm test를 실행할 때, 실제로 명령을 실행하는 것은?",
     opts: ["Claude (모델)", "Claude Code (앱)", "GitHub", "내가 직접"], a: 1,
-    exp: "Claude는 \"Bash로 npm test 실행해 줘\"라고 적을 뿐이다. 실행은 Claude Code가 내 컴퓨터에서 한다." },
-  { q: "Claude Code 대화창에서 접힌 줄을 펼쳤더니 Edit가 보였다. 이건 무엇일까?",
+    exp: "Claude는 \"Bash로 npm test 실행해 줘\"라고 적을 뿐이에요. 실행은 Claude Code가 내 컴퓨터에서 해요." },
+  { q: "Claude Code 대화창에서 접힌 줄을 펼쳤더니 Edit가 보였어요. 이건 무엇일까?",
     opts: ["Claude가 Edit 도구를 어떤 값으로 불러 달라고 적은 기록", "Claude가 직접 파일을 고친 흔적", "내가 이전에 입력한 명령", "모델이 학습한 기록"], a: 0,
-    exp: "Claude가 도구 호출을 적고, Claude Code가 실제로 파일을 고친 것이다." },
+    exp: "Claude가 도구 호출을 적고, Claude Code가 실제로 파일을 고친 거예요." },
   { q: "모델이 도구를 쓰고 싶을 때 실제로 하는 일은?",
-    opts: ["직접 인터넷에 접속한다", "어떤 도구를 어떤 값으로 부를지 적어서 응답한다", "사용자에게 도구 설치를 부탁한다", "도구 사용법을 새로 학습한다"], a: 1,
-    exp: "응답에 tool_use를 적고 멈춘다. 모델이 하는 건 여전히 글쓰기다." },
+    opts: ["직접 인터넷에 접속해요", "어떤 도구를 어떤 값으로 부를지 적어서 응답해요", "사용자에게 도구 설치를 부탁해요", "도구 사용법을 새로 학습해요"], a: 1,
+    exp: "응답에 tool_use를 적고 멈춰요. 모델이 하는 건 여전히 글쓰기예요." },
   { q: "도구 실행 결과는 어떻게 모델에게 전달될까?",
-    opts: ["모델 안에 저장된다", "앱이 컨텍스트에 붙여서 다시 보낸다", "다음 학습 때 반영된다", "전달되지 않고 사용자에게만 보인다"], a: 1,
-    exp: "tool_result로 붙여서 한 번 더 요청한다. 결과도 컨텍스트에 들어가는 글이다." },
+    opts: ["모델 안에 저장돼요", "앱이 컨텍스트에 붙여서 다시 보내요", "다음 학습 때 반영돼요", "전달되지 않고 사용자에게만 보여요"], a: 1,
+    exp: "tool_result로 붙여서 한 번 더 요청해요. 결과도 컨텍스트에 들어가는 글이에요." },
   { q: "앱이 도구 목록을 보낼 때 같이 보내지 않는 것은?",
     opts: ["도구 이름", "언제 쓰는 도구인지 설명", "입력 형식", "도구의 실제 프로그램 코드"], a: 3,
-    exp: "모델은 이름, 설명, 입력 형식만 본다. 코드는 앱 쪽에 있고 앱이 실행한다." },
-  { q: "도구를 줬더니 모델이 엉뚱한 상황에서 그 도구를 부른다. 가장 먼저 고칠 것은?",
-    opts: ["도구 설명(description)을 더 분명하게 쓴다", "temperature를 높인다", "도구 개수를 늘린다", "질문을 짧게 한다"], a: 0,
-    exp: "모델은 설명만 보고 언제 쓸지 고른다. 2강의 좋은 프롬프트와 같은 원리다." },
-  { q: "계산기와 날씨 도구가 있는 앱에 \"회의록 잘 쓰는 법 알려 줘\"라고 했다. 모델은 보통 어떻게 할까?",
-    opts: ["도구 없이 바로 답한다", "반드시 도구를 하나는 쓴다", "두 도구를 모두 쓴다", "도구가 맞지 않아 오류를 낸다"], a: 0,
-    exp: "도구는 필요할 때만 쓴다. 쓸지 말지는 모델이 고른다." },
+    exp: "모델은 이름, 설명, 입력 형식만 봐요. 코드는 앱 쪽에 있고 앱이 실행해요." },
+  { q: "도구를 줬더니 모델이 엉뚱한 상황에서 그 도구를 불러요. 가장 먼저 고칠 것은?",
+    opts: ["도구 설명(description)을 더 분명하게 써요", "temperature를 높여요", "도구 개수를 늘려요", "질문을 짧게 해요"], a: 0,
+    exp: "모델은 설명만 보고 언제 쓸지 골라요. 2강의 좋은 프롬프트와 같은 원리예요." },
+  { q: "계산기와 날씨 도구가 있는 앱에 \"회의록 잘 쓰는 법 알려 줘\"라고 했어요. 모델은 보통 어떻게 할까?",
+    opts: ["도구 없이 바로 답해요", "반드시 도구를 하나는 써요", "두 도구를 모두 써요", "도구가 맞지 않아 오류를 내요"], a: 0,
+    exp: "도구는 필요할 때만 써요. 쓸지 말지는 모델이 골라요." },
   { q: "다음 중 도구가 있어야 제대로 할 수 있는 일은?",
     opts: ["이메일 문장 다듬기", "오늘 환율 확인하기", "시 한 편 쓰기", "영어 문장 번역"], a: 1,
-    exp: "오늘 환율은 학습에 없는 최신 정보다. 나머지는 글만으로 할 수 있다." },
+    exp: "오늘 환율은 학습에 없는 최신 정보예요. 나머지는 글만으로 할 수 있어요." },
   { q: "계산기 도구 없이 큰 수 곱셈을 시키면 틀릴 수 있는 이유는?",
     opts: ["모델이 숫자를 싫어해서", "실제로 계산하는 게 아니라 숫자 토큰을 이어 쓰는 것이라서", "컨텍스트 윈도우가 작아서", "temperature가 0이라서"], a: 1,
-    exp: "그럴듯한 숫자를 이어 쓸 뿐이라 자릿수가 크면 실수한다. 계산기를 주면 정확해진다." },
+    exp: "그럴듯한 숫자를 이어 쓸 뿐이라 자릿수가 크면 실수해요. 계산기를 주면 정확해져요." },
   { q: "모델 응답의 stop_reason이 \"tool_use\"라면 무슨 뜻일까?",
-    opts: ["도구를 써야 해서 멈췄다", "대화가 끝났다", "오류가 났다", "토큰 한도에 걸렸다"], a: 0,
-    exp: "앱은 이걸 보고 도구를 실행하고 결과를 붙여 다시 보낸다." },
+    opts: ["도구를 써야 해서 멈췄어요", "대화가 끝났어요", "오류가 났어요", "토큰 한도에 걸렸어요"], a: 0,
+    exp: "앱은 이걸 보고 도구를 실행하고 결과를 붙여 다시 보내요." },
   { q: "\"메일 보내기\" 도구에 실행 전 사람 확인을 넣는 이유로 가장 알맞은 것은?",
     opts: ["모델이 잘못된 값으로 부를 수 있고, 되돌리기 어려운 일이라서", "모델이 메일을 읽지 못해서", "요금을 줄이려고", "도구는 한 번만 쓸 수 있어서"], a: 0,
-    exp: "모델이 고른 값은 틀릴 수 있다. 실행은 앱이 하니까 앱에서 확인 단계를 넣을 수 있다." },
+    exp: "모델이 고른 값은 틀릴 수 있어요. 실행은 앱이 하니까 앱에서 확인 단계를 넣을 수 있어요." },
   { q: "MCP에 대한 설명으로 맞는 것은?",
     opts: ["도구를 여러 AI 앱에 같은 방식으로 연결하는 공통 규격", "새로 나온 언어 모델 이름", "temperature를 정하는 규칙", "컨텍스트 윈도우를 세는 단위"], a: 0,
-    exp: "USB처럼, 한 번 만든 도구를 여러 AI 앱에 꽂아 쓸 수 있게 하는 규격이다." },
+    exp: "USB처럼, 한 번 만든 도구를 여러 AI 앱에 꽂아 쓸 수 있게 하는 규격이에요." },
 
   // O/X
-  { q: "모델은 도구를 직접 실행한다.", opts: ["O", "X"], ox: OX, a: 1,
-    exp: "모델은 호출을 적을 뿐이고, 실행은 앱이 한다." },
-  { q: "도구 실행 결과도 결국 컨텍스트에 들어가는 글이다.", opts: ["O", "X"], ox: OX, a: 0,
-    exp: "tool_result로 붙여서 보낸다. 그래서 토큰과 요금에도 포함된다." },
-  { q: "도구 목록을 주면 모델은 질문마다 반드시 도구를 하나 이상 쓴다.", opts: ["O", "X"], ox: OX, a: 1,
-    exp: "필요 없으면 쓰지 않고 바로 답한다." },
-  { q: "모델은 도구의 이름과 설명을 보고 언제 쓸지 고른다.", opts: ["O", "X"], ox: OX, a: 0,
-    exp: "그래서 설명을 분명하게 쓰는 게 중요하다." },
-  { q: "도구를 한 번 쓰면 앱과 모델 사이에 요청이 딱 한 번만 오간다.", opts: ["O", "X"], ox: OX, a: 1,
-    exp: "최소 두 번이다. 호출을 받는 요청, 결과를 주고 답을 받는 요청." },
-  { q: "검색 도구를 쓰면 학습이 끝난 뒤의 최신 정보도 답에 쓸 수 있다.", opts: ["O", "X"], ox: OX, a: 0,
-    exp: "모델이 새로 배우는 건 아니다. 검색 결과가 컨텍스트에 들어가서 그걸 보고 답한다." },
+  { q: "모델은 도구를 직접 실행해요.", opts: ["O", "X"], ox: OX, a: 1,
+    exp: "모델은 호출을 적을 뿐이고, 실행은 앱이 해요." },
+  { q: "도구 실행 결과도 결국 컨텍스트에 들어가는 글이에요.", opts: ["O", "X"], ox: OX, a: 0,
+    exp: "tool_result로 붙여서 보내요. 그래서 토큰과 요금에도 포함돼요." },
+  { q: "도구 목록을 주면 모델은 질문마다 반드시 도구를 하나 이상 써요.", opts: ["O", "X"], ox: OX, a: 1,
+    exp: "필요 없으면 쓰지 않고 바로 답해요." },
+  { q: "모델은 도구의 이름과 설명을 보고 언제 쓸지 골라요.", opts: ["O", "X"], ox: OX, a: 0,
+    exp: "그래서 설명을 분명하게 쓰는 게 중요해요." },
+  { q: "도구를 한 번 쓰면 앱과 모델 사이에 요청이 딱 한 번만 오가요.", opts: ["O", "X"], ox: OX, a: 1,
+    exp: "최소 두 번이에요. 호출을 받는 요청, 결과를 주고 답을 받는 요청." },
+  { q: "검색 도구를 쓰면 학습이 끝난 뒤의 최신 정보도 답에 쓸 수 있어요.", opts: ["O", "X"], ox: OX, a: 0,
+    exp: "모델이 새로 배우는 건 아니에요. 검색 결과가 컨텍스트에 들어가서 그걸 보고 답해요." },
 
   // 초성
   { type: "text", q: "다음 설명에 해당하는 용어는?", desc: "검색, 계산, 파일 저장처럼 모델이 글 바깥의 일을 하게 해 주는 기능",
@@ -1883,72 +1883,72 @@ const bank3 = [
   { type: "text", q: "다음 설명에 해당하는 용어는?", desc: "도구 설명서에서, 도구에 어떤 값을 넣어야 하는지 정해 둔 부분 (input_schema)",
     hint: "ㅇㄹ ㅎㅅ", answers: ["입력형식", "입력 형식", "input_schema", "스키마"], exp: "입력 형식 (input_schema)." },
   { type: "text", q: "다음 설명에 해당하는 말은?", desc: "도구 목록에서, 모델이 이 도구를 언제 쓸지 판단하는 근거가 되는 글 (description)",
-    hint: "ㅅㅁ", answers: ["설명", "description", "도구설명", "도구 설명"], exp: "설명 (description). 제일 공들여 써야 하는 부분이다." },
+    hint: "ㅅㅁ", answers: ["설명", "description", "도구설명", "도구 설명"], exp: "설명 (description). 제일 공들여 써야 하는 부분이에요." },
 
   // 순서
   { type: "order", q: "Claude Code에 \"테스트 돌려 봐\"라고 했을 때의 흐름을 순서대로 눌러 보자.",
-    items: ["Claude Code가 요청과 도구 목록을 보낸다", "Claude가 \"Bash로 npm test\"를 적어서 응답한다", "Claude Code가 명령을 실제로 실행한다", "Claude Code가 결과를 붙여서 다시 보낸다", "Claude가 결과를 읽고 답한다"],
-    exp: "모델 → 앱 → 모델로 한 번 왕복한다. 실행은 가운데의 앱이 한다." },
+    items: ["Claude Code가 요청과 도구 목록을 보내요", "Claude가 \"Bash로 npm test\"를 적어서 응답해요", "Claude Code가 명령을 실제로 실행해요", "Claude Code가 결과를 붙여서 다시 보내요", "Claude가 결과를 읽고 답해요"],
+    exp: "모델 → 앱 → 모델로 한 번 왕복해요. 실행은 가운데의 앱이 해요." },
   { type: "order", q: "\"내일 3시에 회의 잡아 줘\"를 처리하는 순서대로 눌러 보자.",
-    items: ["사용자가 요청한다", "모델이 create_event 호출을 적는다", "앱이 캘린더에 일정을 저장한다", "모델이 \"잡았다\"고 답한다"],
-    exp: "실제로 캘린더를 바꾸는 건 앱이다. 모델은 호출을 적고, 결과를 보고 답한다." },
+    items: ["사용자가 요청해요", "모델이 create_event 호출을 적어요", "앱이 캘린더에 일정을 저장해요", "모델이 \"잡았다\"고 답해요"],
+    exp: "실제로 캘린더를 바꾸는 건 앱이에요. 모델은 호출을 적고, 결과를 보고 답해요." },
   { type: "order", q: "개발자가 앱에 새 도구를 붙이는 순서대로 눌러 보자.",
-    items: ["도구 기능을 코드로 만든다", "이름, 설명, 입력 형식을 적는다", "요청의 tools에 넣어 보낸다", "모델이 부르면 앱이 실행해서 결과를 돌려준다"],
-    exp: "모델에게 보내는 건 설명서뿐이고, 코드는 앱에 남는다." },
+    items: ["도구 기능을 코드로 만들어요", "이름, 설명, 입력 형식을 적어요", "요청의 tools에 넣어 보내요", "모델이 부르면 앱이 실행해서 결과를 돌려줘요"],
+    exp: "모델에게 보내는 건 설명서뿐이고, 코드는 앱에 남아요." },
 ];
 
 const bank4 = [
   // 객관식
   { q: "에이전트를 가장 잘 설명한 것은?",
     opts: ["도구 쓰기를 일이 끝날 때까지 스스로 반복하는 AI", "도구를 하나만 쓰는 AI", "더 크게 학습한 모델", "사람이 매번 다음 할 일을 알려 주는 AI"], a: 0,
-    exp: "생각 → 행동 → 확인을 반복하고, 다음 할 일은 모델이 결과를 보고 정한다." },
+    exp: "생각 → 행동 → 확인을 반복하고, 다음 할 일은 모델이 결과를 보고 정해요." },
   { q: "3강의 도구 사용과 4강의 에이전트의 가장 큰 차이는?",
-    opts: ["모델이 결과를 보고 다음 할 일을 정하며 반복한다", "에이전트는 도구를 직접 실행한다", "에이전트는 기억이 있다", "에이전트는 컨텍스트를 쓰지 않는다"], a: 0,
-    exp: "실행은 여전히 앱이 하고, 기억도 없다. 달라진 건 반복과 스스로 정하는 다음 단계다." },
+    opts: ["모델이 결과를 보고 다음 할 일을 정하며 반복해요", "에이전트는 도구를 직접 실행해요", "에이전트는 기억이 있어요", "에이전트는 컨텍스트를 쓰지 않아요"], a: 0,
+    exp: "실행은 여전히 앱이 하고, 기억도 없어요. 달라진 건 반복과 스스로 정하는 다음 단계예요." },
   { q: "에이전트 루프의 \"확인\" 단계에서 하는 일은?",
-    opts: ["도구 결과를 읽고 다 됐는지, 다음에 뭘 할지 판단한다", "도구를 실행한다", "모델을 다시 학습시킨다", "반드시 사용자에게 질문한다"], a: 0,
-    exp: "결과가 컨텍스트에 붙고, 모델이 그걸 읽고 다음을 정한다." },
-  { q: "테스트가 실패하자 에이전트가 코드를 다시 고쳤다. 어떻게 가능했을까?",
-    opts: ["실패 결과가 컨텍스트에 들어가서, 모델이 보고 다음 행동을 정했다", "실패하면서 모델이 학습됐다", "temperature가 자동으로 바뀌었다", "사람이 몰래 고쳤다"], a: 0,
-    exp: "도구 결과도 컨텍스트에 쌓이는 글이다. 모델은 그걸 읽고 다음 행동을 고른다." },
+    opts: ["도구 결과를 읽고 다 됐는지, 다음에 뭘 할지 판단해요", "도구를 실행해요", "모델을 다시 학습시켜요", "반드시 사용자에게 질문해요"], a: 0,
+    exp: "결과가 컨텍스트에 붙고, 모델이 그걸 읽고 다음을 정해요." },
+  { q: "테스트가 실패하자 에이전트가 코드를 다시 고쳤어요. 어떻게 가능했을까?",
+    opts: ["실패 결과가 컨텍스트에 들어가서, 모델이 보고 다음 행동을 정했어요", "실패하면서 모델이 학습됐어요", "temperature가 자동으로 바뀌었어요", "사람이 몰래 고쳤어요"], a: 0,
+    exp: "도구 결과도 컨텍스트에 쌓이는 글이에요. 모델은 그걸 읽고 다음 행동을 골라요." },
   { q: "에이전트가 끝없이 돌지 않게 하는 방법으로 알맞지 않은 것은?",
-    opts: ["최대 반복 횟수를 정한다", "일이 끝나면 도구 없이 답하게 한다", "중요한 단계에서 사람 확인을 받는다", "temperature를 높인다"], a: 3,
-    exp: "temperature는 뽑는 방식의 무작위성일 뿐이다. 멈추는 것과는 상관없다." },
+    opts: ["최대 반복 횟수를 정해요", "일이 끝나면 도구 없이 답하게 해요", "중요한 단계에서 사람 확인을 받아요", "temperature를 높여요"], a: 3,
+    exp: "temperature는 뽑는 방식의 무작위성일 뿐이에요. 멈추는 것과는 상관없어요." },
   { q: "매번 \"메일 받기 → 분류 → 저장\" 순서가 똑같은 일에 더 알맞은 것은?",
     opts: ["워크플로", "에이전트", "챗봇", "퓨샷"], a: 0,
-    exp: "순서가 고정된 일은 미리 짜 둔 워크플로가 더 싸고 안정적이다." },
+    exp: "순서가 고정된 일은 미리 짜 둔 워크플로가 더 싸고 안정적이에요." },
   { q: "에이전트가 오래 일할수록 생기는 문제로 맞는 것은?",
-    opts: ["컨텍스트가 쌓여서 윈도우 한계에 가까워지고 요금이 는다", "모델이 점점 똑똑해진다", "도구가 하나씩 사라진다", "답이 점점 빨라진다"], a: 0,
-    exp: "반복마다 도구 결과가 붙는다. 2강의 컨텍스트 윈도우 문제다." },
+    opts: ["컨텍스트가 쌓여서 윈도우 한계에 가까워지고 요금이 늘어요", "모델이 점점 똑똑해져요", "도구가 하나씩 사라져요", "답이 점점 빨라져요"], a: 0,
+    exp: "반복마다 도구 결과가 붙어요. 2강의 컨텍스트 윈도우 문제예요." },
   { q: "Claude Code가 파일을 지우기 전에 \"허용할까요?\"라고 묻는 이유는?",
     opts: ["되돌리기 어려운 행동이라 사람 확인을 받으려고", "모델이 파일 이름을 몰라서", "요금을 아끼려고", "오류가 나서"], a: 0,
-    exp: "실행은 앱 손에 있어서, 앱이 중간에 멈추고 사람에게 물을 수 있다." },
+    exp: "실행은 앱 손에 있어서, 앱이 중간에 멈추고 사람에게 물을 수 있어요." },
   { q: "다음 중 에이전트가 가장 필요한 일은?",
     opts: ["버그 원인을 찾아서 고치고 테스트까지 돌리기", "문장 하나 번역하기", "오늘 날씨 한 번 확인하기", "이메일 문장 다듬기"], a: 0,
-    exp: "해 봐야 다음 할 일이 보이는 여러 단계짜리 일이다." },
+    exp: "해 봐야 다음 할 일이 보이는 여러 단계짜리 일이에요." },
   { q: "에이전트 반복문이 끝나는 때는?",
     opts: ["모델이 도구를 부르지 않고 답할 때", "도구 결과가 나올 때마다", "첫 응답이 오면 바로", "사용자가 입력할 때마다"], a: 0,
-    exp: "stop_reason이 tool_use가 아니면 \"다 됐다\"는 뜻이라 반복을 멈춘다." },
+    exp: "stop_reason이 tool_use가 아니면 \"다 됐다\"는 뜻이라 반복을 멈춰요." },
   { q: "챗봇, 워크플로, 에이전트를 나누는 기준은?",
     opts: ["다음 단계를 누가 정하느냐", "모델 크기", "가격", "쓰는 언어"], a: 0,
     exp: "사람이 정하면 챗봇, 미리 짠 순서면 워크플로, 모델이 정하면 에이전트." },
   { q: "에이전트가 처음에 잘못 판단했을 때 스스로 바로잡게 돕는 방법은?",
-    opts: ["테스트처럼 결과를 확인할 수 있는 도구를 준다", "반복 횟수를 없앤다", "도구를 모두 뺀다", "질문을 짧게 한다"], a: 0,
-    exp: "확인 수단이 있어야 틀렸다는 걸 결과로 보고 고칠 수 있다." },
+    opts: ["테스트처럼 결과를 확인할 수 있는 도구를 줘요", "반복 횟수를 없애요", "도구를 모두 빼요", "질문을 짧게 해요"], a: 0,
+    exp: "확인 수단이 있어야 틀렸다는 걸 결과로 보고 고칠 수 있어요." },
 
   // O/X
-  { q: "에이전트도 중심에는 글을 이어 쓰는 모델이 있다.", opts: ["O", "X"], ox: OX, a: 0,
-    exp: "1강의 모델 그대로다. 도구와 반복을 붙였을 뿐이다." },
-  { q: "에이전트는 반복하는 동안 모델 자체가 학습해서 똑똑해진다.", opts: ["O", "X"], ox: OX, a: 1,
-    exp: "모델은 바뀌지 않는다. 컨텍스트에 결과가 쌓일 뿐이다." },
-  { q: "에이전트는 중간 결과를 보고 처음 계획을 바꿀 수 있다.", opts: ["O", "X"], ox: OX, a: 0,
-    exp: "결과를 보고 다음 할 일을 정하기 때문이다." },
-  { q: "에이전트에게는 도구가 없어도 된다.", opts: ["O", "X"], ox: OX, a: 1,
-    exp: "도구가 없으면 행동을 못 한다. 행동 → 확인이 에이전트의 핵심이다." },
-  { q: "정해진 순서대로만 도는 자동화도 모두 에이전트라고 부른다.", opts: ["O", "X"], ox: OX, a: 1,
-    exp: "그건 워크플로다. 에이전트는 다음 단계를 모델이 정한다." },
-  { q: "에이전트가 오래 일할수록 컨텍스트가 길어진다.", opts: ["O", "X"], ox: OX, a: 0,
-    exp: "반복마다 도구 호출과 결과가 쌓인다." },
+  { q: "에이전트도 중심에는 글을 이어 쓰는 모델이 있어요.", opts: ["O", "X"], ox: OX, a: 0,
+    exp: "1강의 모델 그대로예요. 도구와 반복을 붙였을 뿐이에요." },
+  { q: "에이전트는 반복하는 동안 모델 자체가 학습해서 똑똑해져요.", opts: ["O", "X"], ox: OX, a: 1,
+    exp: "모델은 바뀌지 않아요. 컨텍스트에 결과가 쌓일 뿐이에요." },
+  { q: "에이전트는 중간 결과를 보고 처음 계획을 바꿀 수 있어요.", opts: ["O", "X"], ox: OX, a: 0,
+    exp: "결과를 보고 다음 할 일을 정하기 때문이에요." },
+  { q: "에이전트에게는 도구가 없어도 돼요.", opts: ["O", "X"], ox: OX, a: 1,
+    exp: "도구가 없으면 행동을 못 해요. 행동 → 확인이 에이전트의 핵심이에요." },
+  { q: "정해진 순서대로만 도는 자동화도 모두 에이전트라고 불러요.", opts: ["O", "X"], ox: OX, a: 1,
+    exp: "그건 워크플로예요. 에이전트는 다음 단계를 모델이 정해요." },
+  { q: "에이전트가 오래 일할수록 컨텍스트가 길어져요.", opts: ["O", "X"], ox: OX, a: 0,
+    exp: "반복마다 도구 호출과 결과가 쌓여요." },
 
   // 초성
   { type: "text", q: "다음 설명에 해당하는 용어는?", desc: "도구 쓰기를 일이 끝날 때까지 스스로 반복하는 AI",
@@ -1962,68 +1962,68 @@ const bank4 = [
 
   // 순서
   { type: "order", q: "에이전트 루프 한 바퀴를 순서대로 눌러 보자.",
-    items: ["생각: 다음에 할 일을 정한다", "행동: 도구 호출을 적는다", "앱이 도구를 실행한다", "확인: 결과를 읽는다", "다 됐나 판단한다"],
-    exp: "다 안 됐으면 다시 생각으로 돌아간다." },
+    items: ["생각: 다음에 할 일을 정해요", "행동: 도구 호출을 적어요", "앱이 도구를 실행해요", "확인: 결과를 읽어요", "다 됐나 판단해요"],
+    exp: "다 안 됐으면 다시 생각으로 돌아가요." },
   { type: "order", q: "에이전트가 버그를 고치는 과정을 순서대로 눌러 보자.",
-    items: ["코드를 읽는다", "고친다", "테스트를 돌린다", "실패 결과를 보고 다시 고친다", "테스트 통과 후 보고한다"],
-    exp: "실패도 결과다. 결과를 보고 다음 행동을 정한다." },
+    items: ["코드를 읽어요", "고쳐요", "테스트를 돌려요", "실패 결과를 보고 다시 고쳐요", "테스트 통과 후 보고해요"],
+    exp: "실패도 결과예요. 결과를 보고 다음 행동을 정해요." },
   { type: "order", q: "\"부산 출장 준비해 줘\"를 맡은 에이전트의 순서로 알맞게 눌러 보자.",
-    items: ["날씨를 확인한다", "기차 시간을 찾는다", "기차표를 예매한다", "일정에 등록한다", "다 됐다고 보고한다"],
-    exp: "각 단계의 결과가 다음 단계를 정한다. 시간이 있어야 예매하고, 예매해야 일정에 넣는다." },
+    items: ["날씨를 확인해요", "기차 시간을 찾아요", "기차표를 예매해요", "일정에 등록해요", "다 됐다고 보고해요"],
+    exp: "각 단계의 결과가 다음 단계를 정해요. 시간이 있어야 예매하고, 예매해야 일정에 넣어요." },
 ];
 
 const bank5 = [
   // 객관식
   { q: "오케스트레이션을 가장 잘 설명한 것은?",
     opts: ["에이전트 여러 개에 일을 나눠 맡기고 결과를 모아 처리하는 것", "모델을 여러 번 학습시키는 것", "도구를 하나 더 붙이는 것", "temperature를 조절하는 것"], a: 0,
-    exp: "팀장이 나누고 팀원이 일하고, 결과를 모아 마무리한다." },
+    exp: "팀장이 나누고 팀원이 일하고, 결과를 모아 마무리해요." },
   { q: "에이전트를 여럿으로 나누는 이유로 알맞지 않은 것은?",
     opts: ["한 에이전트의 컨텍스트가 넘치지 않게", "상관없는 일을 동시에 하려고", "역할마다 프롬프트와 도구를 다르게 주려고", "전체 비용이 항상 줄어서"], a: 3,
-    exp: "나누면 전체 토큰은 오히려 늘 수 있다." },
+    exp: "나누면 전체 토큰은 오히려 늘 수 있어요." },
   { q: "일을 나누고 결과를 모으는 팀장 역할의 에이전트를 부르는 말은?",
     opts: ["오케스트레이터", "서브에이전트", "도구", "워크플로"], a: 0,
-    exp: "오케스트라 지휘자처럼 전체를 맡는다." },
+    exp: "오케스트라 지휘자처럼 전체를 맡아요." },
   { q: "서브에이전트가 팀장에게 돌려주는 것으로 가장 알맞은 것은?",
-    opts: ["필요한 요약 결과", "자기가 본 자료 전부", "아무것도 안 돌려준다", "자기 모델 자체"], a: 0,
-    exp: "요약만 받아야 팀장의 책상이 넘치지 않는다." },
+    opts: ["필요한 요약 결과", "자기가 본 자료 전부", "아무것도 안 돌려줘요", "자기 모델 자체"], a: 0,
+    exp: "요약만 받아야 팀장의 책상이 넘치지 않아요." },
   { q: "서브에이전트에게 일을 줄 때 지시를 자세히 써야 하는 이유는?",
     opts: ["팀장의 대화를 못 보고, 받은 지시만 컨텍스트에 있어서", "서브에이전트는 기억력이 좋아서", "예의를 지키려고", "요금이 줄어서"], a: 0,
-    exp: "빈 책상에서 시작한다. 2강의 \"넣어 준 글만 안다\"가 그대로 적용된다." },
+    exp: "빈 책상에서 시작해요. 2강의 \"넣어 준 글만 안다\"가 그대로 적용돼요." },
   { q: "경쟁사 세 곳을 각각 조사하는 일에 가장 알맞은 패턴은?",
     opts: ["동시에 나눠 하기", "순서대로 넘기기", "만들고 검토하기", "나누지 않기"], a: 0,
-    exp: "서로 상관없는 같은 종류의 일이라 동시에 돌리면 빠르다." },
+    exp: "서로 상관없는 같은 종류의 일이라 동시에 돌리면 빨라요." },
   { q: "\"조사 → 초안 → 교정\"처럼 앞의 결과가 다음의 입력이 되는 패턴은?",
     opts: ["순서대로 넘기기", "동시에 나눠 하기", "팀장과 팀원", "만들고 검토하기"], a: 0,
-    exp: "앞이 끝나야 뒤가 시작된다." },
+    exp: "앞이 끝나야 뒤가 시작돼요." },
   { q: "글을 쓰는 에이전트와 문제를 찾는 에이전트가 번갈아 고치는 패턴은?",
     opts: ["만들고 검토하기", "순서대로 넘기기", "동시에 나눠 하기", "워크플로"], a: 0,
-    exp: "사람이 쓴 글을 다른 사람이 검토하는 것과 같다." },
+    exp: "사람이 쓴 글을 다른 사람이 검토하는 것과 같아요." },
   { q: "일이 몇 갈래로 나뉠지 해 봐야 알 때 알맞은 패턴은?",
     opts: ["팀장과 팀원", "순서대로 넘기기", "동시에 나눠 하기", "나누지 않기"], a: 0,
-    exp: "팀장이 상황을 보고 그때그때 일을 쪼개 준다." },
+    exp: "팀장이 상황을 보고 그때그때 일을 쪼개 줘요." },
   { q: "오케스트레이션이 오히려 손해인 경우는?",
     opts: ["짧고 간단한 일", "자료가 아주 많은 조사", "서로 상관없는 일 여러 개", "역할이 뚜렷이 다른 일"], a: 0,
-    exp: "나누고 설명하는 비용이 더 크다. 혼자가 빠르다." },
+    exp: "나누고 설명하는 비용이 더 커요. 혼자가 빨라요." },
   { q: "오케스트레이션에서 팀원 하나하나는 어떤 구조로 일할까?",
     opts: ["생각 → 행동 → 확인을 반복하는 에이전트", "도구 없는 챗봇", "학습 중인 모델", "고정된 워크플로만"], a: 0,
-    exp: "팀원도 4강의 에이전트다." },
+    exp: "팀원도 4강의 에이전트예요." },
   { q: "서브에이전트를 쓰면 팀장의 컨텍스트가 덜 차는 이유는?",
     opts: ["자세한 과정은 팀원 책상에서 끝나고, 팀장은 요약만 받아서", "팀장의 윈도우가 더 커서", "팀장은 도구를 안 써서", "토큰을 세지 않아서"], a: 0,
-    exp: "조사하며 읽은 긴 자료는 팀원 컨텍스트에만 쌓인다." },
+    exp: "조사하며 읽은 긴 자료는 팀원 컨텍스트에만 쌓여요." },
 
   // O/X
-  { q: "서브에이전트는 팀장이 사용자와 나눈 대화를 자동으로 다 본다.", opts: ["O", "X"], ox: OX, a: 1,
-    exp: "팀장이 써 준 지시만 본다." },
-  { q: "일을 나누면 전체 토큰 사용량은 오히려 늘 수 있다.", opts: ["O", "X"], ox: OX, a: 0,
-    exp: "에이전트마다 지시와 결과를 따로 읽기 때문이다." },
-  { q: "서로 상관없는 일은 동시에 처리해서 시간을 줄일 수 있다.", opts: ["O", "X"], ox: OX, a: 0,
-    exp: "병렬 처리다." },
-  { q: "오케스트레이션은 모델을 새로 학습시키는 방법이다.", opts: ["O", "X"], ox: OX, a: 1,
-    exp: "학습과 상관없다. 에이전트 여러 개를 나눠 굴리는 방식이다." },
-  { q: "에이전트마다 다른 시스템 프롬프트와 도구를 줄 수 있다.", opts: ["O", "X"], ox: OX, a: 0,
-    exp: "그래서 역할별 전문가로 만들 수 있다." },
-  { q: "일이 작아도 에이전트를 여러 개로 나누는 게 항상 좋다.", opts: ["O", "X"], ox: OX, a: 1,
-    exp: "혼자 해 보고, 넘치거나 오래 걸릴 때 나눈다." },
+  { q: "서브에이전트는 팀장이 사용자와 나눈 대화를 자동으로 다 봐요.", opts: ["O", "X"], ox: OX, a: 1,
+    exp: "팀장이 써 준 지시만 봐요." },
+  { q: "일을 나누면 전체 토큰 사용량은 오히려 늘 수 있어요.", opts: ["O", "X"], ox: OX, a: 0,
+    exp: "에이전트마다 지시와 결과를 따로 읽기 때문이에요." },
+  { q: "서로 상관없는 일은 동시에 처리해서 시간을 줄일 수 있어요.", opts: ["O", "X"], ox: OX, a: 0,
+    exp: "병렬 처리예요." },
+  { q: "오케스트레이션은 모델을 새로 학습시키는 방법이에요.", opts: ["O", "X"], ox: OX, a: 1,
+    exp: "학습과 상관없어요. 에이전트 여러 개를 나눠 굴리는 방식이에요." },
+  { q: "에이전트마다 다른 시스템 프롬프트와 도구를 줄 수 있어요.", opts: ["O", "X"], ox: OX, a: 0,
+    exp: "그래서 역할별 전문가로 만들 수 있어요." },
+  { q: "일이 작아도 에이전트를 여러 개로 나누는 게 항상 좋아요.", opts: ["O", "X"], ox: OX, a: 1,
+    exp: "혼자 해 보고, 넘치거나 오래 걸릴 때 나눠요." },
 
   // 초성
   { type: "text", q: "다음 설명에 해당하는 용어는?", desc: "에이전트 여러 개에 일을 나눠 맡기고 결과를 모아 큰 작업을 처리하는 것",
@@ -2037,11 +2037,11 @@ const bank5 = [
 
   // 순서
   { type: "order", q: "팀장과 팀원 패턴의 흐름을 순서대로 눌러 보자.",
-    items: ["팀장이 일을 나눈다", "팀원들이 각자 처리한다", "팀원이 요약을 돌려준다", "팀장이 합쳐서 마무리한다"],
-    exp: "팀원의 자세한 과정은 팀원 책상에서 끝난다." },
+    items: ["팀장이 일을 나눠요", "팀원들이 각자 처리해요", "팀원이 요약을 돌려줘요", "팀장이 합쳐서 마무리해요"],
+    exp: "팀원의 자세한 과정은 팀원 책상에서 끝나요." },
   { type: "order", q: "\"순서대로 넘기기\"로 보고서를 만드는 순서를 눌러 보자.",
-    items: ["자료를 조사한다", "초안을 쓴다", "검토한다", "고쳐서 완성한다"],
-    exp: "앞의 결과가 다음 에이전트의 입력이 된다." },
+    items: ["자료를 조사해요", "초안을 써요", "검토해요", "고쳐서 완성해요"],
+    exp: "앞의 결과가 다음 에이전트의 입력이 돼요." },
   { type: "order", q: "이번 주에 배운 개념을 쌓이는 순서대로 눌러 보자.",
     items: ["LLM", "컨텍스트", "도구", "에이전트", "오케스트레이션"],
     exp: "글 이어 쓰기 → 넣어 준 글만 봄 → 도구로 일 시키기 → 반복 → 여럿이 나눠서." },
@@ -2081,9 +2081,9 @@ function renderCtx() {
   document.getElementById("ctx-bar").style.width = `${len / max * 100}%`;
   document.getElementById("ctx-answer").textContent = ctxAnswer(ctxOn);
   const why = [];
-  why.push(ctxOn.doc ? "첨부 자료가 있어서 남은 연차(6일)를 정확히 안다." : "첨부 자료가 없어서 남은 연차를 모른다. 학습한 적 없는 내 정보다.");
-  why.push(ctxOn.hist ? "이전 대화가 있어서 이름과 이사 날짜를 안다." : "이전 대화가 없어서 내가 누구인지, 언제 이사하는지 모른다.");
-  why.push(ctxOn.sys ? "시스템 프롬프트대로 짧은 존댓말에 신청 방법까지 안내한다." : "시스템 프롬프트가 없어서 말투와 길이가 정해지지 않았다. 필요 없는 말이 붙는다.");
+  why.push(ctxOn.doc ? "첨부 자료가 있어서 남은 연차(6일)를 정확히 알아요." : "첨부 자료가 없어서 남은 연차를 몰라요. 학습한 적 없는 내 정보예요.");
+  why.push(ctxOn.hist ? "이전 대화가 있어서 이름과 이사 날짜를 알아요." : "이전 대화가 없어서 내가 누구인지, 언제 이사하는지 몰라요.");
+  why.push(ctxOn.sys ? "시스템 프롬프트대로 짧은 존댓말에 신청 방법까지 안내해요." : "시스템 프롬프트가 없어서 말투와 길이가 정해지지 않았어요. 필요 없는 말이 붙어요.");
   document.getElementById("ctx-why").innerHTML = why.map(w => `<li>${w}</li>`).join("");
 }
 document.getElementById("ctx-toggles").addEventListener("click", e => {
@@ -2102,34 +2102,34 @@ function renderWin() {
   document.getElementById("win").innerHTML = list.map((t, i) => `<div class="turn ${i < cut ? "cut" : ""}"><span>${i + 1}</span>${t}${i < cut ? '<em>잘림</em>' : ""}</div>`).join("");
   document.getElementById("win-count").textContent = `${Math.min(list.length, WIN)} / ${WIN}`;
   const msg = document.getElementById("win-msg");
-  if (turns === turnPool.length) msg.innerHTML = cut > 0 ? `마지막 질문 "내 이름이 뭐였지?"에 AI는 답하지 못한다. <b>1번 대화가 컨텍스트에서 잘려서</b> 이름을 볼 수 없기 때문이다.` : "";
-  else msg.innerHTML = cut > 0 ? `윈도우가 꽉 차서 <b>오래된 대화 ${cut}개가 잘렸다.</b> 모델은 잘린 내용을 볼 수 없다.` : "아직 윈도우 안에 다 들어간다.";
+  if (turns === turnPool.length) msg.innerHTML = cut > 0 ? `마지막 질문 "내 이름이 뭐였지?"에 AI는 답하지 못해요. <b>1번 대화가 컨텍스트에서 잘려서</b> 이름을 볼 수 없기 때문이에요.` : "";
+  else msg.innerHTML = cut > 0 ? `윈도우가 꽉 차서 <b>오래된 대화 ${cut}개가 잘렸어요.</b> 모델은 잘린 내용을 볼 수 없어요.` : "아직 윈도우 안에 다 들어가요.";
 }
 function addTurn() { if (turns < turnPool.length) { turns++; renderWin(); } }
 function resetWin() { turns = 1; renderWin(); }
 renderWin();
 /* ---------- 3강: 도구 호출 따라가 보기 ---------- */
 const toolDefs = {
-  read: { name: "Read", label: "파일 읽기", act: "파일을 실제로 연다" },
-  edit: { name: "Edit", label: "파일 고치기", act: "파일을 실제로 고친다" },
-  bash: { name: "Bash", label: "명령 실행", act: "명령을 내 컴퓨터에서 실제로 실행한다" },
+  read: { name: "Read", label: "파일 읽기", act: "파일을 실제로 열어요" },
+  edit: { name: "Edit", label: "파일 고치기", act: "파일을 실제로 고쳐요" },
+  bash: { name: "Bash", label: "명령 실행", act: "명령을 내 컴퓨터에서 실제로 실행해요" },
 };
 const toolQs = [
   { label: "파일 보기", q: "login.js에 뭐가 들어 있어?", tool: "read",
     input: '{ "file_path": "login.js" }', result: '1: const btn = document.querySelector("#login")\n2: btn.textContent = "Sign in"',
     answer: "login.js는 로그인 버튼을 찾아서, 버튼 글자를 \"Sign in\"으로 정하는 코드예요.",
     noTool: "제가 파일을 직접 볼 수는 없어요. 내용을 복사해서 붙여 넣어 주세요.",
-    noToolWhy: "Claude는 내 컴퓨터의 파일을 볼 수 없다. 읽어 올 도구가 없다." },
+    noToolWhy: "Claude는 내 컴퓨터의 파일을 볼 수 없어요. 읽어 올 도구가 없어요." },
   { label: "테스트 돌리기", q: "테스트 돌려 봐.", tool: "bash",
     input: '{ "command": "npm test" }', result: "통과 12개, 실패 0개",
     answer: "테스트 12개가 모두 통과했어요.",
     noTool: "제가 직접 테스트를 돌릴 수는 없어요. 터미널에서 npm test를 실행하고 결과를 알려 주세요.",
-    noToolWhy: "명령을 실행하는 건 행동이다. Claude는 글만 쓸 수 있다." },
+    noToolWhy: "명령을 실행하는 건 행동이에요. Claude는 글만 쓸 수 있어요." },
   { label: "파일 고치기", q: "버튼 글자를 '로그인'으로 바꿔 줘.", tool: "edit",
     input: '{ "file_path": "login.js",\n    "old_string": "Sign in", "new_string": "로그인" }', result: "수정 완료",
     answer: "login.js 2번째 줄의 버튼 글자를 \"로그인\"으로 바꿨어요.",
     noTool: "파일을 직접 고칠 수는 없어요. login.js 2번째 줄의 \"Sign in\"을 \"로그인\"으로 바꿔 주세요.",
-    noToolWhy: "고칠 방법은 글로 알려 줄 수 있지만, 파일을 실제로 바꾸는 건 도구가 있어야 한다. 그래서 내가 직접 고쳐야 한다." },
+    noToolWhy: "고칠 방법은 글로 알려 줄 수 있지만, 파일을 실제로 바꾸는 건 도구가 있어야 해요. 그래서 내가 직접 고쳐야 해요." },
   { label: "도구 필요 없음", q: "git이 뭐야? 한 줄로.", tool: null,
     answer: "파일이 어떻게 바뀌어 왔는지 기록하고, 예전 상태로 돌아갈 수 있게 해 주는 도구예요." },
 ];
@@ -2137,24 +2137,24 @@ const toolOn = { read: true, edit: true, bash: true };
 let tq = 0, tstep = 1;
 function toolSteps() {
   const s = toolQs[tq], on = Object.keys(toolDefs).filter(k => toolOn[k]);
-  const rows = [{ who: "Claude Code → Claude", text: "내 요청에 \"너는 이 도구들을 쓸 수 있다\"는 목록을 붙여서 Claude에게 보낸다.",
+  const rows = [{ who: "Claude Code → Claude", text: "내 요청에 \"너는 이 도구들을 쓸 수 있다\"는 목록을 붙여서 Claude에게 보내요.",
     code: `요청: ${s.q}\n도구: ${on.length ? on.map(k => toolDefs[k].name).join(", ") : "없음"}` }];
   if (!s.tool) {
     rows.push({ who: "Claude → 답", dark: true, text: s.answer });
-    return { rows, msg: "도구가 있어도 필요 없으면 쓰지 않는다. 쓸지 말지는 Claude가 도구 설명을 보고 고른다." };
+    return { rows, msg: "도구가 있어도 필요 없으면 쓰지 않아요. 쓸지 말지는 Claude가 도구 설명을 보고 골라요." };
   }
   const t = toolDefs[s.tool];
   if (!toolOn[s.tool]) {
     rows.push({ who: "Claude → 답", dark: true, text: s.noTool });
-    return { rows, msg: `<b>${t.label} 도구가 없다.</b> ${s.noToolWhy}` };
+    return { rows, msg: `<b>${t.label} 도구가 없어요.</b> ${s.noToolWhy}` };
   }
-  rows.push({ who: "Claude → Claude Code", dark: true, text: "답 대신 도구 호출을 적어서 보낸다. 직접 실행하지는 않는다.",
+  rows.push({ who: "Claude → Claude Code", dark: true, text: "답 대신 도구 호출을 적어서 보내요. 직접 실행하지는 않아요.",
     code: `{ "type": "tool_use", "name": "${t.name}",\n  "input": ${s.input} }` });
   rows.push({ who: "Claude Code가 실행", text: `Claude Code가 ${t.act}.`, code: `결과:\n${s.result}` });
-  rows.push({ who: "Claude Code → Claude", text: "결과를 컨텍스트에 붙여서 다시 보낸다.",
+  rows.push({ who: "Claude Code → Claude", text: "결과를 컨텍스트에 붙여서 다시 보내요.",
     code: `{ "type": "tool_result", "content": ${JSON.stringify(s.result)} }` });
   rows.push({ who: "Claude → 답", dark: true, text: s.answer });
-  return { rows, msg: "Claude에게 <b>두 번</b> 요청했다. 한 번은 도구 호출을 받으려고, 한 번은 결과를 주고 답을 받으려고. Claude Code 대화창의 접힌 줄 하나가 이 왕복 하나다." };
+  return { rows, msg: "Claude에게 <b>두 번</b> 요청했어요. 한 번은 도구 호출을 받으려고, 한 번은 결과를 주고 답을 받으려고. Claude Code 대화창의 접힌 줄 하나가 이 왕복 하나예요." };
 }
 function renderTool() {
   document.getElementById("tool-qs").innerHTML = toolQs.map((s, i) =>
@@ -2184,23 +2184,23 @@ renderTool();
 const agentTasks = [
   { label: "버그 고치기 (Claude Code)", task: "로그인 버튼이 안 눌려. 고쳐 줘.",
     turns: [
-      ["코드부터 본다.", 'Read({ "file": "login.js" })', "버튼에 disabled가 항상 걸려 있다"],
-      ["조건을 고친다.", 'Edit({ "file": "login.js", ... })', "수정됨"],
-      ["고쳐졌는지 테스트로 확인한다.", 'Bash({ "command": "npm test" })', "실패 1개: 비밀번호가 빈칸이어도 눌린다", true],
-      ["빈칸이면 막는 조건을 더한다.", 'Edit({ "file": "login.js", ... })', "수정됨"],
-      ["다시 확인한다.", 'Bash({ "command": "npm test" })', "모두 통과"],
+      ["코드부터 봐요.", 'Read({ "file": "login.js" })', "버튼에 disabled가 항상 걸려 있어요"],
+      ["조건을 고쳐요.", 'Edit({ "file": "login.js", ... })', "수정됨"],
+      ["고쳐졌는지 테스트로 확인해요.", 'Bash({ "command": "npm test" })', "실패 1개: 비밀번호가 빈칸이어도 눌려요", true],
+      ["빈칸이면 막는 조건을 더해요.", 'Edit({ "file": "login.js", ... })', "수정됨"],
+      ["다시 확인해요.", 'Bash({ "command": "npm test" })', "모두 통과"],
     ],
     answer: "버튼이 항상 비활성화되던 조건을 고쳤어요. 비밀번호가 비어 있으면 막는 조건도 더했고, 테스트는 모두 통과해요.",
-    msg: "3번째 반복에서 테스트가 실패하자, <b>그 결과를 보고 스스로 다시 고쳤다.</b> Claude Code가 일하는 방식이 이것이다." },
+    msg: "3번째 반복에서 테스트가 실패하자, <b>그 결과를 보고 스스로 다시 고쳤어요.</b> Claude Code가 일하는 방식이 이거예요." },
   { label: "출장 준비", task: "다음 주 수요일 10시에 부산 미팅이야. 출장 준비해 줘.",
     turns: [
-      ["날씨부터 봐야 챙길 게 정해진다.", 'get_weather({ "city": "부산", "date": "수" })', "비 올 확률 80%"],
-      ["10시 미팅이면 아침 기차가 필요하다.", 'search_train({ "from": "서울", "to": "부산", "date": "수" })', "07:00, 09:30 자리 있음"],
-      ["09:30은 늦는다. 07:00으로 예매한다.", 'book_train({ "time": "07:00" })', "예매 완료"],
-      ["캘린더에도 넣어 둔다.", 'create_event({ "title": "부산 미팅", "start": "수 10:00" })', "등록됨"],
+      ["날씨부터 봐야 챙길 게 정해져요.", 'get_weather({ "city": "부산", "date": "수" })', "비 올 확률 80%"],
+      ["10시 미팅이면 아침 기차가 필요해요.", 'search_train({ "from": "서울", "to": "부산", "date": "수" })', "07:00, 09:30 자리 있음"],
+      ["09:30은 늦어요. 07:00으로 예매해요.", 'book_train({ "time": "07:00" })', "예매 완료"],
+      ["캘린더에도 넣어 둬요.", 'create_event({ "title": "부산 미팅", "start": "수 10:00" })', "등록됨"],
     ],
     answer: "수요일 07:00 KTX를 예매하고 캘린더에 미팅을 등록했어요. 비 소식이 있으니 우산 챙기세요.",
-    msg: "사람은 처음에 한 번만 말했다. 무엇을 어떤 순서로 할지는 모델이 <b>결과를 보면서</b> 정했다. 날씨를 봐서 우산을 챙기라고 했고, 기차 시간을 봐서 07:00을 골랐다." },
+    msg: "사람은 처음에 한 번만 말했어요. 무엇을 어떤 순서로 할지는 모델이 <b>결과를 보면서</b> 정했어요. 날씨를 봐서 우산을 챙기라고 했고, 기차 시간을 봐서 07:00을 골랐어요." },
 ];
 let at = 0, astep = 0;
 function renderAgent() {
@@ -2212,9 +2212,9 @@ function renderAgent() {
     t.turns.slice(0, astep).map(([think, act, res, bad], i) => `
     <div class="tl-row"><div class="who"><span>${i + 1}</span>반복 ${i + 1}</div>
       <div class="ag"><div><small>생각</small>${think}</div><div><small>행동</small><code>${act}</code></div><div><small>결과</small>${bad ? `<b>${res}</b>` : res}</div></div></div>`).join("") +
-    (done ? `<div class="tl-row dark"><div class="who"><span>${n + 1}</span>끝</div><div class="ag"><div><small>생각</small>다 됐다. 도구 없이 답한다.</div><div><small>답</small>${t.answer}</div></div></div>` : "");
+    (done ? `<div class="tl-row dark"><div class="who"><span>${n + 1}</span>끝</div><div class="ag"><div><small>생각</small>다 됐어요. 도구 없이 답해요.</div><div><small>답</small>${t.answer}</div></div></div>` : "");
   document.getElementById("agent-next").textContent = done ? "다시 보기" : astep === 0 ? "시작" : `다음 반복 (${astep + 1}/${n + 1})`;
-  document.getElementById("agent-msg").innerHTML = done ? `도구를 ${n}번 썼다. ${t.msg}` : "";
+  document.getElementById("agent-msg").innerHTML = done ? `도구를 ${n}번 썼어요. ${t.msg}` : "";
 }
 document.getElementById("agent-tasks").addEventListener("click", e => {
   const b = e.target.closest("button[data-a]"); if (b) { at = +b.dataset.a; astep = 0; renderAgent(); }
@@ -2235,18 +2235,18 @@ function renderOrch() {
   if (orchMode === "solo") {
     tl = row(1, "에이전트", "A 앱 조사 (검색하고 읽기 6번)", desk(35)) +
          row(2, "에이전트", "B 앱 조사 (6번 더)", desk(65)) +
-         row(3, "에이전트", "C 앱 조사. 책상이 거의 다 차서 앞에서 읽은 A 내용이 잘리기 시작한다", desk(95)) +
-         row(4, "에이전트", "비교표 작성. A 앱 내용이 흐릿해서 비교가 고르지 않다", "", true);
+         row(3, "에이전트", "C 앱 조사. 책상이 거의 다 차서 앞에서 읽은 A 내용이 잘리기 시작해요", desk(95)) +
+         row(4, "에이전트", "비교표 작성. A 앱 내용이 흐릿해서 비교가 고르지 않아요", "", true);
     stats = [["약 30분", "걸린 시간"], ["95%", "가장 꽉 찬 책상"], ["100", "쓴 토큰 (상대값)"]];
-    msg = "한 책상에 다 올리다 보니 넘쳤다. 하나씩 차례로 하니 오래 걸렸다.";
+    msg = "한 책상에 다 올리다 보니 넘쳤어요. 하나씩 차례로 하니 오래 걸렸어요.";
   } else {
-    tl = row(1, "팀장", "일을 셋으로 나누고, 팀원마다 무엇을 조사해 어떻게 돌려줄지 지시를 쓴다", desk(10, "팀장 책상")) +
+    tl = row(1, "팀장", "일을 셋으로 나누고, 팀원마다 무엇을 조사해 어떻게 돌려줄지 지시를 써요", desk(10, "팀장 책상")) +
          `<div class="orch-grid">${["A", "B", "C"].map((x, i) =>
            `<div class="tl-row"><div class="who"><span>2</span>팀원 ${i + 1} · 동시에</div><div>${x} 앱 조사 → 요약 반 쪽만 돌려줌${desk(30)}</div></div>`).join("")}</div>` +
-         row(3, "팀장", "요약 세 개만 받아서 비교한다", desk(25, "팀장 책상")) +
-         row(4, "팀장", "비교표 완성. 세 앱이 같은 기준으로 고르게 정리됐다", "", true);
+         row(3, "팀장", "요약 세 개만 받아서 비교해요", desk(25, "팀장 책상")) +
+         row(4, "팀장", "비교표 완성. 세 앱이 같은 기준으로 고르게 정리됐어요", "", true);
     stats = [["약 12분", "걸린 시간"], ["30%", "가장 꽉 찬 책상"], ["120", "쓴 토큰 (상대값)"]];
-    msg = "책상이 넘치지 않았고, 동시에 해서 빨라졌다. 대신 <b>지시를 쓰고 요약을 주고받느라 토큰은 더 들었다.</b>";
+    msg = "책상이 넘치지 않았고, 동시에 해서 빨라졌어요. 대신 <b>지시를 쓰고 요약을 주고받느라 토큰은 더 들었어요.</b>";
   }
   document.getElementById("orch-tl").innerHTML = tl;
   document.getElementById("orch-stats").innerHTML = stats.map(([v, l]) => `<div><b>${v}</b>${l}</div>`).join("");
