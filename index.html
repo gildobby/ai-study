@@ -80,6 +80,9 @@
   .snav .sub:hover { background: var(--soft); color: var(--text); }
   .snav .sub.now { background: var(--soft); color: var(--text); font-weight: 500; }
   .snav .sub .chip { height: 20px; font-size: 10px; padding: 0 7px; }
+  .snav .sub .seen { font-size: 12px; color: var(--faint); }
+  .reset-btn { background: none; padding: 0; font-size: 13px; font-weight: 400; color: var(--muted); display: inline-flex; align-items: center; gap: 4px; }
+  .reset-btn:hover { background: none; color: var(--text); }
 
   /* ---------- 섹션 공통 ---------- */
   .divider { height: 0; margin: 72px 0 0; }
@@ -409,7 +412,7 @@
   <div class="side-label">AI 공부 기록</div>
   <div class="side-title">에이전틱 오케스트레이션까지</div>
   <div class="side-progress">
-    <div class="row"><span>진행률</span><span id="progress-text"></span></div>
+    <div class="row"><span>내 진행률</span><span id="progress-text"></span></div>
     <div class="track"><div id="progress-bar"></div></div>
   </div>
   <nav class="snav" id="nav"></nav>
@@ -437,6 +440,7 @@
   <p class="body" style="margin:0 0 8px">오케스트레이션은 에이전트 여러 개를 나눠서 굴리는 것이고, 에이전트는 LLM에 도구를 붙여서 반복시키는 것이다. 그래서 LLM부터 순서대로 봤다.</p>
   <div class="cmap" id="cmap"></div>
   <ol class="steps" id="steps"></ol>
+  <p class="hint">진행률과 퀴즈 기록은 보는 사람의 브라우저에만 따로 저장된다. 각 강의 퀴즈를 한 번 끝까지 풀면 완료로 바뀐다. <button class="reset-btn" onclick="resetProgress()"><i class="ph ph-arrow-counter-clockwise"></i>내 기록 지우기</button></p>
 
   <div class="divider"></div>
 
@@ -1232,15 +1236,24 @@
 const quizKey = id => `ai-study:${id}:quiz`;
 function loadQuiz(id) { try { return JSON.parse(localStorage.getItem(quizKey(id))); } catch { return null; } }
 function saveQuiz(id, data) { try { localStorage.setItem(quizKey(id), JSON.stringify(data)); } catch {} }
+const seenKey = id => `ai-study:${id}:seen`;
+function loadSeen(id) { try { return JSON.parse(localStorage.getItem(seenKey(id))) || []; } catch { return []; } }
+function markSeen(id, step) { const v = loadSeen(id); if (!v.includes(step)) { v.push(step); try { localStorage.setItem(seenKey(id), JSON.stringify(v)); } catch {} } }
+const isDone = id => { const d = loadQuiz(id); return !!(d && d.attempts && d.attempts.length); };
+function resetProgress() {
+  if (!confirm("이 브라우저에 저장된 내 진행률과 퀴즈 기록을 모두 지울까?")) return;
+  try { Object.keys(localStorage).filter(k => k.startsWith("ai-study:")).forEach(k => localStorage.removeItem(k)); } catch {}
+  location.hash = ""; location.reload();
+}
 function lastScore(id) { const d = loadQuiz(id); const a = d && d.attempts && d.attempts[d.attempts.length - 1]; return a ? `${a.score}/${a.total}` : ""; }
 
-/* ---------- 탭 / 개요 (공부가 진행되면 status·log만 바꾸면 돼요) ---------- */
+/* ---------- 탭 / 개요 (강의 완료는 보는 사람의 퀴즈 기록으로 정한다. days는 내 공부 일지) ---------- */
 const lessons = [
-  { id: "lesson1", n: 1, title: "LLM이 뭔지", desc: "다음 단어 맞히기 기계", status: "done" },
-  { id: "lesson2", n: 2, title: "프롬프트와 컨텍스트", desc: "모델이 한 번에 읽는 글", status: "done" },
-  { id: "lesson3", n: 3, title: "도구 사용", desc: "검색, 파일 저장 같은 외부 기능 쓰기", status: "todo" },
-  { id: "lesson4", n: 4, title: "에이전트", desc: "생각 → 행동 → 확인 반복", status: "todo" },
-  { id: "lesson5", n: 5, title: "오케스트레이션", desc: "에이전트 여러 개 나눠서 굴리기", status: "todo" },
+  { id: "lesson1", n: 1, title: "LLM이 뭔지", desc: "다음 단어 맞히기 기계" },
+  { id: "lesson2", n: 2, title: "프롬프트와 컨텍스트", desc: "모델이 한 번에 읽는 글" },
+  { id: "lesson3", n: 3, title: "도구 사용", desc: "검색, 파일 저장 같은 외부 기능 쓰기" },
+  { id: "lesson4", n: 4, title: "에이전트", desc: "생각 → 행동 → 확인 반복" },
+  { id: "lesson5", n: 5, title: "오케스트레이션", desc: "에이전트 여러 개 나눠서 굴리기" },
 ];
 const days = [
   { date: "화", md: "11/3", status: "done", plan: "기초: LLM, 컨텍스트, 도구",
@@ -1271,34 +1284,42 @@ function renderNav(id, step) {
       const open = l.id === id;
       const sub = open && stepsOf(l.id).length ? `<div class="subnav">${stepsOf(l.id).map(c => `
         <button class="sub ${c.dataset.step === step ? "now" : ""}" data-go="${l.id}" data-step="${c.dataset.step}">
-          <span>${c.dataset.title}</span>${c.dataset.step === "quiz" && lastScore(l.id) ? `<span class="chip">${lastScore(l.id)}</span>` : ""}
+          <span>${c.dataset.title}</span>${c.dataset.step === "quiz" && lastScore(l.id) ? `<span class="chip">${lastScore(l.id)}</span>` : loadSeen(l.id).includes(c.dataset.step) && c.dataset.step !== step ? '<i class="ph ph-check seen"></i>' : ""}
         </button>`).join("")}</div>` : "";
-      return item(l.id, `${l.status === "done" ? "done" : ""} ${open ? "now" : ""}`, !ready(l.id), `${l.n}강. ${l.title}`, l.desc, sub);
+      return item(l.id, `${isDone(l.id) ? "done" : ""} ${open ? "now" : ""}`, !ready(l.id), `${l.n}강. ${l.title}`, l.desc, sub);
     }).join("");
+  renderProgress();
 }
 document.getElementById("nav").addEventListener("click", e => {
   const b = e.target.closest("button[data-go]");
   if (b && !b.disabled) go(b.dataset.go, b.dataset.step);
 });
-const doneCount = lessons.filter(l => l.status === "done").length;
-document.getElementById("progress-text").textContent = `${doneCount} / ${lessons.length}강`;
-document.getElementById("progress-bar").style.width = `${doneCount / lessons.length * 100}%`;
+function renderProgress() {
+  const doneCount = lessons.filter(l => isDone(l.id)).length;
+  document.getElementById("progress-text").textContent = `${doneCount} / ${lessons.length}강`;
+  document.getElementById("progress-bar").style.width = `${doneCount / lessons.length * 100}%`;
 
-/* 개념 지도 */
-const firstTodo = lessons.findIndex(l => l.status !== "done");
-document.getElementById("cmap").innerHTML = lessons.map((l, i) => `
-  ${i ? `<span class="link ${lessons[i - 1].status === "done" ? "done" : ""}"></span>` : ""}
-  <button class="node ${l.status === "done" ? "done" : i === firstTodo ? "next" : ""}" ${ready(l.id) ? `onclick="go('${l.id}')"` : "disabled"}>
-    <small>${l.n}강${l.status === "done" ? " · 완료" : i === firstTodo ? " · 다음" : ""}</small>${short[l.id]}
-  </button>`).join("");
+  /* 개념 지도 */
+  const firstTodo = lessons.findIndex(l => !isDone(l.id));
+  document.getElementById("cmap").innerHTML = lessons.map((l, i) => `
+    ${i ? `<span class="link ${isDone(lessons[i - 1].id) ? "done" : ""}"></span>` : ""}
+    <button class="node ${isDone(l.id) ? "done" : i === firstTodo ? "next" : ""}" ${ready(l.id) ? `onclick="go('${l.id}')"` : "disabled"}>
+      <small>${l.n}강${isDone(l.id) ? " · 완료" : i === firstTodo ? " · 다음" : ""}</small>${short[l.id]}
+    </button>`).join("");
 
-document.getElementById("steps").innerHTML = lessons.map(l => `
-  <li class="${l.status === "done" ? "done" : ""} ${ready(l.id) ? "link" : ""}" ${ready(l.id) ? `onclick="go('${l.id}')"` : ""}>
-    <span class="num">${String(l.n).padStart(2, "0")}</span>
-    <div><div class="t">${l.title}</div><div class="d">${l.desc}</div></div>
-    <span class="chips">${lastScore(l.id) ? `<span class="chip">퀴즈 ${lastScore(l.id)}</span>` : ""}${l.status === "done" ? '<span class="chip done"><i class="ph ph-check"></i>완료</span>' : '<span class="chip">예정</span>'}</span>
-    ${ready(l.id) ? '<i class="ph ph-arrow-right go"></i>' : "<span></span>"}
-  </li>`).join("");
+  document.getElementById("steps").innerHTML = lessons.map(l => {
+    const seen = loadSeen(l.id).length, total = stepsOf(l.id).length;
+    const state = isDone(l.id) ? '<span class="chip done"><i class="ph ph-check"></i>완료</span>'
+      : seen ? `<span class="chip today">${seen}/${total}장 봄</span>` : '<span class="chip">시작 전</span>';
+    return `
+    <li class="${isDone(l.id) ? "done" : ""} ${ready(l.id) ? "link" : ""}" ${ready(l.id) ? `onclick="go('${l.id}')"` : ""}>
+      <span class="num">${String(l.n).padStart(2, "0")}</span>
+      <div><div class="t">${l.title}</div><div class="d">${l.desc}</div></div>
+      <span class="chips">${lastScore(l.id) ? `<span class="chip">퀴즈 ${lastScore(l.id)}</span>` : ""}${state}</span>
+      ${ready(l.id) ? '<i class="ph ph-arrow-right go"></i>' : "<span></span>"}
+    </li>`;
+  }).join("");
+}
 
 const badge = { today: ["오늘", "today"], done: ["완료", "done"], todo: ["예정", ""] };
 document.getElementById("days").innerHTML = days.map(d => `
@@ -1319,6 +1340,7 @@ function go(id, step) {
     if (!cards.some(c => c.dataset.step === step)) step = cards[0].dataset.step;
     const idx = cards.findIndex(c => c.dataset.step === step), l = lessons.find(x => x.id === id);
     cards.forEach(c => c.hidden = c.dataset.step !== step);
+    markSeen(id, step);
     document.getElementById("crumb-" + id).textContent = `${l.n}강 · ${l.title} · ${idx + 1}/${cards.length} ${cards[idx].dataset.title}`;
     const sec = document.getElementById("p-" + id);
     let nav = sec.querySelector(".step-nav");
