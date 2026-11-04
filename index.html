@@ -941,7 +941,15 @@
       <div><small>02</small><b>확인하기</b>Bash로 테스트, 빌드 실행. 글로 짐작하지 않고 실제로 돌려 본다</div>
       <div><small>03</small><b>바꾸기</b>Edit, Write(파일 고치기, 만들기), git 커밋. 내 컴퓨터를 실제로 바꾸는 일</div>
     </div>
-    <div class="why"><b>참고: MCP</b>Claude Code에 Figma, Gmail 같은 외부 도구를 붙일 때 쓰는 공통 규격이 MCP(Model Context Protocol)다. USB처럼 한 번 만들어 두면 여러 AI 앱에 꽂아 쓸 수 있다. 붙이면 그 도구들도 Read, Bash처럼 목록에 들어간다.</div>
+    <h3><span class="h-num">05</span>MCP: 도구를 새로 꽂는 방법</h3>
+    <p class="tldr">Read, Edit, Bash는 기본 도구다. <strong>Gmail, Figma 같은 도구는 MCP로 꽂아서</strong> 늘린다.</p>
+    <p class="body">충전기가 USB-C로 통일되면 아무 충전기나 꽂아 쓸 수 있는 것과 같다. MCP(Model Context Protocol)는 "도구를 이런 모양으로 만들면 어느 AI 앱에든 꽂힌다"는 공통 규칙이다. 이 규칙대로 만든 도구 묶음을 <strong>MCP 서버</strong>라고 부른다.</p>
+    <div class="pipeline">
+      <div><small>01</small><b>기본 도구</b>Claude Code에 처음부터 있음. Read, Edit, Bash</div>
+      <div><small>02</small><b>MCP 서버 꽂기</b>Gmail MCP를 연결하면 메일 검색, 메일 쓰기 같은 도구가 생김</div>
+      <div><small>03</small><b>목록이 늘어남</b>Claude가 받는 도구 목록에 함께 들어감. 쓰는 방식은 Read와 똑같다</div>
+    </div>
+    <div class="why"><b>실제 예: 내 Claude Code</b>내 Claude Code에는 이미 Figma, Gmail, Google Drive, Railway가 MCP로 연결돼 있다. 그래서 "지난주 회의 메일 찾아 줘"라고 하면, Claude가 "Gmail 메일 검색 도구를 '회의'로 불러 줘"라고 쓰고, Gmail MCP 서버가 실제로 찾아서 돌려준다. 3강에서 본 흐름 그대로다.</div>
   </div>
 
   <!-- 4. 정리 -->
@@ -984,6 +992,13 @@
       <details>
         <summary>get_weather와 Claude Code의 Bash, Edit은 같은 건가?</summary>
         <p>같은 종류다. 셋 다 앱이 "이런 도구가 있다"고 이름, 설명, 입력 형식을 적어서 모델에게 보내는 도구다. get_weather는 날씨 앱이 만든 예시이고, Bash와 Edit은 Claude Code가 만든 것이다. 모델 입장에서는 구분이 없다. 목록에 적힌 걸 보고 골라서 "이 이름으로, 이 값을 넣어 불러 줘"라고 쓸 뿐이다. 실제로 무슨 일이 일어나는지(날씨 조회든 명령 실행이든)는 앱이 정한다.</p>
+      </details>
+      <details>
+        <summary>MCP는 뭔가?</summary>
+        <p>Claude Code에 <strong>도구를 새로 꽂는 방법</strong>이다. Read, Edit, Bash는 처음부터 들어 있는 기본 도구다. 그런데 Gmail 검색이나 Figma 수정은 기본으로는 못 한다. 누군가 그 도구를 만들어 붙여 줘야 한다.</p>
+        <p>MCP는 그 붙이는 방식을 하나로 정한 규칙이다. Gmail 쪽에서 이 규칙대로 도구 묶음(MCP 서버)을 만들어 두면, Claude Code든 Claude 데스크톱이든 꽂기만 하면 된다. 휴대폰 충전기가 USB-C로 통일된 것과 같다.</p>
+        <p>꽂고 나면 Claude가 받는 도구 목록에 Read, Edit, Bash 옆으로 Gmail 메일 검색 같은 도구가 늘어난다. 쓰는 방식은 3강과 똑같다. "메일 검색 도구를 '회의'로 불러 줘"라고 쓰면, MCP 서버가 실제로 Gmail에서 찾아 돌려준다.</p>
+        <p>내 Claude Code에도 이미 Figma, Gmail, Google Drive, Railway가 MCP로 연결돼 있었다.</p>
       </details>
     </div>
     <h3>용어</h3>
@@ -1395,7 +1410,8 @@ const terms = [
   ["도구 호출 (Tool use)", "모델이 \"이 도구를 이 값으로 불러 달라\"고 적어서 응답하는 것. function calling이라고도 한다", "3강"],
   ["도구 결과 (tool_result)", "앱이 도구를 실행한 결과. 컨텍스트에 붙여서 모델에게 다시 보낸다", "3강"],
   ["입력 형식 (input_schema)", "도구에 어떤 값을 넣어야 하는지 정해 둔 것. 도구 이름, 설명과 함께 보낸다", "3강"],
-  ["MCP", "도구를 여러 AI 앱에 같은 방식으로 연결하는 공통 규격 (Model Context Protocol)", "3강"],
+  ["MCP", "도구를 AI 앱에 꽂는 공통 규칙 (Model Context Protocol). 충전기의 USB-C 같은 것", "3강"],
+  ["MCP 서버", "MCP 규칙대로 만든 도구 묶음. 예: Gmail MCP를 꽂으면 메일 검색, 메일 쓰기 도구가 생긴다", "3강"],
   ["에이전트 (Agent)", "도구 쓰기를 일이 끝날 때까지 반복하는 AI. 다음 할 일을 모델이 결과를 보고 정한다", "4강"],
   ["에이전트 루프", "생각 → 행동(도구) → 확인(결과 읽기) → 다 됐나?를 끝날 때까지 되풀이하는 구조", "4강"],
   ["워크플로 (Workflow)", "다음 단계를 모델이 아니라 미리 짜 둔 순서가 정하는 자동화", "4강"],
