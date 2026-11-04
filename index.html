@@ -296,6 +296,26 @@
   .turn.cut { background: none; border: 1px dashed var(--faint); color: var(--faint); text-decoration: line-through; }
   .turn em { margin-left: auto; font-style: normal; font-size: 11px; text-decoration: none; }
   .pipeline.four { grid-template-columns: repeat(4, 1fr); }
+  .grow-legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 12px; color: var(--muted); margin-bottom: 16px; }
+  .grow-legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .grow-legend i { width: 12px; height: 12px; border-radius: 3px; }
+  .grow { display: flex; flex-direction: column; gap: 6px; }
+  .grow-row { display: grid; grid-template-columns: 70px 1fr 64px; align-items: center; gap: 12px; font-size: 12px; color: var(--muted); }
+  .grow-row .num { text-align: right; font-variant-numeric: tabular-nums; }
+  .grow-bar { display: flex; gap: 2px; height: 22px; }
+  .grow-bar i, .grow-legend i { display: block; background: #d6d6d6; }
+  .grow-bar i { border-radius: 4px; transition: background .2s; }
+  .grow-bar i.sys, .grow-legend i.sys { background: #9a9a9a; }
+  .grow-bar i.old, .grow-legend i.old { background: #d6d6d6; }
+  .grow-bar i.new, .grow-legend i.new { background: var(--text); }
+  .grow-bar i.cached, .grow-legend i.cached { background: #fff; box-shadow: inset 0 0 0 1px var(--faint); }
+  .grow-legend .cache-only { display: none; }
+  .grow-legend.caching .cache-only { display: inline-flex; }
+  .grow-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 20px; }
+  .grow-stats div { background: #fff; border-radius: 12px; padding: 14px 16px; }
+  .grow-stats small { display: block; font-size: 12px; color: var(--muted); }
+  .grow-stats b { font-size: 20px; font-weight: 500; letter-spacing: -0.04em; }
+  .demo-actions button.on, .demo-actions button.on:hover { background: var(--text); color: #fff; }
   .prompt-ex { margin: 10px 0 0; background: #fff; border-radius: 10px; padding: 12px 14px; color: var(--text); font-size: 14px; }
   @media (max-width: 960px) { .ctx-diagram { grid-template-columns: 1fr; } .ctx-diagram > i { transform: rotate(90deg); justify-self: center; } .pipeline.four { grid-template-columns: 1fr 1fr; } }
   /* 3강 */
@@ -773,6 +793,56 @@
       <div><small>04</small><b>끼워 넣기</b>앱이 메모를 컨텍스트에 넣어 보내요</div>
     </div>
     <div class="why"><b>그래서</b>1강에서 말한 "대화로는 배우지 않는다"와 모순되지 않아요. 모델은 그대로이고, 컨텍스트에 들어가는 글만 늘어난 거예요.</div>
+
+    <h3><span class="h-num">05</span>대화가 쌓이는 과정</h3>
+    <p class="tldr">질문할 때마다 <strong>지금까지의 대화 전체를 다시 보내서</strong>, 대화가 길어질수록 한 번에 보내는 양이 계속 커져요.</p>
+    <p class="body">모델은 요청을 처리하고 나면 아무것도 남겨 두지 않아요(stateless, 1강). 그래서 앱은 질문이 하나 늘 때마다 시스템 프롬프트, 이전 대화, 새 질문을 처음부터 다시 묶어서 보내요. 아래에서 질문을 하나씩 늘려 보세요. 막대 한 줄이 요청 한 번에 보내는 글이에요.</p>
+    <div class="card">
+      <div class="grow-legend">
+        <span><i class="sys"></i>시스템 프롬프트</span>
+        <span><i class="old"></i>이전 대화 (질문 + 답)</span>
+        <span><i class="new"></i>이번 질문</span>
+        <span class="cache-only"><i class="cached"></i>캐시에서 재사용</span>
+      </div>
+      <div class="grow" id="grow"></div>
+      <div class="grow-stats">
+        <div><small>이번 요청에 보낸 양</small><b id="gs-now"></b></div>
+        <div><small>그중 새로 계산한 양</small><b id="gs-fresh"></b></div>
+        <div><small>지금까지 보낸 양 합계</small><b id="gs-total"></b></div>
+      </div>
+      <div class="demo-actions">
+        <button class="primary" onclick="growAdd()">질문 하나 더 하기</button>
+        <button onclick="growReset()">처음부터</button>
+        <button id="grow-cache" onclick="growCache()">프롬프트 캐싱 켜기</button>
+      </div>
+      <div class="temp-result" id="grow-msg"></div>
+    </div>
+    <p class="hint">숫자는 이해를 돕기 위한 예시예요. 시스템 프롬프트 200토큰, 질문 30토큰, 답 90토큰으로 잡았어요.</p>
+    <div class="why"><b>왜 알아 둬야 하나</b>
+      <ul>
+        <li>질문 하나의 길이는 그대로인데 <strong>보내는 양은 매번 늘어나고, 합계는 더 빠르게 불어나요.</strong> 긴 대화가 느리고 비싼 이유예요.</li>
+        <li>프롬프트 캐싱을 켜면 앞 요청과 똑같은 앞부분은 다시 계산하지 않고 재사용해요. 보내는 양은 같지만 새로 계산하는 양이 줄어서 더 싸고 빨라지죠. 앞부분이 한 글자라도 바뀌면 그 뒤로는 재사용할 수 없어요.</li>
+        <li>계속 커지다 보면 결국 컨텍스트 윈도우(02)에 닿아요. 그때부터는 무엇을 남기고 무엇을 뺄지 골라야 해요.</li>
+      </ul>
+    </div>
+
+    <h3><span class="h-num">06</span>컨텍스트 엔지니어링</h3>
+    <p class="tldr">매번 모델에게 <strong>무엇을 다시 보여 줄지 고르고 관리하는 일</strong>로, 에이전트를 다룰 때 가장 중요한 기술이에요.</p>
+    <p class="body">회의 때마다 기억을 잃는 아주 똑똑한 동료가 있다고 생각해 보세요. 매번 서류철을 건네줘야 하는데, 서류철이 너무 얇으면 상황을 모르고, 너무 두꺼우면 중요한 걸 놓치고 시간도 오래 걸려요. 그래서 이번 회의에 필요한 것만 골라 넣고, 오래된 건 한 장으로 요약하고, 매번 필요한 규칙은 맨 앞에 끼워 두죠. 컨텍스트 엔지니어링은 이 서류철을 잘 꾸리는 일이에요.</p>
+    <p class="body">좋은 프롬프트(03)가 <strong>질문 한 번을 잘 쓰는 일</strong>이라면, 컨텍스트 엔지니어링은 대화와 작업이 이어지는 내내 <strong>컨텍스트 전체를 관리하는 일</strong>이에요. Claude Code에서도 이미 보고 있는 것들이에요.</p>
+    <div class="pipeline four">
+      <div><small>01</small><b>골라 넣기</b>필요한 것만 넣어요. Claude Code는 폴더를 통째로 넣지 않고 Read로 필요한 파일만 열어 봐요</div>
+      <div><small>02</small><b>줄이기</b>대화가 길어지면 앞부분을 요약해서 넣어요. Claude Code의 대화 압축이 이거예요</div>
+      <div><small>03</small><b>밖에 적어 두기</b>계속 필요한 건 파일로 남겨 두고 새 대화마다 다시 넣어요. 이 사이트의 디자인 규칙을 담은 메모리 파일처럼요</div>
+      <div><small>04</small><b>나눠 맡기기</b>긴 조사는 다른 에이전트에게 맡기고 요약만 받아요. 서브에이전트(5강)예요</div>
+    </div>
+    <div class="why"><b>왜 알아 둬야 하나</b>
+      <ul>
+        <li>에이전트는 도구를 쓸 때마다 결과가 컨텍스트에 쌓여서(3–4강), 위의 막대가 사람과 대화할 때보다 훨씬 빨리 커져요.</li>
+        <li>그래서 에이전트가 엉뚱하게 움직이면 모델 탓보다 <strong>"지금 컨텍스트에 뭐가 들어 있나"</strong>를 먼저 보는 게 빨라요. 필요한 게 빠졌거나, 쓸데없는 게 너무 많거나 둘 중 하나인 경우가 많거든요.</li>
+        <li>오케스트레이션(5강)도 결국 에이전트마다 컨텍스트를 나눠서 각자 책상을 깔끔하게 유지하려는 방법이에요.</li>
+      </ul>
+    </div>
   </div>
 
   <!-- 4. 정리 -->
@@ -784,6 +854,8 @@
       <li><span class="num">02</span><div><strong>컨텍스트 = 시스템 프롬프트 + 이전 대화 + 자료 + 질문</strong>내 질문은 그중 일부일 뿐이에요.</div></li>
       <li><span class="num">03</span><div><strong>크기 제한이 있어요</strong>컨텍스트 윈도우를 넘으면 오래된 내용부터 잘리거나 요약되고, 길수록 요금도 늘어요.</div></li>
       <li><span class="num">04</span><div><strong>좋은 프롬프트는 짐작할 게 없는 프롬프트</strong>역할과 목표, 맥락, 구체적 지시, 예시.</div></li>
+      <li><span class="num">05</span><div><strong>질문할 때마다 대화 전체를 다시 보내요</strong>그래서 대화가 길수록 보내는 양이 커지고, 프롬프트 캐싱으로 똑같은 앞부분은 재사용해요.</div></li>
+      <li><span class="num">06</span><div><strong>컨텍스트 엔지니어링</strong>매번 무엇을 보여 줄지 고르고 관리하는 일. 골라 넣기, 줄이기, 밖에 적어 두기, 나눠 맡기기.</div></li>
     </ol>
     <div class="callout">
       <div class="title">다음으로 이어지는 것</div>
@@ -813,7 +885,7 @@
       </details>
       <details>
         <summary>Claude Code도 그렇게 동작하나요?</summary>
-        <p>똑같아요. 대화가 길어지면 Claude Code가 앞부분을 요약해서 줄여요. 다음 대화에서도 알아야 할 것, 예를 들어 이 스터디 사이트의 디자인 규칙은 메모리 파일에 적어 뒀다가 새 대화를 시작할 때 다시 읽어 오고요(자세히 04).</p>
+        <p>똑같아요. 대화가 길어지면 Claude Code가 앞부분을 요약해서 줄여요. 다음 대화에서도 알아야 할 것, 예를 들어 이 스터디 사이트의 디자인 규칙은 메모리 파일에 적어 뒀다가 새 대화를 시작할 때 다시 읽어 오고요(자세히 04, 06).</p>
         <p>결국 에이전트를 잘 다룬다는 건 <strong>매번 모델에게 무엇을 다시 보여 줄지 관리하는 것</strong>이에요. 이걸 컨텍스트 엔지니어링이라고 부르고, 서브에이전트를 쓰는 이유도 여기에 있어요(5강).</p>
       </details>
     </div>
@@ -1861,6 +1933,26 @@ const bank2 = [
   { type: "text", q: "다음 설명에 해당하는 용어는 무엇일까요?", desc: "프롬프트에 원하는 결과의 예시를 몇 개 보여 주는 방법",
     hint: "ㅍㅅ", answers: ["퓨샷", "few-shot", "fewshot", "퓨 샷"], exp: "정답은 퓨샷(few-shot)이에요." },
 
+  { q: "질문 길이는 매번 비슷한데, 대화가 길어질수록 응답이 느려지고 요금도 늘어요. 가장 그럴듯한 이유는 무엇일까요?",
+    opts: ["모델이 대화에 지쳐서", "질문할 때마다 이전 대화 전체를 다시 보내서", "답이 점점 길어지도록 정해져 있어서", "서버가 대화를 저장하느라 바빠서"], a: 1,
+    exp: "모델은 기억이 없어서 앱이 매번 대화 전체를 다시 넣어요. 보내는 양이 계속 커지죠." },
+  { q: "프롬프트 캐싱이 비용을 줄여 주는 이유는 무엇일까요?",
+    opts: ["이전 대화를 아예 안 보내서", "답을 미리 만들어 둬서", "앞 요청과 똑같은 앞부분의 계산을 재사용해서", "토큰 수를 절반으로 세서"], a: 2,
+    exp: "보내는 글은 같지만, 이미 계산한 똑같은 앞부분은 다시 계산하지 않아요." },
+  { q: "다음 중 컨텍스트 엔지니어링과 가장 거리가 먼 것은 무엇일까요?",
+    opts: ["필요한 파일만 골라 읽게 하기", "긴 대화의 앞부분을 요약해 넣기", "규칙을 파일로 적어 두고 새 대화마다 넣기", "temperature를 높여 답을 다양하게 하기"], a: 3,
+    exp: "temperature는 다음 토큰을 얼마나 무작위로 고를지의 문제예요. 컨텍스트 엔지니어링은 무엇을 넣어 보여 줄지의 문제고요." },
+  { q: "에이전트가 엉뚱하게 움직일 때 먼저 확인해 보면 좋은 것은 무엇일까요?",
+    opts: ["지금 컨텍스트에 무엇이 들어 있는지", "모델 이름이 최신인지", "질문에 존댓말을 썼는지", "대화창 글꼴이 맞는지"], a: 0,
+    exp: "필요한 게 빠졌거나 쓸데없는 게 너무 많은 경우가 많아요. 모델은 컨텍스트에 있는 것만 보거든요." },
+  { q: "프롬프트 캐싱을 쓰면 이전 대화를 다시 보내지 않아도 돼요.", opts: ["O", "X"], ox: OX, a: 1,
+    exp: "대화는 매번 그대로 다시 보내요. 똑같은 앞부분의 계산만 재사용할 뿐이에요." },
+  { q: "대화가 길어지면, 질문이 짧아도 한 번에 보내는 양은 계속 커져요.", opts: ["O", "X"], ox: OX, a: 0,
+    exp: "질문마다 이전 대화 전체가 함께 가니까요." },
+  { type: "text", q: "다음 설명에 해당하는 용어는 무엇일까요?", desc: "매번 모델에게 무엇을 넣어 보여 줄지 고르고 관리하는 일이에요.",
+    hint: "ㅋㅌㅅㅌ ㅇㅈㄴㅇㄹ", answers: ["컨텍스트엔지니어링", "컨텍스트 엔지니어링", "콘텍스트엔지니어링", "contextengineering", "context engineering"], exp: "정답은 컨텍스트 엔지니어링이에요." },
+  { type: "text", q: "다음 설명에 해당하는 용어는 무엇일까요?", desc: "요청마다 똑같이 반복되는 앞부분의 계산 결과를 저장해 두고 재사용하는 것",
+    hint: "ㅍㄹㅍㅌ ㅋㅅ", answers: ["프롬프트캐싱", "프롬프트 캐싱", "promptcaching", "prompt caching"], exp: "정답은 프롬프트 캐싱이에요." },
   // 순서
   { type: "order", q: "앱이 모델에 보내는 컨텍스트가 보통 쌓이는 순서대로 눌러 보세요.",
     items: ["시스템 프롬프트", "이전 대화", "지금 쓴 질문"],
@@ -2164,6 +2256,44 @@ function renderWin() {
 function addTurn() { if (turns < turnPool.length) { turns++; renderWin(); } }
 function resetWin() { turns = 1; renderWin(); }
 renderWin();
+/* ---------- 2강: 대화가 쌓이는 과정 ---------- */
+const G = { sys: 200, q: 30, a: 90, max: 8 };
+let growN = 1, growCaching = false;
+function growReq(n) {
+  const total = G.sys + (n - 1) * (G.q + G.a) + G.q;
+  const fresh = !growCaching || n === 1 ? total : (G.q + G.a) + G.q;
+  return { total, fresh };
+}
+function renderGrow() {
+  const maxTotal = growReq(G.max).total;
+  const rows = [];
+  for (let n = 1; n <= growN; n++) {
+    const last = n === growN, cache = growCaching && last && n > 1;
+    const segs = [`<i class="${cache ? "cached" : "sys"}" style="flex:${G.sys}"></i>`];
+    for (let t = 1; t < n; t++) segs.push(`<i class="${cache && t < n - 1 ? "cached" : "old"}" style="flex:${G.q + G.a}"></i>`);
+    segs.push(`<i class="new" style="flex:${G.q}"></i>`);
+    const { total } = growReq(n);
+    rows.push(`<div class="grow-row"><span>${n}번째 질문</span><div class="grow-bar" style="width:${total / maxTotal * 100}%">${segs.join("")}</div><span class="num">${total}</span></div>`);
+  }
+  document.getElementById("grow").innerHTML = rows.join("");
+  const now = growReq(growN);
+  let sum = 0; for (let n = 1; n <= growN; n++) sum += growReq(n).total;
+  document.getElementById("gs-now").textContent = `${now.total} 토큰`;
+  document.getElementById("gs-fresh").textContent = `${now.fresh} 토큰`;
+  document.getElementById("gs-total").textContent = `${sum} 토큰`;
+  document.querySelector(".grow-legend").classList.toggle("caching", growCaching);
+  const btn = document.getElementById("grow-cache");
+  btn.classList.toggle("on", growCaching);
+  btn.textContent = growCaching ? "프롬프트 캐싱 끄기" : "프롬프트 캐싱 켜기";
+  const msg = document.getElementById("grow-msg");
+  if (growN === 1) msg.innerHTML = "첫 질문은 시스템 프롬프트와 질문만 보내요.";
+  else if (growCaching) msg.innerHTML = `보내는 양은 ${now.total}토큰 그대로지만, 앞 요청과 똑같은 앞부분은 재사용해서 <b>새로 계산하는 건 ${now.fresh}토큰뿐이에요.</b> 직전 답과 이번 질문만 새로 읽는 셈이죠.`;
+  else msg.innerHTML = `질문은 늘 30토큰인데 이번에는 <b>${now.total}토큰</b>을 보냈어요. 앞의 대화 ${growN - 1}개를 처음부터 다시 넣었거든요.${growN === G.max ? " 이대로 계속 가면 결국 컨텍스트 윈도우에 닿아요." : ""}`;
+}
+function growAdd() { if (growN < G.max) { growN++; renderGrow(); } }
+function growReset() { growN = 1; renderGrow(); }
+function growCache() { growCaching = !growCaching; renderGrow(); }
+renderGrow();
 /* ---------- 3강: 도구 호출 따라가 보기 ---------- */
 const toolDefs = {
   read: { name: "Read", label: "파일 읽기", act: "파일을 실제로 열어요" },
